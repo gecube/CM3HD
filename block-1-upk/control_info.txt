@@ -1,0 +1,5160 @@
+
+
+<<Control>> Global [] 00000000 
+<prop>
+retval <R> I [] 
+retstr <R> S [] 
+<method> 
+AddFocus <> 01 01 
+        handle H [] 
+        I [] 
+ClearScreen <> 01 01 
+        flag I [] <> 
+        I [] 
+CreatePage <> 01 01 
+        page_handle H [] 
+        I [] 
+CreateTimer <B> 07 01 
+        target_handle H [] <> //name is act as param0 of message
+        name S [] <> //name is act as param0 of message
+        delay_time I [0] <> //the unit is 100ms
+        MsgStrParam S [] <> //param1 of message
+        MsgParam2 I [] <> 
+        MsgParam3 I [] <> 
+        period_flag I [] <> //0: one time timer
+//1: period timer
+        I [] 
+DeleteTimer <> 01 01 
+        name S [] 
+        I [] 
+DestoryPage <> 01 01 
+        page_handle H [] 
+        I [] 
+GetCntDrawState <> 01 01 
+        CntlHandle H [] <> 
+        I [] 
+GetDefLanguage <> 00 01 
+        I [] //return default language ID
+GetHdmode <> 00 01 
+        I [:HDMODE] 
+GetLastShowPage <> 00 01 //to get the handle of latest page showed
+        H [] //The latest page showed
+GetVolume <> 00 01 //The volume has been divided into 64 grade, from 0, 1, 2, ... to 64, 0 is mute, 64 is MAX
+        I [] 
+HideControl <> 01 01 
+        cntl_handle H [] 
+        I [] 
+HideOsdSlide <> 04 01 
+        page_handle H [] <> //any page in the area you want to hide is ok
+        direction I [] <> 
+        speed I [] <> 
+        fade I [] <> 
+        I [] 
+HidePage <> 01 01 
+        page_handle H [] 
+        I [] 
+HidePageFade <> 02 01 
+        page_handle H [] //handle of the page want to hide
+        fade_speed I [0] //0~7 larger the faster
+        I [] 
+HidePageSlide <> 03 01 
+        page H [] <> //page handle
+        effect I [] <> //#define FADE_OUT                    9
+//#define ZOOM_OUT                    10
+//#define ROTATE_OUT                  11
+        effect_param I [] <> //speed or step
+        I [] 
+IsFocused <> 01 01 //1: the handle is focused 0: not focused
+        handle H [] <> //handle of page/window/control
+        I [] 
+IsShown <> 01 01 
+        handle H [] <> 
+        I [] 
+KeepScreen <> 01 01 
+        flag I [] <> 
+        I [] 
+LoadLogo <> 02 01 
+        file_handle RT [] <> //Logo resource file
+        flag I [] <> //0: normal
+//1: smooth jpeg
+//2: sync jpeg
+//3: mi jpeg
+        I [] 
+LoadLogoInRect <> 03 01 
+        file RT [] <> 
+        rect H [Rect] <> 
+        flag I [] <N> //reserved
+        I [] 
+NetfsGetFileNum <> 02 01 //get total file number in the path of netfs
+//return -1 or 0  if this count is not available,  in this case, "block calling" of  GeneralFileTree.ReqGetItemNum can be used to get files number.
+        path_name S [] <> //the full pathname of directory
+        flag I [] <> //reserved
+        I [] 
+OSDAreaCreate <> 08 01 //create a area in a OSD layer
+        layer I [] <> //osd layer
+        type I [] <> //osd type:
+//#define OSD_TYPE_4BPP   0
+//#define OSD_TYPE_8BPP   1
+//#define OSD_TYPE_16BPP  2
+//#define OSD_TYPE_32BPP  3
+        x I [] <> //start x
+        y I [] <> //start y
+        w I [] <> //width
+        h I [] <> //height
+        h_show I [] <> //height of show area, normally same as h, except user nee extra osd area for cache
+        mode I [] <> //reserved
+        I [] 
+OSDLayerCreate <> 03 01 //create a osd layer by width and height
+        layer I [0] //osd layer to create
+        width I [] //osd buffer width
+        height I [] //osd buffer height
+        I [] 
+OSDLayerDestroy <> 01 01 //destroy an existing osd layer
+        layer I [0] //osd layer to destroy
+        I [] 
+OSDLayerHide <> 01 01 
+        layer I [] <> 
+        I [] 
+OSDLayerShow <> 01 01 
+        layer I [] <> 
+        I [] 
+RemoveFocus <> 01 01 
+        handle H [] 
+        I [] 
+ReqTotalFilSize <B> 01 01 //This method can only be "Blocking" called, the return parameter name is: "i_ret" (INT, get by control InOutParam.GetBlkFunRetVal). 
+        play_list H [PlayList] <> // 
+        I [] 
+SetCnInitShowSt <> 02 01 
+        cntl_handle H [] 
+        init_show_state I [] 
+        I [] 
+SetCntDrawState <> 02 01 
+        CntlHandle H [] 
+        DrawState I [] 
+        I [] //Set DrawState of some control
+//The default DrawState of control is 1.
+//Control will not be drawed if it's DrawState is 0.
+SetDefaultFont <> 01 01 
+        font_group_id I [0] //font_id: 0~ max_supported_font_num-1
+        I [] 
+SetDefBgColor <> 01 01 
+        color I [] 
+        I [] 
+SetDefFgColor <> 01 01 
+        color I [] 
+        I [] 
+SetDefLanguage <> 01 01 
+        language_id I [0] //language id is from 0 to max_supported_language -1 
+        I [] 
+SetHdmode <> 01 01 
+        Hdmode I [:HDMODE] <> 
+        I [] 
+SetOSDLayerPos <> 05 01 
+        layer I [] <> 
+        x I [] <> 
+        y I [] <> 
+        delay I [] <> 
+        step I [] <> 
+        I [] 
+SetOSDPosition <> 05 01 
+        layer I [] <> 
+        x I [] <> 
+        y I [] <> 
+        delay I [] <> 
+        step I [] <> 
+        I [] 
+SetOSDRotation <> 01 01 
+        degree I [] <> //0,90,180,270
+        I [] 
+SetOSDTopLayer <> 01 01 //set which osd layer is on top, 
+//0: layer 0 on top on layer 1, 
+//1: layer 1 on top of layer 0
+        layer I [0] //osd layer: 0 or 1
+        I [] 
+SetVolume <> 01 01 //The volume has been divided into 64 grade, from 0, 1, 2, ... to 64, 0 is mute, 64 is MAX
+        volume_level I [] <> 
+        I [] 
+ShowControl <B> 02 01 
+        cntl_handle H [] <> 
+        flag I [] <> 
+        I [] 
+ShowHidePage <> 05 01 //Hide a page and show a page with effect, for slide effect only the show page area will do effect. Make sure the page show area is same or bigger than hide page area.
+        show_page H [] <> //page to show 
+        hide_page H [] <> //page to hide(only hide it, no destroy)
+        focus_flag I [] <> //0: show only
+//1: show and add focus
+//2: show, add focus and remove other pages focua 
+        effect I [] <> //#define NO_EFFECT                   0
+//#define SLIDE_RIGHT                 1
+//#define SLIDE_LEFT                  2
+//#define SLIDE_UP                    3
+//#define SLIDE_DOWN                  4
+//#define SLIDE_MIDDLE2VSIDE          5
+//#define FADE_IN                     6
+//#define ZOOM_IN                     7
+//#define ROTATE_IN                   8
+//#define FADE_OUT                    9
+//#define ZOOM_OUT                    10
+//#define ROTATE_OUT                  11
+//#define FADE_IN_FADE_OUT            12
+//#define KEEP_OFFSCR                 0xffff
+        effect_param I [] <> //for SLIDE_RIGHT, SLIDE_LEFT, SLIDE_UP, SLIDE_DOWN, ZOOM_IN, ZOOM_OUT -- move/scale pixels each step
+//for ROTATE_IN, ROTATE_OUT -- degree(0-360) each step
+        I [] 
+ShowOsdSlide <> 04 01 
+        page_handle H [] <> //the last page handle in the osd area you want to show 
+        focus_flag I [] <> //0: show only
+//1: show with focus
+//2: show with focus and remove all other pages focus
+        direction I [] <> //#define SLIDE_RIGHT                 1           
+//#define SLIDE_LEFT                  2
+//#define SLIDE_UP                    3
+//#define SLIDE_DOWN                  4
+//#define SLIDE_MIDDLE2VSIDE			5 
+//#define NONE_FADE					6
+        speed I [] <> //the bigger the faster
+        I [] 
+ShowPage <B> 02 01 
+        page_handle H [] <> 
+        focus_flag I [] <> //1 -- add ctrls handing input in this page into focus list;
+//0 -- not add ctrls handing input in this page into focus list.
+        I [] 
+ShowPageFade <B> 03 01 //Show Page with fade in effect, should no other page share palette with it show at the same time.
+        page_handle H [] <> //page handle want to show
+        focus_flag I [0] <> //0: not add focus 1:add focus 2:add focus and remove other
+        fade_speed I [0] <> //0~7 larger the faster
+        I [] 
+ShowPageSlide <B> 04 01 
+        page_handle H [] <> 
+        focus_flag I [0] <> //0: show only
+//1: show with focus
+//2: show with focus and remove all other pages focus
+        direction I [] <> //#define SLIDE_RIGHT                 1           
+//#define SLIDE_LEFT                  2
+//#define SLIDE_UP                    3
+//#define SLIDE_DOWN                  4
+//#define SLIDE_MIDDLE2VSIDE          5
+//#define FADE_IN                     6
+//#define ZOOM_IN                     7
+//#define ROTATE_IN                   8
+        speed I [] <> //step or speed
+        I [] 
+UITaskChangPrio <> 01 01 //Change the priority of UITask, whose default priority is 17.
+//To improve the performance of music, user can  change priority of UITask to 20 when it is playing music.
+        new_priority I [] <> //
+//        I [] 
+        I [] 
+<event>
+AFMSG_SYS_REGISTER <>
+AFMSG_SYS_DRAW <>
+AFMSG_SYS_HIDE <>
+AFMSG_SYS_INIT <>
+AFMSG_SYS_PAGE_DESTROYED <>
+AFMSG_SYS_TIMER <>
+AFMSG_SYS_LOST_FOCUS <>
+AFMSG_SYS_GOT_FOCUS <>
+AFMSG_SYS_DRIVER_REGISTER <>
+ 
+
+
+
+<<Control>> uDisplayDevice [] 00000005 <> 
+<prop>
+<method>
+InitOSDLayer <> 01 01 
+        layer I [] <> 
+        I [] 
+Load_logo720p <> 00 01 
+        I [] 
+Loadlogo800448 <> 00 01 
+        I [] 
+Loadlogo320234 <> 00 01 
+        I [] 
+<event>
+AFMSG_SYS_REGISTER <I>
+
+
+
+
+<<Control>> uNandDevice [] 00000000 
+<prop>
+<method>
+<event>
+AFMSG_SYS_REGISTER <I>
+ 
+
+
+
+<<Control>> uUsbDevice [] 00000001 <> 
+<prop>
+<method>
+StartUsbGadget <> 00 01 
+        I [] 
+<event>
+AFMSG_SYS_REGISTER <I>
+ 
+
+
+
+<<Control>> AframeDebug [AframeShellCmd] 00000001 <> 
+<prop>
+argn <H> I [] 
+CmdsDescription <HD> AS [;] 
+CmdNames <HD> AS [;] 
+args <HD> AS [;] 
+<method>
+CmdFun <> 03 01 
+        cmd_name S [] <> 
+        print_fun I [] <> 
+        flag I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uBsp [Bsp] 00000010 <> 
+<prop>
+SystemDesc <R> I [] 
+<method>
+SetBrightness <> 01 01 
+        level I [] <> 
+        I [] 
+PowerOffBackL <> 00 01 
+        I [] 
+PowerOnBackL <> 00 01 
+        I [] 
+IsVDAC <> 00 01 //return 1: vdac is on.  return 0:vdac is off.
+        I [] 
+EnterSleepMode <> 03 01 
+        key I [] <> 
+        master I [] <> 
+        is_tv_out I [] <> 
+        I [] 
+GetUsbId <> 01 01 
+        UsbParam S [] <> 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> uCardDevice [] 00000009 
+<prop>
+<method>
+<event>
+AFMSG_SYS_REGISTER <I>
+
+
+
+
+<<Control>> uCP2Uni [] 00000004 <> //this control is to set current code page. Then can use the function for converting between code page and unicode
+<prop>
+CurCp <g> I [:uCodePage] //Current Code Page id
+<method>
+InitCodePage <> 01 01 //return 1 sucess. return 0 fail
+        cp_id I [:uCodePage] <> //current code page id
+        I [] 
+<event>
+
+
+
+
+<<Control>> uDrawScrollStr [] 00000015 <> 
+<prop>
+<method>
+DrawScrollStr <> 05 01 
+        DisplayArea H [Rect] <> 
+        UnicodeOn I [] <> 
+        Filename S [] <> 
+        FontSize I [] <> 
+        FontColor I [] <> 
+        I [] 
+StopScrollStr <> 00 01 
+        I [] 
+RefreshBrightBg <> 02 01 
+        bk_area H [Rect] <> 
+        type I [] <> 
+        I [] 
+RefreshVolumeBg <> 02 01 //0
+        bk_area H [Rect] <> 
+        type I [] <> 
+        I [] 
+ConvertPathName <> 01 01 
+        path S [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uExt_Interface [] 00000005 <> 
+<prop>
+<method>
+Register <> 00 01 
+        I [] 
+SetErrorText <> 01 01 
+        text S [] <> 
+        I [] 
+RegisterFont <> 01 01 
+        font_fulname S [] <> 
+        I [] 
+ReleaseFont <> 00 01 
+        I [] 
+RegisterFile <> 01 01 
+        file_fulname S [] <> 
+        I [] 
+ReleaseFile <> 00 01 
+        I [] 
+<event>
+AFMSG_UDEV_SWF_MUSIC <> 
+AFMSG_UDEV_SWF_CMD <>
+ 
+
+
+
+<<Control>> uFileInfo [] 00000006 <> 
+<prop>
+FileName <Rg> S [] 
+ModifyTime <Rg> S [] 
+height <Rg> I [] 
+width <Rg> I [] 
+<method>
+GetFileInfo <> 01 01 
+        FileUrl S [] <> 
+        I [] 
+GetFileHeight <> 01 01 
+        FileUrl S [] <> 
+        I [] 
+GetFileWidth <> 01 01 
+        FileUrl S [] <> 
+        I [] 
+GetFileTime <> 01 01 
+        FileUrl S [] <> 
+        S [] 
+<event>
+
+
+
+
+<<Control>> uFileItem0 [FileBrowserItem] 00000012 <> 
+<prop>
+XYWH <> GR [] 
+state <> I [:ButtonState] 
+file_name <> S [] 
+file_type <> I [] 
+color <g> I [] 
+font <g> I [] 
+icon <g> RI [] 
+icon_focus <g> RI [] 
+icon_enter <g> RI [] 
+attr_name <HD> AS [;] //This is only the interface between this item and it's container control. 
+//Container put "attribute name" in this array (the array count is initialized by Item control ) before container draw this item.
+//If the array count n (initialized  by item control) is smaller than container's attributes  number, only first n attributes are put in this array.
+attr_val <HD> AS [;] //This is only the interface between this item and it's container control. 
+//Container put "attribute value" in this array (the array count is initialized by Item control ) before container draw this item.
+//If the array count n (initialized  by item control) is smaller than container's attributes  number, only first n attributes are put in this array.
+<method>
+Draw <> 00 01 
+        I [] 
+Hide <> 00 01 
+        I [] 
+DrawName <> 01 01 
+        flag I [] <> 
+        I [] 
+RevertFlag <> 00 01 
+        I [] 
+SetEmpty <> 01 01 
+        flag I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uFileItem1 [FileBrowserItem] 00000013 <> 
+<prop>
+XYWH <> GR [] 
+name_area <g> H [Rect] 
+state <> I [:ButtonState] 
+type_option <g> I [] //option set to draw type icon and item file name: 
+//0  draw type icon and item file name;
+//1  draw item file name, don't draw type icon;
+//2  don't draw type icon or item file name;
+file_name <> S [] 
+file_type <> I [] 
+unfucos_icon <g> RI [] 
+fucos_icon <g> RI [] 
+unfocu_typeicon <g> RI [] //the directory type icon unfocus
+focus_typeicon <g> RI [] //the directory type icon fucos
+unfcs_musictype <g> RI [] //music type icon unfocus
+fcs_musictype <g> RI [] //the music type icon focus
+unfcs_movietype <g> RI [] //the movie type icon unfocus
+fcs_movietype <g> RI [] //the movie type icon focus
+unfcs_pictype <g> RI [] //the picture type icon unfocus
+fcs_pictype <g> RI [] //the picture type icon focus
+unfucos_baricon <g> RI [] 
+fucos_baricon <g> RI [] 
+markfocus_icon <g> RI [] //file marked icon
+markunfocu_icon <g> RI [] //file unmark icon
+mark_val <g> AS [;] //if mark_val==attr_val   draw mark_icon
+attr_name <HD> AS [;] //This is only the interface between this item and it's container control. 
+//Container put "attribute name" in this array (the array count is initialized by Item control ) before container draw this item.
+//If the array count n (initialized  by item control) is smaller than container's attributes  number, only first n attributes are put in this array.
+attr_val <HD> AS [;] //This is only the interface between this item and it's container control. 
+//Container put "attribute value" in this array (the array count is initialized by Item control ) before container draw this item.
+//If the array count n (initialized  by item control) is smaller than container's attributes  number, only first n attributes are put in this array.
+iconpos <g> AI [0~10;] //(0,1):unfucos_icon pos (2,3):focus_icon pos (4,5):mark icon pos
+<method>
+Draw <> 00 01 
+        I [] 
+Hide <> 00 01 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uFListItemDraw [SlotItemDraw] 00000011 <> 
+<prop>
+AlignType <g> I [] //string align type. 
+//0---left
+//1---middle
+flag <g> I [] //just set 1 if it use in photomail.other set it 0;
+media_type <g> S [] 
+FistItemXY <g> I [] 
+UnicodeOn <> I [] //0 unsupport unicode
+//1 support unicode
+FontType <g> AI [;] //font type you want to draw. defined for different status
+FontColor <g> AI [;] //font color you want to draw. defined for different status
+FontOffset <g> AI [;] //font offset. 
+//0-----X
+//1-----Y
+//it will draw from this offset automaticlly.
+NormalIconSrc <g> ARI [;] //Normal Icon array. You can add the icon resouce here for file, foder and device
+HighlighIconSrc <g> ARI [;] //highlight Icon array. You can add the icon resouce here for file, foder and device
+PrefocusIconSrc <g> ARI [;] //Prefocus Icon array. You can add the icon resouce here for file, foder and device
+<method>
+StopScrollTime <> 00 01 
+        I [] 
+DrawSlotByIndex <> 04 01 
+        BufferX I [] <> //the cache start X. control should draw the slot icon on this address and SlotItemPrepare control will get the data from this address.
+        BufferY I [] <> //the cache start Y. control should draw the slot icon on this address and SlotItemPrepare control will get the data from this address.
+        IconTypeFlag I [] <> //the icon type will be used
+//0------Normal Icon
+//1------Highlight Icon
+//2------Disable Icon
+//3------background Icon
+//......
+        ReservedInt I [] <> //reserved parameter for later using
+        I [] 
+UpdateSlotByKey <> 04 01 
+        KeyValue I [] <> //the value of key
+        DisplayX I [] <> //start x of updating slot. 
+        DisplayY I [] <> //start y of updating slot. 
+        ReservedInt I [] <> //Reserved for later using
+        I [] 
+GetItemStatus <> 01 01 //return the current item status. for example, highlight, disable, normal......
+        ReservedInt I [] <> //reserved int parameters for later using
+        I [] 
+SetFocus <> 01 01 
+        focus_on I [] <> //0-----------off
+//1-----------on
+        I [] 
+<event>
+
+
+
+
+<<Control>> uFontSizeVar [] 00000016 <> 
+<prop>
+TitleBar <g> I [] 
+LeftInfoFiName <g> I [] 
+LeftInfo <g> I [] 
+MusicLrc <g> I [] 
+ErrorInfoList <g> I [] 
+InfoBarFiName <g> I [] 
+PhotoNum1 <g> I [] 
+PhotoNum2 <g> I [] 
+PhotoDisplayOpt <g> I [] 
+VideoNum <g> I [] 
+Video_ON_OFF <g> I [] 
+InfoBarTime <g> I [] 
+AudiNameInPhoto <g> I [] 
+SetupErrorInfo <g> I [] 
+SetupAboutInfo <g> I [] 
+SetupUpgrInfo <g> I [] 
+effect_speed <g> I [] 
+ListTittle <g> I [] 
+PopWin <g> I [] 
+<method>
+<event>
+
+
+
+
+<<Control>> uHDMI [uHDMI_template] 00000006 <> 
+<prop>
+INT_flag <C> I [0~1] 
+INT_pin <C> I [0~255] 
+INT_pol <C> I [0~1] 
+RST_OEN <C> I [] 
+RST_OEN_bit <C> I [] 
+RST_OUT <C> I [] 
+RST_OUT_bit <C> I [] 
+<method>
+HDMI_Audio_Get <> 01 01 
+        HDMI_Audio_Data S [] <> //input data include 5 bytes as between:
+//audio_flag ;        //Bit 0:      1 - enable hdmi audio output;  0 - display hdmi audio out
+//audiopath_format ;  //bit[3:0]: 0 - SPDIF; 1 - I2S; 2 - DSD; 3 - HBR; 
+//	                               //bit[7:4]: 0 - PCM format; 1 - AC3 format; 2 - MPEG1 (Layers 1 & 2); 3 - MP3 (MPEG1 Layer 3) 
+//	                               //         4 - MPEG2 (multichannel); 5 - AAC; 6 - DTS; 7 - ATRAC  
+//audiopath_sf ;      //Sampling Freq Fs:0 - Refer to Stream Header; 1 - 32KHz; 2 - 44KHz; 3 - 48KHz; 4 - 88KHz...
+//audiopath_sl ;      //bit[3:0]: Sample length : 1, 2.0, 3.0, 4.0, 4.1, 5.1, 6.1, 7.1, 8, 0xA, 0xC +1 for Max 24. Even values are Max 20. Odd: Max 24.
+//                                    //bit[7:4]: 16bit/18bit/20bit/24bit Sample Size
+        I [] 
+HDMI_Switch_AV <> 01 01 
+        mute_flag I [0~1] <> //mute_flag is 0, mute HDMI video & audio output
+//mute_flag is 1, clear HDMI mute, HDMI video & audio outputs normally
+        I [] 
+HDMI_Switch_Au <> 01 01 
+        mute_flag I [0~1] <> //mute_flag is 0, disable HDMI  audio output
+//mute_flag is 1, enable HDMI  audio outputs normally
+        I [] 
+HDMI_Aufio_Set <> 01 01 
+        HDMI_Audio_Data S [] <> //input data include 5 bytes as between:
+//audio_flag ;        //Bit 0:      1 - enable hdmi audio output;  0 - display hdmi audio out
+//audiopath_format ;  //bit[3:0]: 0 - SPDIF; 1 - I2S; 2 - DSD; 3 - HBR; 
+//	                               //bit[7:4]: 0 - PCM format; 1 - AC3 format; 2 - MPEG1 (Layers 1 & 2); 3 - MP3 (MPEG1 Layer 3) 
+//	                               //         4 - MPEG2 (multichannel); 5 - AAC; 6 - DTS; 7 - ATRAC  
+//audiopath_sf ;      //Sampling Freq Fs:0 - Refer to Stream Header; 1 - 32KHz; 2 - 44KHz; 3 - 48KHz; 4 - 88KHz...
+//audiopath_sl ;      //bit[3:0]: Sample length : 1, 2.0, 3.0, 4.0, 4.1, 5.1, 6.1, 7.1, 8, 0xA, 0xC +1 for Max 24. Even values are Max 20. Odd: Max 24.
+//                                    //bit[7:4]: 16bit/18bit/20bit/24bit Sample Size
+//audiopath_i2s_in_ctrl;  //I2S control bits
+        I [] 
+Start_Hdmi_Proc <> 00 01 //enable the HDMI chip
+        I [] 
+Stop_Hdmi_Proc <> 00 01 //disable the HDMI output
+        I [] 
+Rst_Hdmi_Proc <> 00 01 //restart the HDMI after stop 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uI2C [uI2C_WR_Process] 00000001 <> 
+<prop>
+i2c_mask <C> I [0~255] 
+i2c_flag <C> I [0~255] 
+i2c_max_addr <C> I [0~65536] 
+i2c_delay <C> I [0~2048] 
+i2c_freq <C> I [10~2048] 
+<method>
+I2CRead <> 04 01 //I2CRead:  id--divice id, length--read lenth unit is bytes, addr--read addr, buff--read to buffer.
+        id I [0~255] <> 
+        length I [0~512] <> 
+        addr I [] <> 
+        buff S [] <> 
+        I [] 
+I2CWrite <> 04 01 //I2CRead:  id--divice id, length--read lenth unit is bytes, addr--read addr, buff--read to buffer.
+        id I [0~255] <> 
+        length I [0~512] <> 
+        addr I [] <> 
+        buff S [] <> 
+        I [] 
+<event>
+AFMSG_SYS_REGISTER <I>
+ 
+
+
+
+<<Control>> uIconButton [ButtonGroupItem] 00000016 <> 
+<prop>
+XYWH <C> GR [] //Position and Size of Button Item
+option <g> I [] //bit[0] 1 don't clear the button rect when draw. 0 clear the rect.
+//bit[1] 1 open the special effect. 0 close effect. 
+//bit[2] 1 don't clear the button rect when hide or destroy. 0 clear the rect when hide or destroy.
+unfocus_bg_icon <Cg> RI [] //1: not clear rect when Hide
+unfocus_fg_icon <g> GI [] 
+unfocus_label <g> GS [] 
+focus_bg_icon <Cg> RI [] 
+focus_fg_icon <g> GI [] 
+focus_label <g> GS [] 
+disable_bg_icon <g> RI [] 
+disable_fg_icon <g> GI [] 
+disable_label <g> GS [] 
+press_bg_icon <> RI [] 
+press_fg_icon <g> GI [] 
+press_label <g> GS [] 
+drawrectnum <> I [] //draw rect arear nums
+multilineflag <g> I [] //0: one line 1:multi-line
+line_length <g> I [] //char number
+y_distance <g> I [] //the distance
+state <> I [:ButtonState] //The State of Button
+label <> S [] //Text
+drawrect <> AI [0~10;] //0:osd layer  1:x0  2:y0  3:w  4:h  5:distance  6:clear color  7:draw color  8:draw mode 
+<method>
+Draw <> 01 01 //Draw
+        slot_index I [] <> 
+        I [] 
+Hide <> 01 01 //Hide
+        slot_index I [] <> 
+        I [] 
+DrawRect <> 01 01 //draw rect 
+        item I [] <> //draw rect numbers
+        I [] 
+ChangeIcon <> 03 01 
+        unfocus_bg_icon RI [] <> 
+        focus_bg_icon RI [] <> 
+        disable_bg_icon RI [] <> 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> uISOFS [] 00000006 <> 
+<prop>
+true_device <> S [] 
+<method>
+isomount <> 01 01 
+        path S [] <N> 
+        I [] 
+isounmount <> 01 01 
+        path S [] <N> 
+        I [] 
+CheckISOMount <> 01 01 // 1 is cur path is mount iso,0 is not
+        path S [] <N> 
+        I [] 
+<event>
+AFMSG_UUSER_DEV_ISO_MOUNT_FINISH <> 
+AFMSG_UUSER_DEV_ISO_MOUNT_FAILED <> 
+AFMSG_UUSER_DEV_ISO_UNMOUNT_FINISH <>
+ 
+
+
+
+<<Control>> uItem [SlotItemDraw] 00000006 <> 
+<prop>
+XYWH <> GR [] 
+state <> I [:ButtonState] //item's state;
+option <> I [] 
+Text_Info <> S [] 
+ItemIcon <Cg> ARI [;] //the item's icon for state, fill in this order:
+//unfocus;
+//focus;
+//disable;
+//...
+ItemButton <> AH [;uItemButtn] 
+ItemContent <> AH [;uItemContent] 
+<method>
+DrawSlotByIndex <> 04 01 
+        BufferX I [] <> //the cache start X. control should draw the slot icon on this address and SlotItemPrepare control will get the data from this address.
+        BufferY I [] <> //the cache start Y. control should draw the slot icon on this address and SlotItemPrepare control will get the data from this address.
+        IconTypeFlag I [] <> //the icon type will be used
+//0------Normal Icon
+//1------Highlight Icon
+//2------Disable Icon
+//3------background Icon
+//......
+        ReservedInt I [] <> //reserved parameter for later using
+        I [] 
+UpdateSlotByKey <> 04 01 
+        KeyValue I [] <> //the value of key
+        DisplayX I [] <> //start x of updating slot. 
+        DisplayY I [] <> //start y of updating slot. 
+        ReservedInt I [] <> //Reserved for later using
+        I [] 
+GetItemStatus <> 01 01 //return the current item status. for example, highlight, disable, normal......
+        ReservedInt I [] <> //reserved int parameters for later using
+        I [] 
+<event>
+
+
+
+
+<<Control>> uItemButton [uItemButtn] 00000006 <> 
+<prop>
+XYWH <> GR [] 
+state <> I [:ButtonState] 
+option <> I [] 
+DrawType <> I [] 
+unfocus_bg_icon <g> RI [] 
+unfocus_fg_icon <g> GI [] 
+unfocus_label <> GS [] 
+focus_bg_icon <g> RI [] 
+focus_fg_icon <g> GI [] 
+focus_label <> GS [] 
+disable_bg_icon <g> RI [] 
+disable_fg_icon <g> GI [] 
+disable_label <> GS [] 
+press_bg_icon <g> RI [] 
+press_fg_icon <g> GI [] 
+press_label <> GS [] 
+<method>
+Draw <> 00 01 
+        I [] 
+Hide <> 00 01 
+        I [] 
+DrawItemButton <H> 02 01 
+        DisplayX I [] <> 
+        DisplayY I [] <> 
+        I [] 
+SetPosition <> 02 01 
+        DisplayX I [] <> 
+        DisplayY I [] <> 
+        I [] 
+SetLabel <> 01 01 //change the string
+        label S [] <> 
+        I [] 
+SetHour <> 01 01 
+        hour I [] <> 
+        I [] 
+GetHour <> 00 01 
+        I [] 
+ChangeHour <> 01 01 
+        direction I [] <> //-1: sub hour
+//1:  add hour
+        I [] 
+SetLabelId <> 01 01 
+        strid RS [] <> 
+        I [] 
+ChangeIcon <> 02 01 
+        unfocus_bg_icon RI [] <> 
+        focus_bg_icon RI [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uItemContent [uItemContent] 00000034 <> 
+<prop>
+XYWH <> GR [] 
+option <> I [] 
+IsTime <> I [] //0: normal
+//1: show time, when is 0, show 00,etc
+IsCircle <> I [] //the content is circle or not.
+//0: is circle
+//1: not circle
+DrawType <> I [] //0: left
+//1: middle
+ContentX <C> I [] //x offset from control's top left corner
+ContentY <C> I [] //y offset from control's top left corner
+StartInt <> I [] //if the content is a series of  integers, fill the start integer
+EndInt <> I [] //the end integer
+state <> I [:ButtonState] 
+StringTable <> H [StringTable] 
+ContentString <> S [] 
+BackIcon <g> ARI [;] //the control's backicon.
+//the order is the same as buttonstate
+BackColor <> AI [;] //the control's backcolor
+//the order is the same as buttonstate
+ContentFont <C> AI [;] //the content's font
+//the order is the same as buttonstate
+ContentColor <C> AI [;] //the content's color
+//the order is the same as buttonstate
+ContentSize <> AI [;] 
+ArrayInt <> AI [;] 
+ArrayStringID <> ARS [;] 
+<method>
+Draw <> 00 01 
+        I [] 
+Hide <> 00 01 
+        I [] 
+GetItemContent <> 00 01 
+        I [] 
+SetRangeInt <> 02 01 
+        startint I [] <> 
+        endint I [] <> 
+        I [] 
+DrawContent <H> 02 01 
+        DisplayX I [] <> 
+        DisplayY I [] <> 
+        I [] 
+ChangeContent <H> 03 01 
+        DisplayX I [] <> 
+        DisplayY I [] <> 
+        direction I [] <> //-1: show the prev content
+//1: show the next content
+        I [] 
+GetContentIndex <> 00 01 
+        I [] 
+SetContentIndex <> 01 01 
+        content_index I [] <> 
+        I [] 
+GetContent <> 00 01 //get the content(for integer)
+        I [] 
+SetContent <> 01 01 //set the content(only for integer)
+        content I [] <> 
+        I [] 
+SetDayRange <> 02 01 
+        year I [] <> 
+        month I [] <> 
+        I [] 
+ShowContent <> 00 01 
+        I [] 
+ContentChange <> 01 01 
+        direction I [] <> //-1: show the prev content
+//1: show the next content
+        I [] 
+GetCurContStr <> 00 01 
+        S [] 
+RefreshContent <> 00 01 
+        I [] 
+SetTotalNum <> 01 01 
+        num I [] <> 
+        I [] 
+<event>
+AFMSG_BPLAY_ALL_ITEM_PLAYED <> //when all the content changed, send this message
+AFMSG_UCN_CHANGE_RANGE <>
+ 
+
+
+
+<<Control>> uLoadingBar [] 00000017 <> 
+<prop>
+TimePeriod <g> I [] 
+Icon_start_x <Cg> I [] 
+Icon_start_y <Cg> I [] 
+cache_buf_x <g> I [] 
+cache_buf_y <g> I [] 
+PreviousPage <> I [:AfKey] 
+State <> I [] //0: stop; 1: running.
+IconArray <D> ARI [;] 
+<method>
+start <> 01 01 //start to show loading bar.
+        mode I [] <> 
+        I [] 
+stop <> 01 01 //stop loading bar.
+        mode I [] <> 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> uMis [] 00000046 <> 
+<prop>
+retInt <g> I [] 
+retStr <Rg> S [] 
+<method>
+RefreshDev <> 00 01 
+        I [] 
+showtime <> 04 01 
+        totaltime I [] <> 
+        rect H [Rect] <> //the time show  rect
+        frontcolor I [] <> 
+        frontsize I [] <> 
+        I [] 
+ShowFullName <> 03 01 //cut over string directly
+        string S [] <> 
+        length I [] <> 
+        fontsize I [] <> 
+        S [] 
+showpath <> 05 01 //source path like : /mnt/usb01/pic/123.jpg -> pic/123.jpg
+        sourcepath S [] <> 
+        rect H [Rect] <> 
+        frontcolor I [] <> 
+        frontsize I [] <> 
+        lenthlimit I [] <> //mnt/nand1/record : 
+//when you want to get "/record", you can set lenthlimit is 3. the first "/" in your result is third one in source string.
+//such as : when you want to get "/nand1/record", you can set lenthlimit is 2 . the first "/" in your result is second one in source string.
+        S [] 
+showsize <> 04 01 
+        totalsize I [] <> 
+        rect H [Rect] <> 
+        frontcolor I [] <> 
+        frontsize I [] <> 
+        I [] 
+showsizestrG <> 04 01 //used to show files that size > 4G
+        totalsize S [] <> 
+        rect H [] <> 
+        fontcolor I [] <> 
+        fontsize I [] <> 
+        I [] 
+showtype <> 06 01 
+        flag I [] <> //0 :video
+//1:audio
+        strtype S [] <> //file type like:avi,rm,avi,mp4.......
+        typenum I [] <> //the type number
+        rect H [Rect] <> 
+        frontcolor I [] <> 
+        frontsize I [] <> 
+        I [] 
+GenRand <> 01 01 
+        num_rand I [0~10] <> //how many rand number in the string returned.
+        S [] 
+TestFileMatch <> 02 01 //test if the file type match the types given, if matched return 1. else 0 will be returned.
+        FileName S [] <> 
+        ExtStr S [] <> //the extern names of a certain type file,  separated by ','. for example 'jpg,jpeg'
+        I [] 
+IsFileExist <> 01 01 //if file exist, it will return 1. else 0 will be returned.
+        FileName S [] <> 
+        I [] 
+DelFile <> 01 01 //delete a file.
+//return value: 0;success  -1:fail
+        FileName S [] <> 
+        I [] 
+VideoZoom <> 00 01 //return zoom level
+        I [] 
+Getsourcestr <> 01 01 
+        stringID RS [] <> //put the source stringID,you will get the sourcestring and return it
+        S [] 
+DrawFilePath <> 08 01 //used to draw unicode filename , can strcat unicode str at left or right file name .
+        layer I [] <> 
+        text S [] <> 
+        catstr S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <> 
+        cat_type I [:uMisConstantSet] <> 
+        unicodeon I [] <> //1 dealwith string as unicode
+//0 dealwith string as ASCII
+        I [] 
+DrawFileName <> 07 01 //used to draw unicode filename , can strcat unicode str at left or right file name .
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <> 
+        align I [:uAlignment] <> //alignment type
+        unicodeon I [] <> //1 dealwith string as unicode
+//0 dealwith string as ASCII
+        I [] 
+DrawFiFullName <> 07 01 //draw path unicode : /mnt/nand01/xxx/xxx.xxx -> /nand01/xxx.xxx
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <> 
+        align I [:uAlignment] <> 
+        unicodeon I [] <> //1 dealwith string as unicode
+//0 dealwith string as ASCII
+        I [] 
+DrawIconMode <> 04 01 
+        layer I [] <> 
+        icon RI [] <> 
+        rect H [Rect] <> 
+        mode I [] <> 
+        I [] 
+VideoDAOutput <> 01 01 
+        Type I [] <> //0 pcm ; 1 raw
+        I [] 
+CheckMountPath <> 02 01 //ret = 0 ChangedPath != MountPath
+//ret = 1 ChangedPath == MountPath
+        ChangedPath S [] <> 
+        MountPath S [] <> 
+        I [] 
+DrawStrFormat <> 06 01 
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <> 
+        align I [:uAlignment] <> 
+        I [] 
+GetFreeSpace <> 01 01 
+        DiskPath S [] <> 
+        I [] 
+<event>
+AFMSG_DEVST_DEV_REFRESH <>
+ 
+
+
+
+<<Control>> uMyMvDataSrc [CustomFiTreSrcT] 00000005 <> 
+<prop>
+config <H> I [] 
+jpgdft <> RT [] 
+<method>
+GetList <H> 03 01 
+        list_id S [] <> 
+        start_pos I [] <> 
+        count I [] <> 
+        I [] 
+ReleaseList <H> 01 01 
+        list_handle I [] <> 
+        I [] 
+SetAttr <H> 05 01 
+        list_id S [] <> 
+        item_pos I [] <> 
+        attr_name S [] <> 
+        attr_val S [] <> 
+        flag I [] <> //reserved
+        I [] 
+GetAttr <H> 04 01 
+        list_id S [] <> 
+        item_pos I [] <> 
+        attr_name S [] <> 
+        flag I [] <> //reserved
+        S [] 
+SearchList <> 03 01 
+        list_id S [] <> 
+        search_string S [] <> 
+        search_flag I [] <> 
+        I [] 
+SetPath <> 01 01 
+        path S [] <> 
+        I [] 
+Reload <> 00 01 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> uOSDSlideHL [] 00000012 <> 
+<prop>
+RowNum <g> I [] //row number ,how many row is this OSD -- line number
+ColNum <g> I [] //column number ,how many column at this OSD ()
+CacheXPos <g> I [] //cahce of X position
+CacheYPos <g> I [] //cahce of Y position
+TotalItems <> I [] //how many picuter or how many video in this playlist, In Album View Menu, this Number is every Row total rect num,now is 7
+IsSelected <> I [] //this slot is select
+//0: not selected
+//1: had selected
+IconWidth <g> I [] //draw icon width
+IconHeight <g> I [] //draw icon height
+SelectedIcon <g> RI [] //selected icon resource
+HighlightIcon <g> RI [] //highlight icon resource
+MoveStep <> I [] //moving step every times
+FocusIndex <> I [] //moving focus index, from (0 - RowNum x ColNum)
+TotalIndex <> I [] //this picture or video playlist index from (0-totalItems)
+MoveFlag <> I [] //1: left key when index is 0, move to big slot index. right key when index is big slot index, move to index 0
+//2: left key when index is 0, move to big col index. right key when index is big slot index, move to col index
+CurRowTotalNum <> I [] //In Album View Menu, this Number is current Row total file num,now is (1-7)
+SlotVCoordinate <g> AI [;] //Slot vertical Coordinate
+SlotHCoordinate <g> AI [;] //Slot horizontal Coordinate
+<method>
+Draw <> 01 01 
+        index I [] <> //draw index with icon , index is the rect index
+        I [] 
+Hide <> 01 01 
+        index I [] <> //hide index with icon , index is the rect index
+        I [] 
+SetTotalItem <> 01 01 
+        total_item I [] <> 
+        I [] 
+IsNeedDraw <> 01 01 
+        draw_flag I [] <> //0 : not draw  /  1 : draw
+        I [] 
+<event>
+AFMSG_SYS_DRAW <I> 
+AFMSG_SYS_HIDE <I> 
+AFMSG_INPUT_REMOTE_INPUT <I>
+ 
+
+
+
+<<Control>> uOSDTool [] 00000006 <> 
+<prop>
+<method>
+DrawMultiLine <> 07 01 
+        string S [] <> 
+        osdlayer I [] <> 
+        position H [Rect] <> 
+        fontgrp I [] <> 
+        fontcolor I [] <> //RGBA value
+        fontsize I [] <> 
+        lineheight I [] <> //line height should > fontsize
+        I [] 
+CopyRegion <> 07 01 
+        layer I [0~1] <> 
+        xSrc I [] <> 
+        ySrc I [] <> 
+        wSrc I [] <> 
+        hSrc I [] <> 
+        xDest I [] <> 
+        yDest I [] <> 
+        I [] 
+ClearRegion <> 05 01 
+        layer I [] <> 
+        xSrc I [] <> 
+        ySrc I [] <> 
+        wSrc I [] <> 
+        hSrc I [] <> 
+        I [] 
+FillRegion <> 06 01 
+        layer I [] <> 
+        color I [] <> //If use palette, color should be palette index.
+//Otherwise, color is RGBA value.
+//color=0 is transparency color.
+        x I [] <> 
+        y I [] <> 
+        w I [] <> 
+        h I [] <> 
+        I [] 
+SetIconBuffer <> 03 01 
+        buffer_icon RI [] <> 
+        icon_pos_x I [] <> 
+        icon_pos_y I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uPicSetting [] 00000002 <> 
+<prop>
+trans_cfg0 <> I [] 
+trans_cfg1 <> I [] 
+trans_cfg2 <> I [] 
+trans_cfg3 <> I [] 
+<method>
+set_trans_cfg0 <> 01 01 
+        mode I [] <> 
+        I [] 
+set_trans_cfg1 <> 01 01 
+        mode I [] <> 
+        I [] 
+set_trans_cfg2 <> 01 01 
+        mode I [] <> 
+        I [] 
+set_trans_cfg3 <> 01 01 
+        mode I [] <> 
+        I [] 
+set_watchdog <> 01 01 
+        mode I [] <> 
+        I [] 
+set_transe_grp <> 01 01 //method to set transition mode group.
+//to use certain transition mode to picplayer, please:
+//1.call set_transe_grp(mode)
+//2. set cfg0~3 of picplayer with the property trans_cfg0~3.
+        mode I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uPlatformInfo [] 00000014 <> 
+<prop>
+upgrade_name <Rg> S [] //the upgrade filename
+Platform_name <Rg> S [] //the platform info
+Platform_type <Rg> S [] //the platform type
+Filename <g> S [] 
+LastUrl <g> S [] 
+WindowNum <Rg> I [] //the play window num in collage mode
+SystenHandle <g> H [Bsp] 
+<method>
+DisableFun <> 00 01 //diable adc and touch
+        I [] 
+<event>
+AFMSG_DEVST_POST_MOUNT <I> 
+AFMSG_DEVST_PRE_UNMOUNT <I>
+ 
+
+
+
+<<Control>> uPlayListMark [] 00000002 <> 
+<prop>
+<method>
+analyze_m3u <> 03 01 
+        path S [] <> 
+        mark_str S [] <> 
+        mark_value S [] <> 
+        I [] 
+analyze_wpl <> 03 01 
+        path S [] <> 
+        mark_str S [] <> 
+        mark_value S [] <> 
+        I [] 
+analyze_pls <> 03 01 
+        path S [] <> 
+        mark_str S [] <> 
+        mark_value S [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uplaytimeset [ButtonGroupItem] 00000014 <> 
+<prop>
+XYWH <C> GR [] //Position and Size of Button Item
+state <> I [:ButtonState] //The State of Button
+label <> S [] //Text
+time_flag <> I [] //0 : hour    1:minute   2 seconds.
+focus_icon <> RI [] 
+unfocus_icon <> RI [] 
+front_size <g> I [] 
+set_cur_time <> I [] 
+foucs_color <> I [] 
+unfoucs_color <> I [] 
+offset <g> AI [;] //the fornt offset 
+//0-----------x;
+//1-----------y; 
+<method>
+Draw <> 01 01 //Draw
+        slot_index I [] <> 
+        I [] 
+Hide <> 01 01 //Hide
+        slot_index I [] <> 
+        I [] 
+chang_time_show <> 01 01 
+        flag I [] <> //flag = -1: down, reduce the number.
+//flag = 1:  up ,     add the number.
+        I [] 
+inital <> 02 01 //intal the begin time 
+        cur_time I [] <> //set the video current play time
+        total_time I [] <> //the video total time
+        I [] 
+ShowTimeNumber <> 01 01 //show movie time
+        Number I [0~99] <> 
+        I [] //return 0: success
+//          -1:invalid input number
+<event>
+
+
+
+
+<<Control>> uProfile [uParaMeter] 00000018 <> 
+<prop>
+config_name <g> S [] 
+sys_para <g> H [uPara] 
+config_filename <> S [] 
+group_name <> S [] 
+ret_str <> S [] 
+factory_items1 <> AS [;] 
+items1_value <> AI [;] 
+factory_items2 <> AS [;] 
+items2_value <> AI [;] 
+factory_items3 <> AS [;] 
+items3_string <> AS [;] 
+srv_items4 <> AS [;] 
+srv_items4_val <> AI [;] 
+srv_items5 <> AS [;] 
+srv_items5_str <> AS [;] 
+<method>
+UserDefaultSet <> 00 01 
+        I [] 
+SetProfileInt <> 02 01 
+        id I [:uIntParaEnum] <> 
+        int_value I [] <> 
+        I [] 
+GetProfileInt <> 01 01 
+        id I [:uIntParaEnum] <> 
+        I [] 
+SetProfileStr <> 02 01 
+        id I [:uStrParaEnum] <> 
+        str_value S [] <> 
+        I [] 
+GetProfileStr <> 01 01 
+        id I [:uStrParaEnum] <> 
+        S [] 
+SetDefaultPara <> 00 01 
+        I [] 
+LoadAllPara <> 00 01 
+        I [] 
+SetDefault <> 00 01 
+        I [] 
+GetProfileStr2 <> 01 01 
+        item_name S [] <> 
+        S [] 
+GetProfileInt2 <> 01 01 
+        item_name S [] <> 
+        I [] 
+SetProfileStr2 <> 02 01 
+        item_name S [] <> 
+        str_value S [] <> 
+        I [] 
+SetProfileInt2 <> 02 01 
+        item_name S [] <> 
+        int_value I [] <> 
+        I [] 
+LoadFile <> 02 01 
+        file_name S [] <> 
+        create_flag I [] <> //1: create this file if it does not exist
+        I [] 
+SaveParaToDev <> 01 01 //write all the saved parameter into device
+        reserved I [] <> 
+        I [] 
+SetProfileStrEx <> 02 01 //saving the parameter into mem
+        item_name S [] <> 
+        str_value S [] <> 
+        I [] 
+SetProfileIntEx <> 02 01 
+        item_name S [] <> 
+        int_value I [] <> 
+        I [] 
+mk_dir <> 01 01 
+        path S [] <> 
+        I [] 
+SetFacDefault <> 01 01 
+        item_id I [] <> //item_id  1:factory_items1;2:factory_items2;3:ifactory_items3;4:srv_items4;5:srv_items5
+        I [] 
+LoadItemDefault <> 01 01 
+        item_name S [] <> 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> uRadio_FM [] 00000040 <> 
+<prop>
+Slave_Addr <> I [] 
+I2CProp <> H [uI2C_WR_Process] 
+freq_str <R> S [] 
+freq_percent <R> I [] 
+cur_chanel_id <> I [] 
+disp_str <RD> AS [;] 
+<method>
+TX_Tune_Power <> 01 01 
+        tune_power I [] <> 
+        I [] 
+TX_Tune_Freq <> 01 01 
+        tune_freq I [] <> 
+        I [] 
+GetDispStr <> 01 01 
+        chanel_index I [] <> 
+        I [] 
+GetStrByIndex <> 01 01 
+        index I [] <> 
+        S [] 
+Power_Up <> 01 01 
+        mod I [] <> 
+        I [] 
+Power_Down <> 00 01 
+        I [] 
+Tune_Freq <> 01 01 
+        Channel_Freq I [] <> 
+        I [] 
+Frequency_add <> 00 01 
+        I [] 
+Frequency_dec <> 00 01 
+        I [] 
+Set_Property <> 04 01 
+        IndexHigh I [] <> 
+        IndexLow I [] <> 
+        ValueHigh I [] <> 
+        ValueLow I [] <> 
+        I [] 
+Seek_All <> 00 01 
+        I [] 
+SaveChannel <> 01 01 
+        ID I [] <> 
+        I [] 
+LoadChannel <> 01 01 
+        ID I [] <> 
+        I [] 
+NextChannel <> 01 01 
+        Cur_ID I [] <> 
+        I [] 
+PreChannel <> 01 01 
+        Cur_ID I [] <> 
+        I [] 
+GetTotalNumber <> 00 01 
+        I [] 
+<event>
+AFMSG_URAD_AUTO_SEARCH_FINISHED <> 
+AFMSG_URAD_CHANEL_FOUND <>
+
+
+
+
+<<Control>> uResPathSet [] 00000001 <> 
+<prop>
+path <> RT [] 
+<method>
+<event>
+
+
+
+
+<<Control>> uScrollBar [] 00000025 <> 
+<prop>
+BackRect <g> H [Rect] 
+BackIcon <g> RI [] 
+option <C> I [] //0: if focus item is the first item,  show normal up arrow, same sa the last.
+//1: if foucs item is the first item,  don't show the up arrow. same as the last.
+LoopFlag <> I [] //0:not loop;
+//1:loop
+MoveMode <> I [] //0: move when focus reach the boarder
+//1: move when change the focus
+ScrollBarRect <Cg> H [Rect] //the scrollbar's moving area
+ScrollBarIcon <Cg> RI [] //the icon
+ScrollBarHeight <Cg> I [] //the scrollbar's height or width(if movingdir is 1)
+ShowItems <Cg> I [] //the num of item in screen one time
+ShowColumns <g> I [] //number of columns
+TotalItems <Cg> I [] //the total items
+MovingDir <Cg> I [] //0: the items's moving direction is up-down
+//1: the items's moving direction is left-right
+ArrowRect <g> AH [;Rect] //sore in this array:
+//up;
+//down;
+//left;
+//right.
+ArrowIcon <g> ARI [;] //when option  is 0:
+//store in this array:
+//up normal icon;up focus icon;
+//down normal icon;down focus icon;
+//left normal icon;left focus icon;
+//right normal icon;right focus icon.
+//else if is 1:
+//store int this order:
+//up icon;down icon;
+//left icon;right icon;
+<method>
+Draw <> 00 01 
+        I [] 
+Hide <> 00 01 
+        I [] 
+ChangeLocation <> 01 01 //change the scrollbar's location
+        direction I [] <> //-1: go up or left;
+//1: go down or right.
+        I [] 
+SetTotalItem <> 01 01 //when the totalitem changed,set the totalitem
+        totalitem I [] <> 
+        I [] 
+AddTotalItem <> 00 01 //add 1
+        I [] 
+SubTotalItem <> 00 01 //sub 1
+        I [] 
+SetLocation <> 03 01 //set the scrollbar's location
+        focus_slot I [] <> 
+        focus_column I [] <> 
+        focus_item I [] <> 
+        I [] 
+SetFoucsFile <> 01 01 
+        fileindex I [] <> //add for thumbnail
+        I [] 
+RefreshScrolBar <> 03 01 
+        focus_slot I [] <> 
+        focus_column I [] <> 
+        focus_item I [] <> 
+        I [] 
+RefreshThumbBar <> 01 01 
+        fileindex I [] <> 
+        I [] 
+<event>
+AFMSG_INPUT_REMOTE_INPUT <I> 
+AFMSG_SYS_DRAW <I> 
+AFMSG_SYS_HIDE <I>
+
+
+
+
+<<Control>> uSearchSubtitle [SubtitleFinderT] 00000001 <> 
+<prop>
+<method>
+GetSubtitleURL <H> 02 01 //return the url of subtitle file, multi-urls are supported, for example:
+//"url1,url2,url3"
+        play_item_url S [] <> 
+        info I [] <> 
+        S [] 
+<event>
+
+
+
+
+<<Control>> uShowProcess [] 00000023 <> 
+<prop>
+option <> I [] 
+BackRect <> H [Rect] 
+BackIcon <g> RI [] 
+BackColor <> I [] 
+ShowArea <C> H [Rect] 
+ShowAreaIcon <g> RI [] 
+ShowAreaColor <> I [] 
+ShowDirection <C> I [] //1: left--right
+//2: down--up
+ProcessColor <> I [] //process color
+totalstep <g> I [] 
+playstep <> I [] 
+offset <g> I [] //if  have the hightlight ball ,the offset is the length of the hightlight ball
+ProcessBkIcon <g> ARI [;] //the unfocus process icon
+//normaly, there need only one icon, 
+//but when the showareaicon can not divide exactly by totalstep,
+//should provide the last icon 
+ProcessIcon <g> ARI [;] //the focus process icon
+//normaly, there need only one icon, 
+//but when the showareaicon can not divide exactly by totalstep,
+//should provide the last icon 
+ExtraRect <> AH [;Rect] //extra rect, as after upgrade, draw icon in rect.
+//so load the icon in mem before upgrade
+ExtraIcon <g> ARI [;] //extra icon,as after upgrade, draw icon
+//so load the icon in mem before upgrade
+<method>
+Draw <> 00 01 //fill backicon or backcolor in backrect
+//or
+//fill areaicon or areacolor in showarea
+        I [] 
+Hide <> 00 01 //hide backrect or showarea
+        I [] 
+SetProcess <> 01 01 //set the process
+        process I [] <> //1~100
+        I [] 
+SetStep <> 01 01 //if totalstep > 0, setstep for initial
+        step I [] <> 
+        I [] 
+ChangeStep <> 01 01 //change the step(if totalstep > 0)
+        direction I [] <> //-1: sub step
+//1: add step
+        I [] 
+GetStep <> 00 01 
+        I [] 
+SetTotalTime <> 01 01 //set the total time, designed for audio or video
+        time I [] <> 
+        I [] 
+SetPlayedTime <> 01 01 //set the played time, disigned for audio or video
+        time I [] <> 
+        I [] 
+ReadToMem <> 00 01 
+        I [] 
+ReadFromMem <> 01 01 
+        index I [] <> //draw the extraicon in extrarect
+        I [] 
+startinital <> 01 01 
+        percentage I [] <> // the inital percentage of the playing video :0----100
+        I [] 
+<event>
+
+
+
+
+<<Control>> uShowSubtitle [ShowSubtitle] 00000024 <> 
+<prop>
+drawtype <> I [] //0: left
+//1: middle
+//2: right
+font_color <> I [] 
+font_id <> I [] 
+font_size_type <g> I [] 
+bk_icon <g> RI [] 
+useupper <> I [] 
+auto <> I [] //auto detect codepage
+font_edge_color <> I [] 
+inter_area <> H [Rect] 
+zoom_multiple <g> I [] 
+vpos_offset <g> I [] 
+vinter_offset <g> I [] ////if the infobar show,the intersubutitle will show up it. it 's offeset for it
+font_size <g> AI [;] 
+location <C> AH [;Rect] 
+<method>
+ShowSubtitle <> 03 01 
+        subtitle_type I [] <> 
+        subtitle_info I [] <> 
+        info_type I [] <> 
+        I [] 
+HideSubtitle <> 01 01 
+        subtitle_type I [] <> 
+        I [] 
+SetLanguage <> 02 01 //the subtitle will show in this language
+        codepage I [:uCodePage] <> 
+        language_index I [] <> 
+        I [] 
+<event>
+AFMSG_GPLAY_UPDATE_LYRIC <I> 
+AFMSG_BPLAY_SHOW_SUBTITLE <I>
+
+
+
+
+<<Control>> uBookMark [] 00000003 <> 
+<prop>
+sys_para <> H [uParaMeter] 
+<method>
+CheckFileExist <> 01 01 
+        full_name S [] <> 
+        I [] 
+GetMarkLineID <> 01 01 
+        full_name S [] <> 
+        I [:uIntParaEnum] 
+GetMarkValue <> 01 01 
+        id I [] <> 
+        I [] 
+SetFileName <> 01 01 
+        full_name S [] <> 
+        I [:uStrParaEnum] 
+SetMarkValue <> 02 01 
+        mark_value I [] <> 
+        id I [] <> 
+        I [] 
+ClearFileName <> 01 01 
+        full_name S [] <> 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> AShellUsbSerial [] 00000001 <> //need include lib:
+//usb_serial.lib, tty.lib
+<prop>
+CmdHandles <> AH [;AframeShellCmd] 
+<method>
+<event>
+AFMSG_SYS_REGISTER <I> 
+AFMSG_SYS_DRIVER_REGISTER <I>
+
+
+
+
+<<Control>> AttrsMultiSrc [AttributeRWSrc] 00000003 <> //Only support readonly attributes.
+//For each attribute, all AttributeSource in AttrsSrc will be tried until none-NULL attribute value is returned.
+<prop>
+AttrsSrc <> AH [1~;AttributeSource] 
+<method>
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+SetAttribute <> 05 01 
+        url S [] <> 
+        attr_name S [] <> 
+        attr_val S [] <> 
+        continue_flag I [] <> //flag: 1, there are other urls will be set attribute 
+//0, no more urls will be set attribute
+        info I [] <> //reserved
+        I [] 
+<event>
+
+
+
+
+<<Control>> AVIPlayer [BasicPlayer,AttributeSource] 00000021 <s> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+DisplayMode <> I [0~5] //0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+InterSubtitle <> H [ShowSubtitle] 
+VidDecodeFilter <> I [] //used for configure which video format should be filtered out,if  a  certain media type is filtered, Unsupport  message will be sent out
+//bit0 :   FILTER_DIVX
+//bit1:    FILTER_MPEG1
+//bit2:   FILTER_MPEG2
+//bit3:   FILTER_MPEG4
+//bit4:   FILTER_MJPEG
+//bit5:     FILTER_H263             
+//bit6:     FILTER_H264   
+PreviewMode <> I [] //0: full screen
+//1: keep ratio
+ntfsupportfb <> I [] 
+<method>
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+AdjDisplayMode <> 01 01 //ajust video display mode
+        mode I [] <> //video adjust mode.  
+//0xff: DISPLAY_ADJUST_TOGGLE    ajust from 0 to 4 in turn
+//0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+//0xfe: DISPLAY_ADJUST_DISABLE
+        I [] 
+<event>
+AFMSG_BPLAY_SHOW_SUBTITLE <> 
+AFMSG_BPLAY_ZOOM_LEVEL <>
+ 
+
+
+
+<<Control>> BatchPlayer [] 00000044 <> 
+<prop>
+PlayList <S> H [PlayList] //playlist control handle
+FastBackwardMax <> I [] //maximum fast backward playing level
+FastForwardMax <> I [] //maximum fast forward playing level
+MaxPrefetchNum <> I [] 
+PlayWindow <Sg> H [Rect] //the control define the play area  
+PlayTime <R> I [] //play time
+TotalTime <R> I [] //the total time of current played item, it is adjusted and varies during playing if the stream is vbr 
+DefAudioProp <> I [] //bit[0~7]: default language ID
+//bit[15~8]: reserved
+CurAudioStream <R> I [] //Current audio stream ID
+TotAudioStream <R> I [] //The total number of audio streams
+AudStreamTable <S> H [StringTableWR] 
+DefSubtitleProp <> I [] //bit[0~7] default language ID
+CurSubtitleID <R> I [] 
+TotSubtitleNum <R> I [] 
+SubtitleTable <S> H [StringTableWR] //column 0: subtitle language
+//column 1: subtitle format, as ASS,SRT...
+//column 2: subtitle type, internal(0) or external(1)
+Config <> I [] //bit [0~1] "play end" policy, the policy when player has played to the end of one file
+//    00 play next item of playlist
+//    01 back to first frame 
+//    10  stop and keep last frame
+//    11  stop and clear screen
+//  01,10,11 will AFMSG_BPLAY_STATE_CHANGE message
+//bit [2~3] "fast backward to start" policy
+//    00 play the same item 
+//    01 pause at start
+//    10 goto previous item
+//bit [4~7] start playing policy
+//    00 normal playing
+//    01 stop at begining before start playing 
+//           send AFMSG_BPLAY_ITEM_CHANGING (include new item's PlayingPos, PlayingURL),  
+//           prop of PlayingPos, PlayingURL are old's
+//    10  pause at begining 
+//bit[8] play thumbnail if it has PlayWindow
+//bit[12~15] fail policy
+//    0 play next item  
+//    1 stop after fail (or unsupport)
+//bit[16~17] audio stream control
+//    0 normal
+//    1 disable audio
+//    2, 3: reserved
+//bit[18] 1: use audio stream with DefAudioProp as default audio stream
+//bit[19] only enable external subtitle
+//bit[20] 1: enable subtitle auto load
+//bit[21] 0: use first subtitle as default subtitle; 1: use subtitle with DefSubtitleProp as default subtitle
+//bit[22~23] :  movie icon mode
+//0: normal mode
+//1: movie I only 
+//2: movie run
+State <R> I [:BatchPlay_State] //current state of batchplayer
+BusyFlag <R> I [] //1: batchplayer is busy (changing play item,etc), can not receive command.
+//Do not call method when BusyFlag is not 0.
+PlayingPos <R> I [] //the current playing pos in PlayList, which is updated when message of AFMSG_BPLAY_ITEM_CHANGED is sent
+//-1 if not avaiable or player is state of STOP
+PlayingURL <R> S [] //the current playing url in PlayList, which is updated when message of AFMSG_BPLAY_ITEM_CHANGED is sent
+//"" if not avaiable or player is state of STOP
+ExSubtitlFinder <S> H [SubtitleFinderT] 
+ExternSubtitles <S> AH [;BasicSubtitle] 
+players <SC> AH [1~;BasicPlayer] //players handle
+<method>
+SetPlayList <> 01 01 //Set playlist 
+        playlist_handle H [PlayList] <> 
+        I [] 
+ReqPlay <B> 01 01 //Play the current item in playlist
+//mode: 0 normal; 1  pause at first frame, only valid when State is "STOP".
+//"Blocking call is supported" (when POLICY_STOP_AT_BEGIN is not set),  the result is get from InOutParam.GetBlkFunRetStr("s_ret"): SUCCESS, NOT_SUPPORT,FAIL,EMPTY
+        mode I [] <N> //mode: 0 normal; 1  pause at first frame, only valid when State is "STOP",
+        I [] 
+ReqStop <B> 01 01 //Stop playing 
+        mode I [] <> //flag:
+//0: clear/black screen
+//1: back to first frame
+        I [] 
+ReqPause <> 00 01 //Pause playing
+        I [] 
+ReqPlayNextItem <> 01 01 //Play the next item in playlist
+//mode: 0 normal; 1  pause at first frame
+        mode I [] <N> 
+        I [] 
+ReqPlayPrevItem <> 01 01 //Play the previous item in playlist
+//mode: 0 normal; 1  pause at first frame
+        mode I [] <N> 
+        I [] 
+ReqFastForward <> 01 01 //Fastforward or change fastforward/fastbackward level
+//level: 0, increase fastforward level; none 0, set fastforward level (max value is defined by prop of FastForwardMax)
+        level I [] <N> 
+        I [] 
+ReqFastBackward <> 01 01 //Fastbackward or change fastforward/fastbackward level
+//level: 0, increase fastbackward level; none 0, set fastbackward level (max value is defined by prop of FastBackwardMax)
+        level I [] <N> 
+        I [] 
+ReqTimeSearch <> 02 01 //Time search, input: time, flag (0 normal play; 1 pause )
+        time I [] <> 
+        pause_flag I [] <> //if pause_flag is 1, pause after time search
+        I [] 
+ReqSetAudStream <> 02 01 //Change audio stream
+//flag:
+//0, set audio stream by stream_id
+//1, switch current audio stream_id between {0,1,2,..., stream_num-1}
+        stream_id I [] <> 
+        flag I [] <N> 
+        I [] 
+ReqSetVidStream <> 02 01 //Change video stream 
+        stream_id I [] <> 
+        flag I [] <N> 
+        I [] 
+ReqSetSubtitle <> 03 01 //Set subtitle
+//flag: 
+//0, enable subtitle and set subtitle by id
+//1, enable subtitle and switch current subtitle id between {0, 1,2, ..., max_subtitle_num-1}
+//2, enable subtitle and swithc current subtitle id between {-1,0,1,2, ..., max_subtitle_num-1}
+//3, enable subtitle and keep old subtitle id
+//4, enable subtitle and set subtitle by external_url
+//-1, disable subtitle
+        id I [] <> 
+        external_url S [] <N> 
+        flag I [] <N> 
+        I [] 
+ReqPlayItem <> 02 01 //play one item, input: item url
+//mode: 0 normal; 1  pause at first frame
+        url S [] <> 
+        mode I [] <N> 
+        I [] 
+Mute <> 00 01 //Mute
+        I [] 
+UnMute <> 00 01 //Unmute
+        I [] 
+SetAspectRatio <> 00 01 //Set aspect ratio
+        I [] 
+Zoom <> 01 01 //Zoom, input: zoom level
+        level I [] <> 
+        I [] 
+Pan <> 02 01 //input: direction
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetPlayWindow <> 01 01 
+        play_window H [Rect] <> 
+        I [] 
+IsSupport <> 01 01 //check if some file can be played by this batchplayer; return 1 if this file is supported, otherwise return 0.
+        url S [] <> 
+        I [] 
+AdjDisplayMode <> 01 01 //adjust video display mode
+        mode I [] <> //video adjust mode.  
+//0xff: DISPLAY_ADJUST_TOGGLE    ajust from 0 to 4 in turn
+//0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+//0xfe: DISPLAY_ADJUST_DISABLE
+        I [] 
+ResetPlayingPos <> 01 01 
+        playingpos I [] <> 
+        I [] 
+SetSubDlyTime <> 01 01 //set subtitle delay time for adjust subtitle
+        delaytime I [] <> //the delay time(s)*90000, can be +,-
+//will show subtitle at current video time + delaytime
+        I [] 
+UpdateSubtitle <> 02 01 //update subtitle when change subtitle font size or color...etc
+        data0 I [] <> 
+        data1 I [] <> 
+        I [] 
+<event>
+AFMSG_FITRE_REFRESH <I> //This message is sent by PlayList when the items in PlayList have changed.
+AFMSG_BPLAY_STATE_CHANGE <> 
+AFMSG_BPLAY_PLAYLIST_EMPTY <> 
+AFMSG_BPLAY_PLAY_TIME <> 
+AFMSG_BPLAY_PLAY_FAIL <> 
+AFMSG_BPLAY_ITEM_NOT_SUPPORT <> 
+AFMSG_BPLAY_ITEM_CHANGING <> 
+AFMSG_BPLAY_ITEM_CHANGED <> 
+AFMSG_BPLAY_ALL_ITEM_PLAYED <> 
+AFMSG_BPLAY_PIC_DISPLAY <> 
+AFMSG_BPLAY_AUDIO_STREAM <> 
+AFMSG_BPLAY_SUBTITLE_STREAM <> 
+AFMSG_BPLAY_EVENT <> 
+AFMSG_BPLAY_CMD_FAIL <> 
+AFMSG_BPLAY_UNSUPPORTED_AUDIO <>
+
+
+
+
+<<Control>> BlockDevMonitor [] 00000020 <S> 
+<prop>
+MntPointConfig <S> I [0~1] //0, mount points have format: /mnt/TypeStr/dev_name; 1, mount points have format: /mnt/dev_name
+AutoMountConfig <S> I [] //bit[3~0]
+//0, auto detection of partitions and auto mount; 
+//bit[7~4]
+//0, "unmount all"  and send message of AFMSG_DEVST_PC_CONNECT when "pc connect"
+//1, only send message of AFMSG_DEVST_PC_CONNECT when "pc connect"
+//bit[8]: 1, do not mount resource device automatically; 0, mount resource device automatically. 
+DeviceInfo <S> H [StringTableWR] //if this prop is not NULL, the information of all mounted devices will be put into this table:
+//The name of each row is mount_point
+//the information put into cols are same as parameters of POST_MOUNT.
+//the nickname of each col is:
+//"dev_name":  /dev/disk/nanda0, etc
+//"dev_type_str": UDISK, NAND, CF, SD, SD2, MMC, XD, MS, UPNP, PIC_GALLERY, etc
+//"mount_point"
+//"label"
+//"fs_type": FS_UNKNOWN, FAT_FS, NETFS_FS, etc
+//"fs_option": READ_ONLY, READ_WRITE
+DiskFreeSpace <R> I [] //the return information of GetDiskInfo.
+DiskSectorNum <R> I [] //the return information of GetDiskInfo.
+DiskSectorSize <R> I [] //the return information of GetDiskInfo.
+MountRules <S> AS [0~;] //The mount rule, format is "device_name:", sample: "/dev/disk/nanda1", do not mount '/dev/disk/nanda1' automatically
+<method>
+Start <> 00 01 //Start "BolckDeviceMon", 
+//To avoid missing some POST_MOUNT message, call this method only after "device select UI" has been created and can process messages.
+        I [] 
+Stop <> 01 01 
+        flag I [] <N> //reserved
+        I [] 
+GetMountPoint <> 01 01 //return mount point of file if this file has been mounted
+//otherwise return ""
+        file_fullname S [] <> 
+        S [] //return mount point of file if this file has been mounted
+//otherwise return ""
+UnMountAll <B> 01 01 
+        flag I [] <> 
+        I [] 
+UnMount <B> 02 01 //This method can be called if user want to format some device. All partition device will be unmounted if it has partition.
+//How to format device:
+//Blocking call BlockDevMonitor->Unmount(dev_name);
+//BlockDevMonitor->Stop()
+//BlockDevFormat->Format(dev_name);
+//BlockDevMonitor->Start();
+        dev_name S [] <> 
+        flag I [] <> //reserved
+        I [] 
+GetDiskInfo <> 02 01 //only valid for FAT filesytem.
+//The return disk info is put into props of "DiskFreeSpace", "DiskSectorNum", "DiskSectorSize"
+//parameters:
+//disk_name:  path name of some directory in disk; or disk type str , such like "NAND", etc
+//flag: reserved
+        disk_name S [] <> 
+        flag I [] <N> //reserved
+        I [] 
+SetLabel <> 02 01 //only valid for FAT filesytem
+//disk_name:  path name of some directory in disk; or disk type str , such like "NAND", etc
+        disk_name S [] <> 
+        new_label S [] <> 
+        I [] 
+<event>
+AFMSG_DEVST_POST_MOUNT <> 
+AFMSG_DEVST_PRE_UNMOUNT <> 
+AFMSG_DEVST_POST_UNMOUNT <> 
+AFMSG_DEVST_MOUNT_FAIL <> 
+AFMSG_DEVST_PC_CONNECT <> 
+AFMSG_DEVST_PC_DISCONNECT <> 
+AFMSG_DEVST_DEVICE_NOT_RECONGNISED <> 
+AFMSG_DEVST_MAX_HUB_TIERS <>
+ 
+
+
+
+<<Control>> BttvDataSrc [CustomFiTreSrcT] 00000001 <> 
+<prop>
+config <H> I [] 
+id <C> I [] //data source id; must be unique. use id and parent_id to identify NET_DATASRC_READY message.
+parent_id <> I [] //use id and parent_id to identify NET_DATASRC_READY message.
+<method>
+GetList <H> 03 01 
+        list_id S [] <> 
+        start_pos I [] <> 
+        count I [] <> 
+        I [] 
+ReleaseList <H> 01 01 
+        list_handle I [] <> 
+        I [] 
+SetAttr <H> 05 01 
+        list_id S [] <> 
+        item_pos I [] <> 
+        attr_name S [] <> 
+        attr_val S [] <> 
+        flag I [] <> //reserved
+        I [] 
+GetAttr <H> 04 01 
+        list_id S [] <> 
+        item_pos I [] <> 
+        attr_name S [] <> 
+        flag I [] <> //reserved
+        S [] 
+SearchList <> 03 01 
+        list_id S [] <> 
+        search_string S [] <> 
+        search_flag I [] <> 
+        I [] 
+<event>
+AFMSG_NET_DATASRC_READY <I> 
+AFMSG_NET_PIC_DOWNLOAD_READY <I>
+ 
+
+
+
+<<Control>> ButtonGroup [ButtonGroup] 00000020 <> 
+<prop>
+XYWH <Cg> GR [] //position and size of button
+offset_xy <g> GR [] 
+RowNum <S> I [] //row mode is supported if RowNum is not 0.
+option <> I [] //option[ bit 0]  0: a default focus will be set if all button's initial state are not "Focus"; 1: do not set default focus if all button's initial state are not "Focus"
+//option[ bit 1]  1: item state of  GRAY_UNFOCUS, GRAY_FOCUS, GRAY_DISABLE are used instead of UNFOCUS, FOCUS, DISABLE when this ButtonGroup is unfocused
+//option[ bit 2] 1: goto first button when it has reached to the last button; goto last button when it has reached to the first button
+//option[ bit 3] 1: BUTTON_STATE_PRESS  is used when focus item is pressed
+//option[ bit 4] init draw option,  0: draw all items in order; 1: draw focus item at last;
+//           
+buttons_num <R> I [] //Readonly, the number of buttons
+focus_slot <R> I [] //Readonly, slot index of focus button 
+focus_button <R> S [] //Readonly, name of focus button
+FirstSlotBtnIdx <R> I [] //Readonly, the button index in first slot
+FocusMoveHandle <S> H [BtnFocusMoveT] 
+AutoSlotsNum <g> I [] //If AutoSlotsNum is not 0,  n slots  (same size of Slots[0]) will be created and put in the area defined by ButtonGroup.XYWH. In this case,  Slots[1~...] will not be used.
+//slots number n:
+//AutoSlotsNum[bit0:15]*AutoSlotsNum[bit16:31] if AutoSlotsNum[bit16:31] is not 0 
+//AutoSlotsNum[bit0:15] if AutoSlotsNum[bit16:31] is 0
+Slots <SCg> AH [0~;Rect] //The total number of slot
+//Slot is used to define the position of button that are displayed in  screen. It is possible that actual button number is larger or smaller than slots_num.
+//If slots_num is 0, the buttons in array of "init_button_num" are used to initialize the slot number and position.
+Buttons <SCEg> AH [0~;ButtonGroupItem] //The initial buttons
+<method>
+Draw <> 01 01 //Draw the button 
+//flag: 0, redraw items in order
+//         1, redraw unfocus items firstly, and focus item at last
+        flag I [] <N> 
+        I [] 
+Hide <> 00 01 //Hide
+        I [] 
+AddButton <> 02 01 //Add new button into ButtonGroup, input: name, button handle
+        button_name S [] <> 
+        button_handle H [ButtonGroupItem] <> 
+        I [] 
+InsertButton <> 04 01 //Insert button, input: reference button name, the name of button inserted, button handle, flag (1, insert before reference; 0, insert after reference)
+        ref_button_name S [] <> 
+        button_name S [] <> 
+        button_handle H [ButtonGroupItem] <> // 
+        before_flag I [0~1] <> //1: insert before ref_button;
+//0: insert after ref_button.
+        I [] 
+RemoveButton <> 02 01 //Remove button, input: name, flag (if flag is 0, switch focus to the first enabled button in slots if the removed button is focus )
+        button_name S [] <> 
+        flag I [0~1] <> //if flag is 0, switch focus to the first enabled button in slots if the removed button is focus
+        I [] 
+FocusButton <> 01 01 //Move focus to one button, and put this button in one slot, input: name, slot index
+        button_name S [] <> //if the focused button pos is smaller than butons in slot, it move this button into first slot and focus it;
+//if the focused button pos is larger thant buttons in slot, it mvoe this button into the last slot and focus it.
+        I [] 
+GotoNextButton <> 01 01 //Goto next button, input: mode (if mode is 1, goto first button when it has reached to the last button)
+        mode I [] <> //if mode is 1, goto first button when it has reached to the last button
+        I [] 
+GotoPreButton <> 01 01 //Goto previous button, input: mode (if mode is 1, goto last button when it has reached to the first button)
+        mode I [] <> //if mode is 1, goto last button when it has reached to the first button
+        I [] 
+GotoNextPage <> 01 01 //Goto next page, input: mode (if mode is 1, goto first button when it has reached to the last button
+        mode I [] <> //if mode is 1, goto first button when it has reached to the last button
+        I [] 
+GotoPrePage <> 01 01 //Goto previous page, input: mode (if mode is 1, goto last button when it has reached to the first button)
+        mode I [] <> //if mode is 1, goto last button when it has reached to the first button
+        I [] 
+GotoNextRow <> 01 01 
+        mode I [] <> 
+        I [] 
+GotoPreRow <> 01 01 
+        mode I [] <> 
+        I [] 
+GetButtonName <> 01 01 
+        button_idx I [] <> 
+        S [] 
+GetButtonIndex <> 01 01 
+        button_name S [] <> 
+        I [] //return -1 if there is not this button
+SetButtonLabel <> 02 01 
+        button_name S [] <> 
+        new_label S [] <> 
+        I [] 
+SetButtonState <> 02 01 
+        button_name S [] <> 
+        new_state I [:ButtonState] <> 
+        I [] 
+GetButtonLabel <> 01 01 
+        button_name S [] <> 
+        S [] 
+GetButtonState <> 01 01 
+        button_name S [] <> 
+        I [:ButtonState] 
+GetSlotNum <> 00 01 
+        I [] //the number of slots
+SetSlotPos <> 02 01 
+        idx I [] <> 
+        rect H [Rect] <> 
+        I [] 
+<event>
+AFMSG_INPUT_REMOTE_INPUT <I> 
+AFMSG_GUI_ITEM_FOCUS_CHANGE <> 
+AFMSG_GUI_ITEM_FOCUS_SELECTED <> 
+AFMSG_SYS_DRAW <I> 
+AFMSG_SYS_HIDE <I>
+ 
+
+
+
+<<Control>> Calculator [] 00000004 
+<prop>
+RetVal <> I [] 
+<method>
+Add <> 02 01 //RetVal = a + b
+        a I [] 
+        b I [] 
+        I [] 
+Sub <> 02 01 //RetVal = a - b
+        a I [] 
+        b I [] 
+        I [] 
+GetBits <> 03 01 //RetVal = (value>>position) & ((1<<bits) -1)
+        value I [] 
+        position I [] 
+        bits I [] 
+        I [] 
+SetBits <> 03 01 
+        position I [] 
+        bits I [] 
+        value I [] //RetVal = value & (((1<<bits)-1)<<position) | (value<<position)
+        I [] 
+Mul <> 02 01 //RetVal = a * b
+        a I [] 
+        b I [] 
+        I [] 
+Div <> 02 01 //RetVal = a / b
+        a I [] 
+        b I [] 
+        I [] 
+Mod <> 02 01 //RetVal = a % b
+        a I [] 
+        b I [] 
+        I [] 
+ShiftLeft <> 02 01 //RetVal = value << bits
+        value I [] 
+        bits I [] 
+        I [] 
+ShiftRight <> 02 01 //RetVal = value >> bits
+        value I [] 
+        bits I [] 
+        I [] 
+Random <> 01 01 //rand()%range
+        range I [] 
+        I [] 
+<event>
+
+
+
+
+<<Control>> DrawTools [] 00000019 <> 
+<prop>
+drawed_area <R> GR [] //returne the drawing area after some draw method is called
+<method>
+DrawLine <> 06 01 //Draw a line
+        layer I [] <> 
+        x0 I [] <> 
+        y0 I [] <> 
+        x1 I [] <> 
+        y1 I [] <> 
+        color I [] <> 
+        I [] 
+DrawIcon <> 03 01 //af_draw_icon( x,  y, icon_resource)
+        layer I [] <> 
+        rect H [Rect] <> 
+        icon RI [] <> 
+        I [] 
+DrawIconEx <> 08 01 //put "icon" to "rect" with "mode" and "effect"
+        layer I [] <> //put icon to osd layer -- 0 or 1
+        x I [] <> //dest x
+        y I [] <> //dest y
+        icon RI [] <> //icon resource id
+        mode I [] <> //0 -- not write 100% transparent pixels in icon to preserve background
+//1 -- write all pixels
+        effect I [] <N> //effct:
+//0 -- no effect
+//1 -- scale to "effect_rect"
+//2 -- clip to "effect_rect"
+//2 -- x_rotate, 0-360 degree in "effect_param"
+//3 -- y_rotate, 0-360 degree in "effect_param"
+        effect_rect I [] <N> //dest rect for "effect"
+        effect_param I [] <N> //param for "effect"
+        I [] 
+DrawString <> 05 01 
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawStringM <> 05 01 
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawStringID <> 06 01 
+        layer I [] <> 
+        string_id RS [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        font_group_id I [] <> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawStringIDM <> 06 01 
+        layer I [] <> 
+        string_id RS [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        font_group_id I [] <> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawStringR <> 06 01 
+        layer I [] <> 
+        text S [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        font_group_id I [] <N> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawStringIDR <> 06 01 
+        layer I [] <> 
+        string_id RS [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        font_group_id I [] <> 
+        size I [] <N> //only useful when current font is a true type font 
+        I [] 
+DrawRect <> 04 01 
+        layer I [] <> 
+        rect H [Rect] <> 
+        color I [] <> 
+        mode I [] <> 
+        I [] 
+CopyVideo <> 04 01 //Copy image in window "src_wnd" on current video layer to OSD position ('dst_x", "dst_y") on osd "layer"
+        src_wnd H [Rect] <> 
+        layer I [] <> 
+        dst_x I [] <> 
+        dst_y I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> DvdPlayer [BasicPlayer] 00000017 <> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+CurPath <> S [] 
+DvdInfo <R> I [] 
+RsmInfoAddr <R> I [] 
+RsmInfoSize <R> I [] 
+Domain <> I [:DvdDomain] 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+GetDvdInfo <> 01 01 //Get relative dvd info according to type then set to prop:DvdInfo
+        Type I [:DvdInfo] <> 
+        I [] 
+ClearResumeFlag <> 00 01 
+        I [] 
+SlowForward <H> 01 01 
+        level I [] <> 
+        I [] 
+SlowBackward <H> 01 01 
+        level I [] <> 
+        I [] 
+Frame <H> 01 01 
+        type I [] <> //0: frame, 1: frame plus, 2: frame minus
+        I [] 
+Audio <> 02 01 
+        flag I [] <> //0: circle switch from 1 to max audio number
+//1: set to audio_num
+        audio_num I [] <> 
+        I [] 
+Subpicture <> 02 01 
+        flag I [] <> //0: circle switch from 1 to max spu num, then turn off
+//1: set to spu_num
+        spu_num I [] <> 
+        I [] 
+Angle <> 02 01 
+        flag I [] <> //0: circle switch from 1 to max angle number
+//1: set to angle_num
+        angle_num I [] <> 
+        I [] 
+TitleCall <> 00 01 
+        I [] 
+MenuCall <> 00 01 
+        I [] 
+Button <> 01 01 
+        direction I [] <> //0: enter, 1: left, 2: right, 3: up, 4: down
+        I [] 
+ReqNextChapter <> 00 01 
+        I [] 
+ReqPreChapter <> 00 01 
+        I [] 
+<event>
+AFMSG_DVD_ANGLE_CHANGED <> 
+AFMSG_DVD_AUDIO_CHANGED <> 
+AFMSG_DVD_CHAPTER_CHANGED <> 
+AFMSG_DVD_FORBIDDEN <> 
+AFMSG_DVD_PLAY_FAIL <> 
+AFMSG_DVD_SPU_CHANGED <> 
+AFMSG_DVD_STATUS_CHANGED <> 
+AFMSG_DVD_TIME_INFO <> 
+AFMSG_DVD_ZOOM_CHANGED <> 
+AFMSG_DVD_DOMAIN_CHANGED <> 
+AFMSG_DVD_TITLE_CHANGED <>
+
+
+
+
+<<Control>> FileBrowser [] 00000041 <> // 
+<prop>
+XYWH <Cg> GR [] //position and size of filebrowser 
+data_source <SC> H [FileBrowserSrc] //data source (filenav or playlist) handle
+previewer <> H [ThumbnailPlayer] //thumbnail player handle or Rect for preview
+focus_item <R> I [] //Readonly, item index of focus
+focus_slot <g> I [] //"fix focus mode" is used: slot index of focus item 
+//"fix  focus mode" is not used: the initial value of this prop is used as the initial focus slot everytime it enter into new directory; The value of this prop will be update after FileBrowser is showed
+focus_fullname <R> S [] //ReadOnly, the full name (path and filename) of focus item
+cur_directory <R> S [] 
+NonEmptySlotNum <R> I [] //The number of none empty slots.
+//Now only valid for none focus slot mode.
+error_code <R> I [] 
+firstslot_item <R> I [] //the item index of first slot, it is equal to (focus_item-focus_slot).
+//now only valid for none fix focus mode.
+ItemNumPerPage <Sg> I [] 
+col_num <Sg> I [] //The number of colums in each row, which is used when GotoNextRow, GotoPreRow
+root_directory <> S [] //If root directory is set, the browser will disable "UpDirectory" when current directory is "root directory", in this case ,  message of AFMSG_FIBRW_STATE_CHANGE (UpRootDirectory) is sent out.
+option <S> I [] //filebrowser configuration:
+//bit 0: 1, do not enter into empty directory
+//bit 1: 1, reserved, circular browsing mode (not support for "fix focus mode" and "row mode") 
+//bit 2: 1, go to first item when it get to last one; go to last item when it get to first one
+//bit 3: 1, fix focus slot ; the "focus slot" index is set in Prop of "focus_slot"
+//bit 4: 1, go to first item when it "up directory"
+//bit 5: 1, focus to first slot when page up/down (only for none fixed focus mode)
+//bit 6: 1, do not enter into directory for input key of "Enter" (user can call EnterDirectory to enter this dir ), message of FOCUS_SELECTED will be sent out
+//bit 7: 1, draw items in order (the focused item is drawed at last when this bit is 0)
+//bit 8: 1, auto call data_source.ReqGetItemNum to get total item number.  
+//              Result is sent out by msg of AFMSG_FIBRW_ITEM_COUNT_UPDATE.
+//              If this bit is set, do not call data_source.ReqGetItemNum directly in rule.
+//bit9: 0, focus to item 0 when msg of AFMSG_FITRE_REFRESH (FILETREEREFRTYPE_CACHINGDONE)  comes; 
+//          1, keep focus for focused item when msg of AFMSG_FITRE_REFRESH (FILETREEREFRTYPE_CACHINGDONE)  comes 
+//bit10: 0, remove "xxx" in "xxx$%name" when draw filename; 1, do not change filename for displaying
+//bit11: 1, hide old focus slot before every drawing 
+//bit [15~11], reserved
+//bit [23~16], maximum sliding page number for previewer.  It is 2 defaultly, and no limit if it is 0xff.
+attributes <> S [] //the name of attrs used by FileBrowser or it's items (FileBrowserItem).  For example "Mark.Select, CreatedTime",etc
+//The names are get from GeneralFileTree.attributes if this prop is not set.
+items <SCEg> AH [;FileBrowserItem] //The  UI items Array
+<method>
+Draw <B> 02 01 //Draw items of filebrowser again, do not re-read filename and attributes
+        flag I [] <N> //flag[bit 0], 1: do not refresh Thumbnail
+//flag[bit 1~2]:
+//   00: redraw all items (do not read items again) 
+//   01: it will draw only the items that are not drawed during "DrawState" of FileBrowser is 0. "DrawState" is set by global function of "SetCntDrawState()"
+//   10: read and redraw all items
+//   11: read and redraw item in slot_index
+        slot_index I [] <N> //only valid when flag[bit 1~2] is 11
+        I [] 
+Hide <> 00 01 //Hide
+        I [] 
+GotoNextItem <B> 01 01 //Goto next item 
+        mode I [] <> //if mode is 1, goto first item when it has reached to the last item
+        I [] 
+GotoPreItem <B> 01 01 //Goto previous item
+        mode I [] <> //if mode is 1, goto last item when it has reached to the first item
+        I [] 
+EnterDirectory <B> 01 01 //Enter into directory
+        path_name S [] <> 
+        I [] 
+UpDirectory <B> 00 01 //Go back to UP directory
+        I [] 
+GotoNextRow <B> 01 01 //Goto next row
+        mode I [0~1] <> //if mode is 1, goto first item when it has reached to the last item
+        I [] 
+GotoPreRow <B> 01 01 //Goto previous row
+        mode I [0~1] <> //if mode is 1, goto last item when it has reached to the first item
+        I [] 
+GotoNextPage <B> 01 01 //Goto next page
+        mode I [0~1] <> //if mode is 1, goto first item when it has reached to the last item
+        I [] 
+GotoPrePage <B> 01 01 //Goto previous page, par: mode (if mode is 1, goto last item when it has reached to the first item) 
+        mode I [0~1] <> //if mode is 1, goto last item when it has reached to the first item
+        I [] 
+FocusItem <B> 02 01 //Move focus to one item, and put this item in one slot
+        item_pos I [] <> 
+        flag I [] <> //* "focus slot" is set if (flag&0x8000)==0x8000, flag&0x7fff is the focus slot index.
+//If (flag&0x10000)!=0, focus will fail if the focus item index is large than the maximum file number. Otherwise, maximum item will be focused.
+        I [] 
+FocusFile <B> 02 01 
+        filename S [] <> //if filename is full filename with format of " /fullpath/filename" or filename only (without path)
+//this method will EnterDirectory of "/fullpath" if there is path , and it will search file of "filename" and set focus to it.
+        flag I [] <> //* "focus slot" is set if (flag&0x8000)==0x8000, flag&0x7fff is the focus slot index.
+//If (flag&0x10000)!=0, focus will fail if the focus item index is large than the maximum file number. Otherwise, maximum item will be focused.
+        I [] 
+SetAttr <B> 02 01 //Set attribute for focus item, input: attr name, attr value.
+//The attribute should be supported by data_source's method of "ReadAttr" and "ReqSetAttr"
+        attr_name S [] <> //Set attribute for focus item
+        attr_value S [] <> 
+        I [] 
+SetAttrInt <B> 02 01 //convert decimal number to string and set this string to attribute of "attr_name"
+//The attribute should be supported by data_source's method of "ReadAttr" and "ReqSetAttr"
+        attr_name S [] <> 
+        value I [] <> 
+        I [] 
+GetAttr <> 02 01 //Get attribute of item in one slot, input: slot index , attr name, output: attr value. 
+//The attribute should be supported by data_source's method of "ReadAttr"
+        slot_index I [] <> 
+        attr_name S [] <> 
+        S [] 
+GetAttrInt <> 02 01 //Get attribute of item in one slot,
+//convert attr string to decimal number and return
+//The attribute should be supported by data_source's method of "ReadAttr"
+        slot_index I [] <> 
+        attr_name S [] <> 
+        I [] 
+GetTypeStr <> 01 01 //Get file type string, it include below strings and the media type name which is defined in FileTreeManager: 
+//Dir,   Hide,  System , Other  (all files not defined in FileTreeManager)
+//If one item is both dir and hide item, the string returned is "Dir,Hide"
+        slot_index I [] <> 
+        S [] //return NULL if slot_index is not valid
+GetFileName <> 01 01 //return full file name (include path)
+        slot_index I [] <> 
+        S [] 
+SetSource <> 02 01 //Set new data_source of FileBrowser.
+//The calling of this method will not cause the refreshing of displaying; User need call EnterDirectory,etc to refresh the displaying.
+        data_source H [FileBrowserSrc] <> 
+        flag I [] <N> //reserved
+        I [] 
+<event>
+AFMSG_GUI_ITEM_FOCUS_CHANGE <> 
+AFMSG_GUI_ITEM_FOCUS_SELECTED <> 
+AFMSG_FIBRW_STATE_CHANGE <> //This message is sent out when state of FileBrowser has changed,
+AFMSG_FIBRW_ITEM_COUNT_UPDATE <> //this message is sent out to inform UI change it's scroll bar. The item count is the count of all files only when parameter of update_done is 1.
+AFMSG_FITRE_REQUEST_READY <I> 
+AFMSG_FITRE_REFRESH <I> 
+AFMSG_INPUT_REMOTE_INPUT <I> 
+AFMSG_SYS_DRAW <I> 
+AFMSG_SYS_HIDE <I>
+ 
+
+
+
+<<Control>> FileListSlide [ThumbnailPlayer] 00000016 <> 
+<prop>
+CacheX <g> I [] //cache X coordinate. we need the cache buffer for slot buffer prepare
+CacheY <g> I [] //cache Y coordinate. we need the cache buffer for slot buffer prepare
+Playlist <> H [PlayList] 
+SlotAttr <> H [SlotSlideAttr] //attribute of the FilelistSlide control
+DisplayArea <> H [Rect] //valid dislaying area of filelist slide control
+ItemDraw <g> H [SlotItemDraw] //handle to the user level draw control. it will fill the cache for slot buffer.
+AttrArray <> AS [;] //user can fill some attribute name here. this control will check the attribute and send attribute value to user draw control.
+//for example, user control want  to use the mark attribute for slot drawing. filelist control should send this value as parameter of user draw function
+ReservedInit <> AI [;] //Reserved for later using
+<method>
+UpdateShow <> 03 01 
+        first_item I [] <> 
+        action_type I [] <> 
+        action_param I [] <> 
+        I [] 
+RequestStop <> 00 01 //Stop playing 
+        I [] 
+SetPlayList <H> 01 01 
+        playlist_handle H [PlayList] <> 
+        I [] 
+IsBusy <> 00 01 
+        I [] 
+RefreshSlot <> 04 01 //For UI update the specified slot
+        SlotIndex I [] <> //the Slot index you want to refresh. you can get it from the property FocusSlot of SlotAttr. Do not forget to plus 1 based on Focus Slot number
+        ItemIndex I [] <> //the item index of the slot you want to refresh. you can get from the property FocuxIndex of SlotAttr
+        IconType I [] <> //Icon Type flag. Which icon you want to using. Normally it will be use the highlight icon.
+//1-----Highlight
+//0-----Normal
+        RefreshType I [] <> //Refresh type. user can select only update the slot buffer or refresh the UI display at same time
+//0-------Sync the slot buffer only
+//1-------Sync the slot buffer and refresh the UI display at same time
+        I [] 
+ClearSlot <B> 01 01 //clear the slot displaying area or free the slot cache
+        ClearType I [] <> //bit 0: clear the displaying area only
+//bit 1: free the slot cache
+        I [] 
+<event>
+
+
+
+
+<<Control>> FileTreeManager [FileTreeMgr] 00000029 <S> //Provide management of path cache, attributes, media type
+//There are four types of attributes 
+//1. predefined attributes:
+//ModifiedTime, ModifiedTime.Year, ModifiedTime.Month, ModifiedTime.Day, ModifiedTime.YearMonth
+//CreatedTime, CreatedTime.Year, CreatedTime.Month, CreatedTime.Day, CreatedTime.YearMonth
+//FileSize
+//FileName
+//PathName
+//SubItemURL.0, SubItemURL.1, etc
+//SubItemCount
+//TypeStr  (file type string, it include below strings and the media type name which is defined in FileTreeManager: Dir,   Hide,  System , Other (all files not defined in FileTreeManager)
+//If one item is both dir and hide item, the string returned is "Dir,Hide")
+//2. Mark, Mark.xxx (xxx is defined in Prop of "MarkDefines)
+//3. User defined attributes: they are defined in Prop of "UserAttrNames" and "UserAttrSources", one "UserAttrSources" can support multi attr names (see detail in FileNav document)
+//4. ReadOnly Attributes: these attributes are returned by RdOnlyAttrSrc (see detail in FileNav document)
+//* attributes of "SubItemCount", "SubItemURL.xxx" can not be used in filter or Sorter
+<prop>
+Config <S> I [] //Config[bit 7~0] pre-allocated attr cache size for each file item. If 0, the pre-allocated attr cached size is calculated base on the total size of default attr value
+//Config[bit 8], 0: only cache files whose media type is registered; 1: cache all files
+//Config[bit 9], 1: do not cache file name; filename is cached if bit 9 is 0 (default)
+MallocMargin <> I [] //If MallocMargin is not zero, free memory space will be monitored during caching and dir will not be cached after free memory space is below this level. The unit is Byte.
+CachedAttrs <S> S [] //it has format of "ModifiedTime,Rating",etc, the catched attribute can be pre-defined attributes or attributes from RdOnlyAttrSrc, UserAttrSources. 
+//"Mark" is always cached even it is not listed in "CachedAttrs".
+//Caching of some attributes will improve the performance, but more memory space is needed also.
+UserAttrNames <S> AS [;] //the name of the attributes (Read/Write) that are defined by User. 
+//Each user defined attribute have one UserAttrSource, which is defined in array of "UserAttrSources".
+//The format of each item in array is like:
+//"Favorite,Rating", "Favorite", "Favorite:0,Rating:0" etc.
+//"Favorite:0,Rating:0" means the default value of Favorite is "0" ; "" is used as default value if default value is not set.
+//The default will be used (and cached) if the corresponding UserAttrSource return "" or NULL.
+UserAttrSources <S> AH [;AttributeRWSrc] //the source handle of the attributes that are defined by User. It's name is defined in array of UserAttrNames
+MarkDefines <S> AS [;] //1. the format is "Favorite:5",etc
+//this string define Mark of "Favorite", which has the maximum state of 5  (0~4)
+//2. Use attribute name of "Mark.Favorite" to access it's value
+//3. The total bits used by all Marks must be less than or equal to 8
+MediaDefines <SC> AS [0~8;] //the format is "Audio:mp3,wma,wav",etc. This string define media type of "Audio"; 
+HeadNodDefines <S> AS [;] //User can define some special virtual file nodes at the head of each directory, such like: "__UP__", "Play All".
+//User need give the ext name for each virtual file node, so that this special file node can have a media type (defined by prop of "MediaDefines") and can be filtered if user does not want to show it.
+//One special virtual file node is "__UP__.xxx" (xxx is ext name),  FileBrowser will call method of "UpDirectory" automatically when this file node is clicked.
+<method>
+LoadUAttr2Cache <B> 03 01 //Load user attrs of all files in directory or sub-directories of base_dir into cache.
+//The attrs should be defined in prop of UserAttrNames
+        UserAttrNames S [] <> //it has format of "attr_name1,attr_names", etc
+        base_dir S [] <> //usually it is mount_point
+        flag I [] <> //flag[bit 3~0]: 
+//0,1, use default value if the attr of some item does not exist in DB file (AttrsDB)
+//2, get attr value from UserAttrSources again if the attr of some item does not exist in DB file (AttrsDB)
+//flag[bit4]:
+//0, attr value should be loaded immediately after the disk is mounted (has better performance) 
+//1, attr value can be loaded any time
+        I [] 
+GetAttribute <B> 02 01 //now only "Blocking call" is supported.
+//the return parameter name is: "s_ret" (STR, get by control InOutParam.GetBlkFunRetStr). 
+        url S [] <> 
+        attr_name S [] <> 
+        S [] 
+SetAttribute <B> 03 01 //now only "Blocking call" is supported.
+        url S [] <> 
+        attr_name S [] <> 
+        attr_val S [] <> 
+        S [] 
+ClearMark <> 01 01 //clear all files' mark (only for mark of "mark_name")
+//mark_name: the name of Mark that will be cleared.
+        mark_name S [] <> 
+        I [] 
+ClearAttrsCache <> 04 01 //Clear attrs cache of one item of url (directory_flag=0) or all items in sub-directory of url (directory_flag=1 or 2).
+//directory_flag: 
+//0: clear attr cache of one item of url.
+//1: clear all items in directory and sub-directory of url
+//2: cear all items in directory of url.
+        url S [] <> 
+        directory_flag I [] <> //directory_flag: 
+//0: clear attr cache of one item of url.
+//1: clear all items in directory and sub-directory of url
+//2: cear all items in directory of url.
+        attr_name S [] <> 
+        flag I [] <N> //reserved
+        I [] 
+ReqFillPath <> 01 01 //Request to fill path cache, sub directories are included.
+        pathname S [] <> 
+        I [] 
+<event>
+AFMSG_DEVST_PRE_UNMOUNT <I> //This type of control should process the message of "PRE_UNMOUNT" , check if any directory in it's path cache has been unmounted.
+//If any directory in it's path cache is unmounted, it need refresh it's cache and broadcast message of "FILETREE_REFRESH",
+//The UI control (FileBrowser) will refresh displaying. 
+AFMSG_DEVST_DEV_REFRESH <I> //message of "DEV_REFRESH" should be processed , usually this message is sent out by any control that may change files in some disk (such like copy,del method in GeneralFileOp)
+//If any directory files in it's path cache is changed, it need refresh it's cache and broadcast message of "FILETREE_REFRESH" . The UI control (FileBrowser) will refresh displaying 
+AFMSG_DEVST_POST_MOUNT <I> 
+AFMSG_FITRE_CACHING_PROGRESS <> 
+AFMSG_FITRE_CACHING_DONE <>
+
+
+
+
+<<Control>> GeneralFileList [PlayList,FileBrowserSrc] 00000028 <> 
+<prop>
+FileTreeSrc <CE> H [FileTreeEx] //The control that read entry from filesystem
+Config <> I [] //config[bit 0], 1: directories are included
+//config[bit 1], 1: files are excluded
+//config[bit 2], 1: filter is valid for directory, only include the files in directories that are not filtered. 
+//config[bit 3], reserved
+//config[bit 4], 1: item can still be get before sorting is finished. After sorting is finished, msg of FITRE_REFRESH (FILETREEREFRTYPE_CACHINGDONE)  will be sent out in order  to refresh displaying of FileBrowser,etc.
+//name sort config:
+//config[bit 16], 0: ignore case   1: do not ignore case
+//config[bit 17], 0: filename sort, 1: fullname sort
+SortType <> I [:SortType] 
+PlayMode <> I [:PlayList_Mode] 
+EntryTable <S> H [StringTableWR] //The entry url will be stored in this table if it is not NULL,
+//the row name is entry url,
+StartPlayURL <> S [] //If this prop is a valid full filename, the playlist will set it as current item.
+//This prop will be clear automatically after playlist set it as current item.
+CachedItemCount <> I [] 
+PlayingPos <> I [] 
+PlaylistConfig <H> I [] //bit 0: 0, disable "PlayMode" if playlist has this option;  1, enable "play mode"
+Sorter <> H [SorterT] 
+CurPathName <R> S [] 
+<method>
+AddEntry <B> 02 01 //Add playlist entry, input: the entry url, the entry max reading deep level
+//entry url can include multi entries, which has format of "entry1_url,entry2_url,entry3_url",etc.
+//This method can be "Blocking" called, the return parameters are: "s_result" (String, "SUCCESS" or "FAIL"). 
+        url S [] <> // the url of entry.
+        max_deep I [] <> 
+        I [] 
+RemoveEntry <B> 01 01 
+        url S [] <> 
+        I [] 
+RemoveAllEntry <B> 00 01 //Remove all entries
+        I [] 
+ReqRefresh <> 02 01 //Refresh filelist, usually called while DEVICE_REFRESH message come, input: dir; flag  (bit 0,include subdir; bit 1, fill cache now )
+        url S [] <> 
+        flag I [] <> 
+        I [] 
+GetCurItem <H> 00 01 //return the url of current pos
+        S [] 
+GetNextItem <H> 00 01 //returen the url of next item
+        S [] 
+GetPrevItem <H> 00 01 //return the url of previous item
+        S [] 
+GetCurItemType <H> 00 01 //Get type value of current playing pos, output: type
+        I [] 
+GetCurItemAttr <H> 01 01 //Get attribute value of current playing pos, input: attribute name (in array of attribute_num),output: attribute value
+        attr_name S [] <> 
+        S [] //attr value
+SetSorter <> 01 01 
+        Sorter H [SorterT] <> 
+        I [] 
+ReqGetItemNum <B> 00 01 //This method can be "Blocking" called, the return parameter name is: "i_ret" (INT, get by control InOutParam.GetBlkFunRetVal). 
+//If this method is not "Blocking" called, the result is get by msg of AFMSG_FITRE_REQ_GET_ITEM_NUM_READY.
+        I [] 
+BldShuffleTable <> 01 01 //build shuffle table,  current PlayingPos or StartPlayURL will be the first item in shuffle table.
+//flag[bit 0]: 
+//0, does not rebuild the shuffle table after the whole playlist is repeated
+//1, rebuild the shuffle table after the whole playlist is repeated.
+//[bit 4]:
+//1: random the first PlayingPos when build shuffle table
+        flag I [] <> 
+        I [] 
+ReqGetItems <B> 02 01 //Request to read count of items from start_pos (include start_pos).
+//The result is read from method ReadResult after message of FILETREE_REQUEST_READY;  
+//ReadResult read out one item url and increase readout index.
+//ReadType, ReadAttr are used to read type/attr of this item after ReadResult is called. And they do not increase readout index.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        start_pos I [] <> 
+        count I [1~128] <> 
+        I [] 
+ReqSetAttr <B> 03 01 //Request to set attribute of item_pos,  the operation is done after message of FILETREE_REQUEST_READY;
+//The new item result is read from method ReadResult.
+//ReadType, ReadAttr are used to read new type/attr of this item after ReadResult is called. 
+//Attribute "Mark" of all items can be set by config input parameter "item_pos".
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+//  
+        item_pos I [] <> //1.  pos[23~0]   position of item ;
+//2.  pos[31~24] mode:
+//set all items in subdir of item if mode is 1 ( * only valid for Mark or Mark.xxx , only valid when the item is directory)
+//3. pos[23~0]==0x3fffff: set all items in cur dir;  pos[23~0]==0x3ffffe: set all items in cur dir/subdirs 
+//(* only valid for Mark or Mark.xxx) 
+        attr_name S [] <> 
+        attr_value S [] <> 
+        I [] 
+ReqChangDir <B> 03 01 //Request to change directory and read count of items from start_pos (include start_pos).
+//The result is read from method ReadResult after message of FILETREE_REQUEST_READY;  
+//ReadResult read out one item url and increase readout index.
+//ReadType, ReadAttr are used to read type/attr of this item after ReadResult is called. And they do not increase readout index.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        path S [] <> 
+        start_pos I [] <> 
+        count I [0~128] <> 
+        I [] 
+ReqSearch <B> 01 01 //Request to read item with name of filename,  the operation is done after message of FILETREE_REQUEST_READY;
+//The item result is read from method ReadResult.
+//ReadType, ReadAttr are used to read new type/attr of this item after ReadResult is called. 
+//If filename is the full pathname, the current directory will be changed as the path of this file.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        filename S [] <> 
+        I [] 
+ReqGetAttr <B> 02 01 //Request to get value of one attribute which is not listed in attribute_num. This method is usually used for attribute that takes long time to get .
+//the operation is done after message of FILETREE_REQUEST_READY;
+//The item result is read from method ReadResult;
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        item_pos I [] <> 
+        attr_name S [] <> //attr_name can be the name of single attribute or multi attributes with format of "name1,name2,name3",etc
+        I [] 
+ReadResult <> 00 01 //Readout the url of result item after message of  FILETREE_REQUEST_READY is received. 
+//The count time of "ReadResult" should be called if the result item include count items.
+        S [] //The file url
+ReadType <> 00 01 //Read the type of item. It canbe called only after "ReadResult" is called and it does not increase readout index
+        I [] //The file type. 
+ReadAttr <> 01 01 //Read the attr of item. It can be called only after "ReadResult" has been called and it does not increase readout index.
+        attr_name S [] <> 
+        S [] //The attr value
+GetAttrsName <H> 00 01 //Returen the attributes name that supported by method of "ReadAttr",
+//The format is like "Size,Mark.Select,ModifiedTime", etc
+        S [] //Returen the attributes name that supported by method of "ReadAttr"
+GetCachItemNum <> 01 01 
+        flag I [] <> //0: get items count in cache
+//1: get items count in cache only when all items are in cache; otherwise return -1
+        I [] 
+CancelRequest <> 01 01 
+        flag I [] <> 
+        I [] 
+SetAttrsName <H> 01 01 //Set the attributes name that supported by method of "ReadAttr",
+//The format is like "Size,Mark.Select,ModifiedTime", etc. 
+//This method will  re-assign the value of  the attributes (array)
+        names_str S [] <> 
+        I [] 
+<event>
+AFMSG_FITRE_ADD_ENTRY_RESULT <> //this message is sent out after method AddEntry is called, with this message , user can learn if new entry has been added successfully . If there is not valid item in this entry, it will fail to add entry.
+AFMSG_FITRE_REQ_GET_ITEM_NUM_READY <> 
+AFMSG_DEVST_PRE_UNMOUNT <I> //This type of control should process the message of "PRE_UNMOUNT" , check if any directory in it's path cache has been unmounted.
+//If any directory in it's path cache is unmounted, it need refresh it's cache and broadcast message of "FILETREE_REFRESH",
+//The UI control (FileBrowser) will refresh displaying. 
+AFMSG_DEVST_DEV_REFRESH <I> //message of "DEV_REFRESH" should be processed , usually this message is sent out by any control that may change files in some disk (such like copy,del method in GeneralFileOp)
+//If any directory files in it's path cache is changed, it need refresh it's cache and broadcast message of "FILETREE_REFRESH" . The UI control (FileBrowser) will refresh displaying 
+AFMSG_FITRE_REFRESH <> //This message is sent out to inform UI control (such like FileBrowser) to refresh displaying when this control has refreshed it's cache. Usually it happens when receiving message of PRE_UNMOUNT or DEV_REFRESH
+AFMSG_FITRE_REQUEST_READY <> //This message is sent to MsgProcHandle when data requested by methods of ReqGetItems, ReqChangDir, ReqSetAttr, ReqGetAttr, ReqSearch is ready.
+
+
+
+
+<<Control>> GeneralFileOp [] 00000028 <> 
+<prop>
+PlayList <> H [PlayList] 
+Config <> I [] //Config[bit 0]: 0, continue to copy/delete next file if fail to copy/delete one file; 1,stop copying/deleting if fail to copy/delete one file.
+//Config[bit 1]: 0, remove the whole directory recursively if the directory to delete is not empty; 1, fail if the directory to delete is not empty.
+//Config[bit 2]: 1, do normal copying if resize copying fails
+//Config[bit 3]: 1, do normal copying if size of file less than or eque to ThresholdSize
+//Config[bit 4]: 1, do normal copying if file to copy is not jpeg file
+//Config[bit 5,6]: for file system cache configure. 00 default, 01 set MI buffer.  other is reserved.
+Rename <> I [] //1: when copy rename dest file name
+//0 : over write when copy 
+CopySrcPath <> S [] //Used when ReqCopy, ReqResizeCopy is called. If this prop is set, the files will be copied with its directories.
+//example:
+//CopySrcPath: /mnt/UDISK/usb01
+//source file : /mnt/UDISK/usba01/aaa/bbb/s.jpg
+//des_path:  /mnt/NAND/nanda1/jpg/
+//the des file will be:  /mnt/NAND/nanda1/jpg/  +   {/mnt/UDISK/usba01/}aaa/bbb/s.jpg
+//  =>  /mnt/NAND/nanda1/jpg/aaa/bbb/s.jpg
+ThresholdSize <> I [] //The minimum size of jpeg file which need resize copy
+Proc4FileOp <> H [Proc4FileOp] //extern handles for file operation control
+<method>
+ReqDelete <> 01 01 //Delete items in PlayList 
+        request_preview I [] <N> 
+        I [] 
+ReqCopy <> 02 01 //Copy items in PlayList
+        des_path S [] <> // 
+        request_preview I [] <> 
+        I [] 
+RemovDir <> 01 01 
+        dir_name S [] <> 
+        I [] 
+MakeDir <> 01 01 
+        dir_name S [] <> 
+        I [] 
+ReqRename <> 02 01 
+        file_name S [] <> 
+        new_name S [] <> 
+        I [] 
+Cancel <> 00 01 
+        I [] 
+ReqResizeCopy <> 06 01 //resize copy file 
+        type I [:ResizeCopyType] <> 
+        des_path S [] <> 
+        width I [] <> //the width you want to resize to be 
+        height I [] <> //the height you want to resize to be 
+        disktype I [] <> //the dest disk is nand or card and so on 0
+//the dest disk is flash 1
+        request_preview I [] <> 
+        I [] 
+SetPrevStatus <> 01 01 
+        flag I [] <> 
+        I [] 
+ReqSetAttr <> 03 01 
+        attr_name S [] <> 
+        attr_value S [] <> 
+        attr_type I [] <> //now only for rotate 
+//0: normal
+//1: 90 clockwise , skip attr_value
+//2: 90 anticlockwise ,skip attr_value
+//3:180 degree , skip attr_value
+        I [] 
+ReqDeleteOnce <> 01 01 
+        FileName S [] <> 
+        I [] 
+ReqRsCopyOnce <> 06 01 //resize copy a single jpeg files
+        type I [:ResizeCopyType] <> //1 means resize copy the jpeg file with the name of Src_url.  2 means copy current video.
+        Dest_url S [] <> 
+        Src_url S [] <> 
+        Width I [] <> //width of dest file, It is useless to normal mode copy.
+        Height I [] <> //Height of dest file, It is useless to normal mode copy.
+        request_preview I [] <> 
+        I [] 
+ReqCopyOnce <> 03 01 
+        Dest_url S [] <> 
+        Src_url S [] <> 
+        request_preview I [] <> 
+        I [] 
+ReqDialogBox <> 01 01 
+        mode I [] <> 
+        I [] 
+<event>
+AFMSG_FIOP_REQ_COMPLETE <> 
+AFMSG_FIOP_REQ_CANCELED <> 
+AFMSG_FIOP_POPUP_DIALOGBOX <> 
+AFMSG_FIOP_START <> 
+AFMSG_FIOP_SUCCESS <> 
+AFMSG_FIOP_FAIL <> 
+AFMSG_FIOP_PROGRESS <> 
+AFMSG_DEVST_DEV_REFRESH <> //This msg will be sent out to inform FileTree control to refresh it's path cache.
+AFMSG_DEVST_PRE_UNMOUNT <I>
+ 
+
+
+
+<<Control>> GeneralFileTree [FileTreeEx,PlayList,FileBrowserSrc] 00000048 <> 
+<prop>
+FileTreeManager <SC> H [FileTreeMgr] 
+PlayMode <> I [:PlayList_Mode] 
+ExcludeDir <S> I [0~1] 
+IncludeHideFile <S> I [0~1] 
+IncludeSysFile <S> I [0~1] 
+Config <S> I [] //config[bit 0~3]: reserved
+//config[bit 4], 1: item can still be get before sorting is finished. After sorting is finished, msg of FITRE_REFRESH (FILETREEREFRTYPE_CACHINGDONE)  will be sent out in order  to refresh displaying of FileBrowser,etc.
+PlayingPos <> I [] 
+PlaylistConfig <H> I [] //bit 0: 0, disable "PlayMode" if playlist has this option;  1, enable "play mode"
+Sorter <> H [SorterT] 
+CurPathName <R> S [] 
+SortType <> I [:SortType] 
+MediaTypeMask <H> I [] //Set bit n if files with type 'n' are included; MSB (bit 15) is used for directory; bit 14 is used as hiden files; bit 13 is used as system files; bit 12 is used for file types unregistered
+InitMediaType <H> I [] 
+MsgProcHandle <H> H [] //The control that receive and process the message sent by this control.
+//If MsgProcHandle is not assigned, there are no messages to be sent by this control.
+CancelReqFlag <H> I [] 
+ApplyFilter4Dir <> I [] 
+IncludMediTypes <S> AS [;] //The name of "MediaTypes" is defined in "FileTreeManager".
+//Only files with these types are listed.
+//If "Other" is used , it will also list all files that are not defined in "FileTreeManager"
+//If this array is not set, all files are included.
+attributes <SD> AS [;] //Obsolete (Now user can set "FileBrowser.attributes"  for attrs that will be used by FileBrowser)
+<method>
+ReqRefresh <> 02 01 //Refresh filelist, usually called while DEVICE_REFRESH message come, input: dir; flag  (bit 0,include subdir; bit 1, fill cache now )
+        refresh_path S [] <> 
+        flag I [] <> //bit 0,include subdir; bit 1, fill cache now
+        I [] 
+DuplicateProps <> 01 01 
+        source_handle H [FileTreeEx] <> 
+        I [] 
+GetCurItem <H> 00 01 //return the url of current pos
+        S [] 
+GetNextItem <H> 00 01 //returen the url of next item
+        S [] 
+GetPrevItem <H> 00 01 //return the url of previous item
+        S [] 
+GetCurItemType <H> 00 01 //Get type value of current playing pos, output: type
+        I [] 
+GetCurItemAttr <H> 01 01 //Get attribute value of current playing pos, input: attribute name (in array of attribute_num),output: attribute value
+        attr_name S [] <> 
+        S [] //attr value
+SetSorter <> 01 01 
+        Sorter H [SorterT] <> 
+        I [] 
+ReqGetItemNum <B> 00 01 //This method can be "Blocking" called, the return parameter name is: "i_ret" (INT, get by control InOutParam.GetBlkFunRetVal). 
+//If this method is not "Blocking" called, the result is get by msg of AFMSG_FITRE_REQ_GET_ITEM_NUM_READY.
+        I [] 
+BldShuffleTable <> 01 01 //build shuffle table,  current PlayingPos or StartPlayURL will be the first item in shuffle table.
+//flag[bit 0]: 
+//0, does not rebuild the shuffle table after the whole playlist is repeated
+//1, rebuild the shuffle table after the whole playlist is repeated.
+//[bit 4]:
+//1: random the first PlayingPos when build shuffle table
+        flag I [] <> 
+        I [] 
+SetMediaType <> 05 01 //Parameters:
+//(1) IncluMediTypes: Media type string is defined in "FileTreeManager.MediaDefines".
+//Multi-media type strings can be set, each media type string is separated with ','
+//example: "photo,music,video"
+//(2) IncludMntpoints:  Valid only when BlockDevMonitor.MntPointConfig is 1
+//mount_points that are included.
+//All mount_points are inclued if it is set as "" or not set.
+//example: "/mnt/nanda1,/mnt/usba01",etc
+        IncludMediTypes S [] <> //Media type string is defined in "FileTreeManager.MediaDefines".
+//Multi-media type strings can be set, each media type string is separated with ','
+//example: "photo,music,video"
+        ExcludeDir I [] <> 
+        IncludeHideFile I [] <> 
+        IncludeSysFile I [] <> 
+        IncludMntpoints S [] <N> //Valid only when BlockDevMonitor.MntPointConfig is 1
+//mount_points that are included.
+//All mount_points are inclued if it is set as "" or not set.
+//example: "/mnt/nanda1,/mnt/usba01",etc
+        I [] 
+SetMntPoints <> 01 01 //Parameters:
+//(1) Mntpoints:  Valid only when BlockDevMonitor.MntPointConfig is 1
+//mount_points that are included.
+//All mount_points are inclued if it is set as "" or not set.
+//example: "/mnt/nanda1,/mnt/usba01",etc
+        Mntpoints S [] <> //Valid only when BlockDevMonitor.MntPointConfig is 1
+//mount_points that are included.
+//All mount_points are inclued if it is set as "" or not set.
+//example: "/mnt/nanda1,/mnt/usba01",etc
+        I [] 
+ReqGetItems <B> 02 01 //Request to read count of items from start_pos (include start_pos).
+//The result is read from method ReadResult after message of FILETREE_REQUEST_READY;  
+//ReadResult read out one item url and increase readout index.
+//ReadType, ReadAttr are used to read type/attr of this item after ReadResult is called. And they do not increase readout index.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        start_pos I [] <> 
+        count I [1~128] <> 
+        I [] 
+ReqSetAttr <B> 03 01 //Request to set attribute of item_pos,  the operation is done after message of FILETREE_REQUEST_READY;
+//The new item result is read from method ReadResult.
+//ReadType, ReadAttr are used to read new type/attr of this item after ReadResult is called. 
+//Attribute "Mark" of all items can be set by config input parameter "item_pos".
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+//  
+        item_pos I [] <> //1.  pos[23~0]   position of item ;
+//2.  pos[31~24] mode:
+//set all items in subdir of item if mode is 1 ( * only valid for Mark or Mark.xxx , only valid when the item is directory)
+//3. pos[23~0]==0x3fffff: set all items in cur dir;  pos[23~0]==0x3ffffe: set all items in cur dir/subdirs 
+//(* only valid for Mark or Mark.xxx) 
+        attr_name S [] <> 
+        attr_value S [] <> 
+        I [] 
+ReqChangDir <B> 03 01 //Request to change directory and read count of items from start_pos (include start_pos).
+//The result is read from method ReadResult after message of FILETREE_REQUEST_READY;  
+//ReadResult read out one item url and increase readout index.
+//ReadType, ReadAttr are used to read type/attr of this item after ReadResult is called. And they do not increase readout index.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        path S [] <> 
+        start_pos I [] <> 
+        count I [0~128] <> 
+        I [] 
+ReqSearch <B> 01 01 //Request to read item with name of filename,  the operation is done after message of FILETREE_REQUEST_READY;
+//The item result is read from method ReadResult.
+//ReadType, ReadAttr are used to read new type/attr of this item after ReadResult is called. 
+//If filename is the full pathname, the current directory will be changed as the path of this file.
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        filename S [] <> 
+        I [] 
+ReqGetAttr <B> 02 01 //Request to get value of one attribute which is not listed in attribute_num. This method is usually used for attribute that takes long time to get .
+//the operation is done after message of FILETREE_REQUEST_READY;
+//The item result is read from method ReadResult;
+//This method can be "Blocking" called (ReadResult can be called after it is "Blocking" called), the return parameters are: "i_start_pos" (INT), "i_result_count" (INT).
+        item_pos I [] <> 
+        attr_name S [] <> //attr_name can be the name of single attribute or multi attributes with format of "name1,name2,name3",etc
+        I [] 
+ReadResult <> 00 01 //Readout the url of result item after message of  FILETREE_REQUEST_READY is received. 
+//The count time of "ReadResult" should be called if the result item include count items.
+        S [] //The file url
+ReadType <> 00 01 //Read the type of item. It canbe called only after "ReadResult" is called and it does not increase readout index
+        I [] //The file type. 
+ReadAttr <> 01 01 //Read the attr of item. It can be called only after "ReadResult" has been called and it does not increase readout index.
+        attr_name S [] <> 
+        S [] //The attr value
+GetAttrsName <H> 00 01 //Returen the attributes name that supported by method of "ReadAttr",
+//The format is like "Size,Mark.Select,ModifiedTime", etc
+        S [] //Returen the attributes name that supported by method of "ReadAttr"
+GetCachItemNum <> 01 01 
+        flag I [] <> //0: get items count in cache
+//1: get items count in cache only when all items are in cache; otherwise return -1
+        I [] 
+CancelRequest <> 01 01 
+        flag I [] <> 
+        I [] 
+SetAttrsName <H> 01 01 //Set the attributes name that supported by method of "ReadAttr",
+//The format is like "Size,Mark.Select,ModifiedTime", etc. 
+//This method will  re-assign the value of  the attributes (array)
+        names_str S [] <> 
+        I [] 
+SetFilterRules <> 01 01 //Set Filter Rule string, each rule has format such like: "FileSize<=5000","Mark.Favorite==1",etc ;
+//There is logic relation character ( '&' or '|' ) between rules.
+//The first char ( '&' or '|' ) is logic relation to previous rule; 
+//Any attribute used by Rule should appear in array of "attributes" also.
+        rules S [] <> 
+        I [] 
+GetFilterRules <H> 00 01 
+        S [] 
+SetMultiAttrs <H> 06 01 
+        attr_name S [] <> 
+        attr_value S [] <> 
+        dir_name S [] <> 
+        include_subdir I [] <> 
+        media_type I [] <> 
+        filter S [] <> 
+        I [] 
+FileTreeCntl <H> 02 01 
+        cmd I [] <> 
+        param I [] <> 
+        I [] 
+<event>
+AFMSG_FITRE_REQ_GET_ITEM_NUM_READY <> 
+AFMSG_DEVST_PRE_UNMOUNT <I> //This type of control should process the message of "PRE_UNMOUNT" , check if any directory in it's path cache has been unmounted.
+//If any directory in it's path cache is unmounted, it need refresh it's cache and broadcast message of "FILETREE_REFRESH",
+//The UI control (FileBrowser) will refresh displaying. 
+AFMSG_DEVST_DEV_REFRESH <I> //message of "DEV_REFRESH" should be processed , usually this message is sent out by any control that may change files in some disk (such like copy,del method in GeneralFileOp)
+//If any directory files in it's path cache is changed, it need refresh it's cache and broadcast message of "FILETREE_REFRESH" . The UI control (FileBrowser) will refresh displaying 
+AFMSG_FITRE_REFRESH <> //This message is sent out to inform UI control (such like FileBrowser) to refresh displaying when this control has refreshed it's cache. Usually it happens when receiving message of PRE_UNMOUNT or DEV_REFRESH
+AFMSG_FITRE_REQUEST_READY <> //This message is sent to MsgProcHandle when data requested by methods of ReqGetItems, ReqChangDir, ReqSetAttr, ReqGetAttr, ReqSearch is ready.
+
+
+
+
+<<Control>> GPlayer [BasicPlayer,AttributeSource] 00000016 <> // 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+DisplayMode <> I [0~5] //0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+VidDecodeFilter <> I [] //used for configure which video format should be filtered out,if  a  certain media type is filtered, Unsupport  message will be sent out
+//bit0 :   FILTER_DIVX
+//bit1:    FILTER_MPEG1
+//bit2:   FILTER_MPEG2
+//bit3:   FILTER_MPEG4
+//bit4:   FILTER_MJPEG
+//bit5:     FILTER_H263             
+//bit6:     FILTER_H264   
+PreviewMode <> I [] //0: full screen
+//1: keep ratio
+Config <> I [] //bit0: preview mode policy
+//        0: full screen
+//        1: keep ratio
+//bit4: spectrum policy
+//        0:disable spectrum
+//        1:enable spectrum
+//         notice: It's best to set this config in rules(set before play music&clear after stop music), as gplayer will play video
+//bit5: lyric policy
+//        0:disable lyric
+//        1:enable lyric
+//bit6: get time use memory policy
+//        0: use default memory
+//        1: malloc memory 
+//.....
+ShowLyric <> H [ShowSubtitle] 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+AdjDisplayMode <> 01 01 //adjust video display mode
+        mode I [] <> //video adjust mode.  
+//0xff: DISPLAY_ADJUST_TOGGLE    ajust from 0 to 4 in turn
+//0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+//0xfe: DISPLAY_ADJUST_DISABLE
+        I [] 
+<event>
+AFMSG_GPLAY_UPDATE_SPECTRUM <> 
+AFMSG_GPLAY_UPDATE_LYRIC <> 
+AFMSG_BPLAY_ZOOM_LEVEL <>
+ 
+
+
+
+<<Control>> HWWatchDog [] 00000006 <s> 
+<prop>
+AutoClearSecond <> I [] 
+Config <> I [] //bit [0]: 1, disable "auto clear" mode, user need call method of ClearWDogCount() periodically to avoid the resetting of chip.
+//bit[1]: 1, reset the chip if malloc memory is not enough. (reset only when malloc(size<MallocResetSize) fails)
+//bit[2]: 0, disable watchdog in dbg code;  1,  enable watchdog in dbg code.  
+AutoStarDisable <> I [] 
+MallocResetSize <> I [] 
+<method>
+Start <> 01 01 
+        flag I [] <> 
+        I [] 
+ResetSystem <> 01 01 
+        flag I [] <> 
+        I [] 
+GetResetReason <> 00 01 
+        I [:Reboot_Reason] 
+Stop <> 01 01 
+        flag I [] <> 
+        I [] 
+ClearWDogCount <> 00 01 
+        I [] 
+<event>
+
+
+
+
+<<Control>> IconForThumb [ThumbIcon] 00000007 <> 
+<prop>
+def_folder_icon <> RT [] 
+def_file_icon <> RT [] 
+UserAttrIndex <> I [] 
+folder_name <> AS [;] //folder names need to specify a jpeg for thumbnail display
+folder_icon <> ART [;] //the jpg used for the folder name in same array poosition of folder_name.
+file_ext <> AS [;] //file extensions need to specify jpg for thumbnail.
+file_icon <> ART [;] //the jpg used for this kind of files in the same array poosition of file_ext.
+UserAttrNames <> AS [;] 
+UserIconSource <> ART [;] 
+<method>
+GetThumbIcon <H> 01 01 //Used to specify a jpeg for a folder or file url
+        filelist H [PlayList] <> //the datasrc filelist or filetree for thumbnail to use, the PlayingPos is the folder or file that need to specify a jpg to display
+        S [] //return a url to a jpg file used as thumbnial
+<event>
+ 
+
+
+
+<<Control>> InOutParam [] 00000009 <S> 
+<prop>
+RetVal <> I [] 
+RetStr <> S [] 
+<method>
+SetPageInputVal <> 04 01 
+        param_name S [] <> 
+        param_val I [] <> 
+        page_handle H [] <> 
+        flag I [] <N> //bit[0]: 0, set this parameter as n/a after page is destroyed;   1, keep the value of this parameter after page is destroyed.
+        I [] 
+SetPageInputStr <> 04 01 
+        param_name S [] <> 
+        param_str S [] <> 
+        page_handle H [] <> 
+        flag I [] <N> //bit[0]: 0, set this parameter as n/a after page is destroyed;   1, keep the value of this parameter after page is destroyed.
+        I [] 
+GetPageInputVal <> 01 01 
+        param_name S [] <> 
+        I [] 
+GetPageInputStr <> 01 01 
+        param_name S [] <> 
+        S [] 
+SetPageRetVal <> 02 01 
+        param_name S [] <> 
+        param_val I [] <> 
+        I [] 
+SetPageRetStr <> 02 01 
+        param_name S [] <> 
+        param_str S [] <> 
+        I [] 
+GetBlkFunRetVal <> 01 01 
+        param_name S [] <> 
+        I [] 
+GetBlkFunRetStr <> 01 01 
+        param_name S [] <> // 
+        S [] 
+<event>
+
+
+
+
+<<Control>> IOControl [] 00000004 <> 
+<prop>
+<method>
+SetIOMode <> 03 01 
+        type I [:IOGroupType] 
+        pin I [] 
+        level I [] 
+        I [] 
+GetOutPut <> 02 01 
+        type I [:IOGroupType] 
+        pin I [] 
+        I [] 
+SetInPut <> 03 01 
+        type I [:IOGroupType] 
+        pin I [] 
+        level I [] 
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> MagicMxNThum [ThumbnailPlayer] 00000023 <> 
+<prop>
+CacheCfgFile <Cg> RT [] //config files for cache
+PlayList <S> H [PlayList] // handle to a Playlist Control
+bk_jpg <g> RT [] //background jpeg
+col_num <Cg> I [1~] //number of column
+fps <C> I [2~] //animation frame per second
+ThumbIcon <> H [ThumbIcon] //control handle which used to set special image for certain files 
+MovieIcon <> H [ThumbMovieIcon] //The control to generate movie icon for thumb
+PreviewSlot <> H [Rect] //Window for display preview
+WaitImage <g> RT [] //Image used to fill the slot before image decoded
+WaitImgSkipFlag <> I [] //1 -- if has WaitImage, skip using it for specail files in virtual file tree (*.### and *.&&&)
+//0 -- always use WaitImage if assigned one
+GetExtraInfo <> H [PicUtil] //get extra infomation for the source url, like rotation
+sticker <> H [ThumbSticker] //use to draw a bitmap into video layer thumbnail slot, for example "selected"
+postproc <> H [ThumbPostproc] //handle to a control based on template ThumbPostproc to get postproc needed to apply to thumbnail
+AniFrameAction <> H [ThumbFrameCB] //handle to a control that add action for each animation step 
+DefaultPic <> RT [] 
+FirstColSlots <g> AH [1~;Rect] //rect array for slots that in first column, if layout is left to right, the animation will be left<->right else up<->down
+ColSpaces <g> AI [1~;] //space between each slot in same row
+<method>
+RequestPreview <> 02 01 //Request to show a picture in Rect:PreviewSlot
+        filename S [] <> //full url of filename
+        slot I [] <> //to preview in slot n instead of PreviewSlot, n from 1 to MxN.
+        I [] 
+UpdateShow <> 03 01 
+        first_item I [] <> 
+        action_type I [] <> 
+        action_param I [] <> 
+        I [] 
+RequestStop <> 00 01 //Stop playing 
+        I [] 
+ReqStop <B> 00 01 //stop vani application
+        I [] 
+SetPlayList <H> 01 01 
+        playlist_handle H [PlayList] <> 
+        I [] 
+IsBusy <> 00 01 
+        I [] 
+<event>
+AFMSG_THUMB_THUM_IDLE <> 
+AFMSG_THUMB_THUM_START <>
+ 
+
+
+
+<<Control>> MovieIconThumb [ThumbMovieIcon] 00000009 <> 
+<prop>
+disable_flag <> I [] //flags to disable GetMovieIcon or PlayMovieIcon:
+// set bit 0 to disable GetMovieIcon
+// set bit 1 to disable PlayMovieIcon
+def_video_jpg <> RT [] //if set, not supported movie file will use it
+cache_area <> I [] //cache area (0,1,2,3,6 for SD) and (4,5,7 for HD)
+cache_format <> I [] 
+cache_x <> I [] //x position of cache for decoding movie icon in current show area
+cache_y <> I [] //y position of cache for decoding movie icon in current show area
+cache_w <> I [] //width of cache for decoding movie icon in current show area
+cache_h <> I [] //height of cache for decoding movie icon in current show area
+players <> AH [;BasicPlayer] //array of handles to basic players
+<method>
+GetMovieIcon <> 03 01 //return a movie icon in format: ?PIX:<area>_<top>_<left>_<width>_<height>
+//for example ?PIX:7_100_200_120_80
+//if not supported movie or not moive, return NULL
+        file_list H [PlayList] <> //handle to filelist
+        vani_index I [] <> //the index and serial number asked for
+        vani_param I [] <> //pointer to a structure contains vani parameter(sticker, rotate, postprocess, ...)
+        S [] 
+PlayMovieIcon <> 02 01 //play movie icon in window (cache_x, cache_y, cache_w, cache_h)
+        url S [] <> //full url of movie file to play in slot
+        params I [] <> //params reserved
+        I [] 
+StopMovieIcon <> 01 01 //stop current playing movie icon
+        params I [] <> //params reserved
+        I [] 
+<event>
+
+
+
+
+<<Control>> NameTimeSorter [SorterT] 00000001 <> 
+<prop>
+SorType <> I [] 
+ItemCount <H> I [] //The total count of items need to be sorted.
+//This prop is set by caller controls (StringTable, FileTree) that use this Sorter
+ResultIndexPtr <HD> I [] //This prop value is casted to the address pointer of the index buffer, which is allocated and provided by caller controls (StringTable, FileTree). And the control of "Sorter" should make sorting and put the sorted index into this buffer. For example, if origin SortAttrValPtr={"bbb","aaa","dddd", "ccc"}, and the dictionary-order sorting will give the index as {1, 0, 3, 2}
+SortAttrName <HD> AS [;] //this Array give the name of each attribute, the value of it is used for sorting
+SortAttrType <HD> AI [;] //this Array give the value type of each attribute
+//0: the value of the attribute is "String" 
+//1: the value of the attribute is "Int"
+SortAttrValPtr <HD> AI [;] //each item of this array is casted to the address pointer of attribute value buffer, this buffer is allocated and provided by caller controls( StringTable, FileTree) , in which the same attribute's value of all sortting items are listed.
+<method>
+Sorting <H> 00 01 //Sorter do the sorting when this method is called
+        I [] 
+GetSortAttrName <H> 00 01 //return the name of attrs that will be used by Sorter, it has the format like:
+//"FileName, Mark.Tag0", etc
+        S [] 
+SetGetParam <H> 02 01 //Reserved
+        type I [] <> 
+        value I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> NecRemoteInput [] 00000011 <> 
+<prop>
+customer_code <S> I [] 
+leader_act_time <> I [] //leader active time (¦Ìs) , format as : 0xaaaabbbb,  aaaa---max time, bbbb---min time
+leader_idl_time <> I [] //leader idle time (¦Ìs) , format as : 0xaaaabbbb,  aaaa---max time, bbbb---min time
+rep_idl_time <> I [] //repeat leader active time (¦Ìs) , format as : 0xaaaabbbb,  aaaa---max time, bbbb---min time
+bit0_ident_time <> I [] //bit 0 identification time (¦Ìs) , format as : 0xaaaabbbb,  aaaa---max time, bbbb---min time
+ir_polarity <> I [0~1] //Polarity of the input signal, defaut is 0, you can set as 1 to change the polarity
+IRQ_selection <> I [0~3] //IRQ Selection and width measurement reset:
+//00:	IR Decoder done [default]
+//01:	IR input rising or falling edge detected
+//10:	IR input falling edge detected
+//11:	IR rising edge detected
+frame_mask <> I [0~3] //Frame mask.  These bits are used to qualify frames for capture.
+//11:	Capture all frames good or bad
+//01:	Capture only frames where data=~data.  Ignore custom codes
+//10:	Capture only frames where custom_code = ~custom_code.  Ignore data codes
+//00:	Capture only frames where (data=~data) and (custom_code = ~custom_code) (default)
+hold_first_key <> I [0~1] //Hold Last Key.  If this parameter is set as 0, then the frame data register will only be updated if hasn't already been updated.  Once updated, the frame data register will not be updated again until it has been read.  This bit can be used to guarantee the first TV remote code captured will not be overwritten by subsequent transmissions from a TV remote.
+//NOTE:  You must read the frame data register to clear an internal hold last flag if this parameter set as 0.
+//default: 0
+decode_mode <> I [0~3] //Decoder mode
+//00:	NEC Frames: Decode Leader and 32 bits [default]
+//01:	Only accumulate bits (skip the leader)
+//10:	Measure Mode.
+//11:	NEC Frames: Decode Leader and 32 bits
+bit_number <> I [0~31] //Number of bits in the IR frame (N-1), default [0x1f]
+rawcodesavemode <> I [0~1] //0  ---  save row code[0~0xff] with ordinal in a map [default]
+//1  ---  save row code in a map without ordinal, slowly in read process
+//You must set it if the remote row data code has more than 8 bits
+raw_code <S> AI [;] 
+afkey_val <S> AI [;:AfKey] 
+afkey_flag <> AI [;] 
+afkey_str <S> AS [;] 
+<method>
+Enable <> 01 01 
+        bEnable I [0~1] <> 
+        I [] //0,disable,other,enable(default)
+<event>
+AFMSG_INPUT_REMOTE_INPUT <> 
+AFMSG_SYS_REGISTER <I>
+ 
+
+
+
+<<Control>> OnboardKeyInput [] 00000009 <> //when pull high is valid
+<prop>
+keyionum <S> I [] //how many IO used for key? 
+keydelay <S> I [] //There are two values for the delay between keys. 
+//When pressing keys normally, the delay between keypresses is "keydelay"
+//When holding down a key, the delay after the first key is "keyinitdelay"
+//    then the delay between keys or repeat rate becomes "keydelay".
+//keyinitdelay should be greater than keydelay
+//default values are:
+//keydelay: 2
+//keyinitdelay: 8
+keyinitdelay <S> I [] //There are two values for the delay between keys. 
+//When pressing keys normally, the delay between keypresses is "keydelay"
+//When holding down a key, the delay after the first key is "keyinitdelay"
+//    then the delay between keys or repeat rate becomes "keydelay".
+//keyinitdelay should be greater than keydelay
+//default values are:
+//keydelay: 2
+//keyinitdelay: 8
+afkey_attr <C> I [] //bit 0-7: key mode
+//0---repeat key
+//1---long key
+//bit 8-15: long key start offset in raw_code afkey_val
+//bit 16-23: long key realease index
+//bit 24-31: reserved
+raw_code <S> AI [;] 
+afkey_val <S> AI [;:AfKey] 
+afkey_flag <> AI [;] 
+afkey_str <S> AS [;] 
+<method>
+<event>
+AFMSG_INPUT_REMOTE_INPUT <> 
+AFMSG_SYS_REGISTER <I>
+
+
+
+
+<<Control>> PicPlayer [BasicPlayer,AttributeSource] 00000046 <> 
+<prop>
+SlideDuration <> I [] //Slide duration, index mode or user define time mode.
+//data format    [31][30...........0]
+//index mode     0      index.
+//user mode       1      time(in ms)   (for example. define a 15ms slideshow duration as 0x8000000e)
+//index mode define 
+// {1s, 3s, 5s, 10s,INFINITY,15s,30s,1m,5m,10m,15m,30m,1h,24h,0,4h ,12h} ;
+//if you can't fine the slideshow duration time you need. please use user define mode.
+DisplayOption <> I [] //Picture display option:PIC_SHOW_SMART_CROP (1),PIC_SHOW_FULL_IMAGE (0),PIC_SHOW_CINEMA_MODE (5),PIC_SHOW_FULL_SCREEN_KEEP_RATIO (3);  
+BGroundColor <> I [] 
+ErrProcessCfg <> I [] //Error Process Config, bit[0]: use  default jpeg instead of error picture when error happen
+Config <> I [] //Config, bit[0~3] zoom mode, 0 normal zoom . config[4] is for photo style mode. 0 means no photo style. bit[5] is for gif animation, if 1, gif animation will be opened.
+SlideTransLeft <> I [] 
+SlideTransRight <> I [] 
+TranMode <> I [] //Slide show transition mode
+TranCfg0 <> I [] //Slide show random transition config
+TranCfg1 <> I [] //Slide show random transition config
+TranCfg2 <> I [] //Slide show random transition config
+TranCfg3 <> I [] //Slide show random transition config 
+FrameDirection <> I [] 
+RotateInput <> I [] 
+BkEnable <> I [] 
+BkClear <> I [] 
+MovieIconEnable <> I [] 
+RotateLevel <> I [] 
+ExtraInfo <> H [PicUtil] 
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+MagicWinMode <> I [] 
+MagicWinEnable <> I [] 
+InputMagicIndex <> I [] 
+DefaulPic <> RT [] //play default picture when unsupport picture.
+InputMagicWin <Cg> ART [;] 
+MagicWinAngle <Cg> ART [;] 
+<method>
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+Rotate <> 01 01 
+        direction I [] <> 
+        I [] //0: clockwise ,90 degree
+//1: antilclockwise  ,90 degree.
+//2: 180 degree.
+SetInterval <> 01 01 //Set slide show interval
+        interval I [] <> //0:1s 1:3s 2:5s 3:10s 4:forever 5:15s 6:30s 7:1m 8:5m 9:10m 10:15m 11:1h 12:1day 13:0s 
+        I [] 
+SetPicEnhance <> 01 01 
+        flag I [:PicEnhance] <> 
+        I [] 
+SetPicPolicy <> 02 01 
+        type I [:PIC_EFFECT] <> 
+        flag I [] <> 
+        I [] 
+SetTransMode <> 00 01 
+        I [] 
+StartMagicWin <> 01 01 //enable  sub window slideshow with transition effect
+        para I [] <> 
+        I [] 
+StopMagicWin <> 01 01 
+        para I [] <> 
+        I [] 
+StopTransition <B> 01 01 //stop current transition immediately
+        flag I [] <> 
+        I [] 
+SetFrameDir <> 01 01 
+        frame_direction I [] <> //Set Frame Direction
+        I [] 
+SetDispOption <> 01 01 
+        dispoption I [] <> 
+        I [] 
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+ReqPageUP <> 00 01 //use special page up transition effect
+        I [] 
+ReqPageDOWN <> 00 01 //use special page down transition effect
+        I [] 
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+ReloadCurPic <> 00 01 
+        I [] 
+<event>
+AFMSG_PIC_PROCESS_FINISH <>
+
+
+
+
+<<Control>> realplayer [BasicPlayer,AttributeSource] 00000006 <> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+DisplayMode <> I [] //0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+PreviewMode <> I [] //0: full screen
+//1: keep ratio
+ntfsupportfb <> I [] 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+AdjDisplayMode <> 01 01 
+        mode I [] <> //ajust video display mode:
+//0xff: DISPLAY_ADJUST_TOGGLE    ajust in turn
+//0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+//0xfe: DISPLAY_ADJUST_DISABLE
+        I [] 
+<event>
+AFMSG_BPLAY_ZOOM_LEVEL <>
+ 
+
+
+
+<<Control>> Rect [Rect] 00000001 <> 
+<prop>
+XYWH <g> GR [] //The position and size of control
+<method>
+<event>
+ 
+
+
+
+<<Control>> SlotItemPrepare [SlotItemPrepare] 00000015 <> 
+<prop>
+CacheX <g> I [] //X coordinate of cache buffer. we need one buffer for slot icon draw and will get the data from this buffer to slot cache buffer
+CacheY <g> I [] //Y coordinate of cache buffer. we need one buffer for slot icon draw and will get the data from this buffer to slot cache buffer
+MaxItemsNum <> I [] //the max item number
+SlotSlideAttr <g> H [SlotSlideAttr] //slotslideattr control. slotitemprepare control need some attribute to process the logical control
+ItemNumFixed <> I [] //the number of item is fixed mode or free mode. Most menus the item is fixed, but some menu for example album menu, the items number depends on the search resault.
+//1------fixed mode
+//0------free mode
+ItemDraw <> AH [;SlotItemDraw] //the array of handle which point to the every item draw control. user should create all items draw to different control. SlotItemPrepare control will call the user defined draw method to finish the icon draw.
+<method>
+PrepareInit <> 01 01 //the slot initialize function. it will prepare all slots
+        SlotBufferAddr I [] <> //the address of buffer which cache the slot icon
+        I [] 
+PreparePreItem <> 01 01 //prepare the previous slot item
+        SlotBufferAddr I [] <> //the address of buffer which cache the slot icon
+        I [] 
+PrepareNextItem <> 01 01 //prepare the next slot item.
+        SlotBufferAddr I [] <> //the address of buffer which cache the slot icon
+        I [] 
+PrepareByIndex <> 04 01 //parepare the slot item by Index
+        SlotIndex I [] <> //Which Slot will be prepared
+        DstBufType I [] <> //0-----Cache buffer
+//1-----Display buffer
+        ItemIndex I [] <> //item index which item will be prepared
+        IconType I [] <> //prepare icon type
+//0------normal icon
+//1------highlight icon
+//2------disable icon
+//3------background icon
+        I [] 
+AddItem <> 02 01 //add the item in dynamic item mode
+        ItemIndex I [] <> //item index you want to insert
+//-1-----means append the item on the last one
+        ItemDrawHandle H [SlotItemDraw] <> //item draw handle of the new one
+        I [] 
+RemoveItem <> 01 01 //remove the item in dynamic item mode
+        ItemIndex I [] <> //item index you want to remove. 
+//-1------means remove all items
+        I [] 
+GetItemStatus <> 01 01 //Get item status by index. the up level should use this return value for scroll control. for example, if the current focus item is disabled item, the up level should send another scroll key for next item
+        ItemIndex I [] <> //item index you want to get 
+        I [] 
+RefreshItem <> 01 01 //this function will be used after item adding or delete
+        ItemIndex I [] <> //this control will refresh all items from this index
+        I [] 
+GetItemSlotNum <> 01 01 //it will return the slot number of the related item
+        ItemIndex I [] <> //the item index you want to check
+        I [] 
+<event>
+AFMSG_INPUT_REMOTE_INPUT <I>
+ 
+
+
+
+<<Control>> SlotSlide [SlotSlide] 00000007 <> 
+<prop>
+SlotItemPrepare <g> H [SlotItemPrepare] //handle to the osd data prepared
+DisplayArea <g> H [Rect] //control display area.  it will display nothing out of this area. Do not forget to put the cache slot out of this area. 
+SlotSlideAttr <g> H [SlotSlideAttr] //point to the slotslide attribute setting control
+ExternalDraw <> H [UserDrawCall] //user can draw something used this callback if you want to draw something except in slot area
+<method>
+SyncSlotBuf <> 02 01 //it will sync the display osd buffer with slot cache buffer
+        SlotIndex I [] <> //which slot index you want to sync
+        SrcBufType I [] <> //0-----Cache buffer
+//1-----Display buffer
+        I [] 
+WaitFinished <> 00 01 //the rule level sometimes need to waitdraw finished they draw another slotslide control
+        I [] 
+<event>
+AFMSG_SYS_DRAW <I> 
+AFMSG_SYS_HIDE <I> 
+AFMSG_SYS_INIT <I> 
+AFMSG_INPUT_REMOTE_INPUT <I> 
+AFMSG_GUI_ITEM_FOCUS_CHANGE <> 
+AFMSG_GUI_ITEM_FOCUS_SELECTED <> 
+AFMSG_GUI_ITEM_DRAW_FINISHED <> 
+AFMSG_GUI_ITEM_SLIDE_FINISHED <>
+ 
+
+
+
+<<Control>> SlotSlideAttr [SlotSlideAttr] 00000003 <> 
+<prop>
+MaxSlotNum <g> I [] //Max slot number. the first and the last slot will be cache. 
+//for example, if you want  to display 5 slot in screen. you should set this value to 7.
+SlotMovingStep <g> I [] //slot moving step. the slot will move based on this setting. if you set it bigger, the slot will move faster.
+//negative: means user want the special slow speed. the slot will move 1 pixel  in every step and will delay the -negative time.
+//positive number: means the slot will move positive number pixel in every step.
+FocusIndex <> I [] //current item index of focus slot
+FocusSlot <g> I [] //focus slot sequence. Note this sequence is not include the cache slot. 
+//0 means the focus slot will be fixed. the value means the index of fixed Focus slot number.
+//-1 means all the slot items will be unfocus status when first displaying
+ShowDirection <> I [] //bit 0-bit7:Dec Meaning show direction
+//0----left -> right
+//1----right -> left
+//2----up -> down
+//3----down -> up
+//4----no direction. it means display the control without any effect
+//5----open door mode
+//6----close door mode
+//7----replace the old one from left to right
+//8----replace the old one from right to left
+//9----zoom in&out effect
+//bit 8: means this control should be displayed or hide after AFMSG_SYS_DRAW or AFMSG_SYS_HIDE. 
+//user can send the AFMSG_SYS_DRAW or  AFMSG_SYS_HIDE message to this control later for displaying or hide
+//bit 9: rolling control flag. if this flag is true, the highlight icon will be rolling effect
+//bit 10: icon number of each slot identify. if it's true, it means more than 1 icon for each slot
+//bit 28~31:if bit 10 is true, these value means the icon number of each slot.
+MoveDirection <> I [] //slot moving direction
+//0-----Left or Right
+//1-----Up or Down
+LoopFlag <> I [] //loop display control flag
+//0---- focus fixed without loop when reach the boarder
+//1---- focus fixed with loop display when reach the boarder
+//2----focus moving without loop when reach the boarder
+//3----focus moving with loop when reach the boarder
+//4----focus moving and will go to first item or last item when reach the boarder
+ReservedInt1 <> I [] //bit 0~bit16: delay time for refreshing of each icon when ShowDirection bit 10 is true.
+ReservedInt2 <> I [] //the background color when ShowDirection use the zoom in or out mode
+MaxSlotWidth <g> I [] //max slot width value
+MaxSlotHeight <g> I [] //max slot height value
+BackgroundIcon <g> RI [] //background icon of slide menu. it will fill based on this icon if there are no item in related slot.
+SlotVCoordinate <g> AI [;] //Define the Vertical slot coordinate and it will move based on it if you set the MovingDir to 1
+SlotHCoordinate <g> AI [;] //Define the horizontal slot coordinate and it will move based on it if you set the MovingDir to 0
+<method>
+<event>
+ 
+
+
+
+<<Control>> StringTable [StringTableWR,StringTableRD,StringTable,StringTableEx] 00000026 <> 
+<prop>
+Sorter <H> H [SorterT] 
+InitRow <> AS [;] //the initial row in this table, it has format like: "row_name,col0_string,col1_string", etc
+RowProfContent <> AS [;] //The Configuration for the row that is needed to be saved or loaded with "profile"
+//Each configuration item has format of: "row_name:ALL", "row_name:STR", or "row_name:SELCOL".
+//"row_name:STR" will save the string of each col , "row_name:SELCOL" will save the selected col index of this row. "row_name:ALL" will save both of these two information.
+//If this prop is not set, all rows will be loaded or saved when calling LoadProfile and SaveProfile.
+ColNickNameList <SD> AS [;] //Nickname of "__ROWNAME__", "__INFO__" are reserved for row_name and info_data of each row.
+//"0","1","15",etc are used if Nickname of some col is not set.
+<method>
+Query <> 03 01 //return the string in colmun "return_col", if the string in same row and in column "col" has "match_string"
+        col I [] <> 
+        result_col I [] <> 
+        match_string S [] <> 
+        S [] 
+QueryEx <> 03 01 
+        col_name S [] <> 
+        result_col_name S [] <> 
+        match_string S [] <> 
+        S [] 
+QueryN <> 04 01 
+        col I [] <> 
+        result_col I [] <> 
+        match_string S [] <> 
+        cmp_num I [] <> 
+        S [] 
+QueryExN <> 04 01 
+        col_name S [] <> 
+        result_col_name S [] <> 
+        match_string S [] <> 
+        cmp_num I [] <> 
+        S [] 
+SetValue <> 03 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        value I [] <> 
+        I [] 
+GetValue <> 02 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        I [] 
+GetValueEx <> 02 01 
+        row_name S [] <> 
+        col_name S [] <> 
+        I [] 
+GetStringEx <> 02 01 
+        row_name S [] <> 
+        col_name S [] <> 
+        S [] 
+Query2StrTable <> 02 01 //Query the rows that meet the condition in "cond_string"
+//The result is put into prop of "QueryResultTab" (another StringTable)
+        cond_string S [] <> // it has format of:
+//"col_nickname1==ABC",
+//"col_nickname1==ABC&colnickname2!=DEF", 
+//"col_nickname1==ABC|colnickname2==DEF",
+//"col_nickname1==ABC|colnickname2==DEF&colnickname3!=GHI"
+//etc
+//* col_nickname is  defined by user (prop of "ColNickNameList") or have the default name (set by owner control)
+//* Order of Precedence: & (AND) is higher than | (OR)
+        result_str_tab H [StringTableWR] <> 
+        S [] 
+GetColIndex <> 01 01 //The the col index by it's nickname {0~ColCount-1}
+//Return -1 if ColNickName does not exist.
+        ColNickName S [] <> 
+        I [] 
+GetRowCount <> 00 01 
+        I [] 
+GetColCount <> 01 01 
+        row_name S [] <> 
+        I [] 
+GetString <> 02 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        S [] 
+GetRowName <> 01 01 
+        row_index I [] <> 
+        S [] 
+GetRowIndex <> 01 01 
+        row_name S [] <> 
+        I [] 
+LoadProfile <> 01 01 
+        profile_src H [Profile] <> 
+        I [] 
+SaveProfile <> 02 01 //save profile of all rows that are set in "RowProfContent" if row_name is zero length string.
+        profile_src H [Profile] <> //save profile of all rows that are set in "RowProfContent" if row_name is zero length string.
+        row_name S [] <> //save profile of all rows that are set in "RowProfContent" if row_name is zero length string.
+        I [] 
+SetSorter <> 01 01 
+        Sorter H [SorterT] <N> 
+        I [] 
+AddRow <> 01 01 
+        row_name S [] <> 
+        I [] 
+DelRow <> 01 01 
+        row_name S [] <> 
+        I [] 
+SetString <> 03 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        string S [] <> 
+        I [] 
+DelString <> 02 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        I [] 
+Release <> 00 01 
+        I [] 
+GetRowInfo <> 01 01 
+        row_name S [] <> 
+        I [] 
+SetRowInfo <> 02 01 
+        row_name S [] <> 
+        info_data I [] <> 
+        I [] 
+GetSelColIndex <> 01 01 
+        row_name S [] <> 
+        I [] 
+SetSelColIndex <> 02 01 
+        row_name S [] <> 
+        col_index I [] <> 
+        I [] 
+GetRowNameStrID <H> 01 01 
+        row_name S [] <> 
+        I [] 
+SetRowNameStrID <> 02 01 
+        row_name S [] <> 
+        strID RS [] <> 
+        I [] 
+GetRowIndexNcas <> 01 01 
+        row_name S [] <> 
+        I [] 
+<event>
+AFMSG_STRTB_REFRESH <>
+ 
+
+
+
+<<Control>> StrManipulator [] 00000011 <> 
+<prop>
+RetVal <> I [] 
+RetStr <> S [] 
+<method>
+IsSubStr <> 02 01 //RetVal = (int)strstr(str2, str1)
+        substr S [] <> 
+        str S [] <> 
+        I [] 
+SubStr <> 03 01 //RetStr = substring of str from position to position+length-1
+        str S [] <> 
+        position I [] <> 
+        length I [] <> 
+        S [] 
+StrCat <> 02 01 //RetStr = strcat(str1, str2);
+        str1 S [] <> 
+        str2 S [] <> 
+        S [] 
+StrToInt <> 01 01 //RetVal = atoi(str)
+        str S [] <> 
+        I [] 
+IntToStr <> 01 01 //RetStr = itoa(value)
+        value I [] <> 
+        S [] 
+HexStrToInt <> 01 01 //RetVal = htoi(str)
+        str S [] <> 
+        I [] 
+FilenameCmp <> 02 01 //Compare filename with each pathname in PathSet, return compare result if filename is equal or in one of these path.
+//The pathname is put in prop of RetStr.
+//return value:
+//0, not match
+//1, filename==path 
+//2, filename is in directory of path 
+//3, filename is in directory or subdirectory of path 
+        filename S [] <> 
+        PathSet S [] <> //the name of one path or multi path (have format of "path1,path2,path3", etc )
+        I [] //return value:
+//0, not match
+//1, filename==path 
+//2, filename is in directory of path 
+//3, filename is in directory or subdirectory of path 
+ExtractFileName <> 01 01 //extract the filename from full path name of file, the filename is put prop of RetStr also
+        fullname S [] <> 
+        S [] //filename
+ExtractPath <> 01 01 //extract the path from full path file name, result is assigned to property RetStr.
+        fullname S [] <> 
+        S [] //path
+ExtractFileExt <> 01 01 
+        fullname S [] <> 
+        S [] 
+ExtractVPath <> 01 01 //use it to extract the path from virtual path, result is assigned to property RetStr.
+//eg: ":/mnt/SD/5in1/Photo/:" to  "/mnt/SD/5in1/Photo/", remove ':' in the path.
+        sour_str S [] <> 
+        S [] 
+<event>
+ 
+
+
+
+<<Control>> SubtitleExtern [BasicSubtitle] 00000005 <> 
+<prop>
+Subtitle <SC> H [ShowSubtitle] //fill or not by project needs
+//if not fill, will send message AFMSG_BPLAY_SHOW_SUBTITLE,
+//which would be processed in uShowSubtitle control
+<method>
+SetAppInfo <> 03 01 //set app info
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+SetExtSubtitle <> 03 01 //set external subtitle
+        address I [] <> 
+        url S [] <> 
+        flag I [] <> //show or not
+//0:show
+//1:no
+        I [] 
+ChangeSubtitle <> 01 01 //change the subtitle
+        id I [] <> //-1: increse current stream id
+//other: change to the specify id
+        I [] 
+RemoveExtSub <> 01 01 //remove external subtitle
+        index I [] <> //-1:remove all
+//other: remove by the index
+        I [] 
+ShowSubtitle <> 03 01 //show the subtitle
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+HideSubtitle <> 00 01 //hide the subtitle
+        I [] 
+QuitSubtitle <> 00 01 //stop the subtitle
+        I [] 
+<event>
+AFMSG_BPLAY_SHOW_SUBTITLE <>
+ 
+
+
+
+<<Control>> SubtitlePGS [BasicSubtitle] 00000001 <> 
+<prop>
+<method>
+SetAppInfo <> 03 01 //set app info
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+SetExtSubtitle <> 03 01 //set external subtitle
+        address I [] <> 
+        url S [] <> 
+        flag I [] <> //show or not
+//0:show
+//1:no
+        I [] 
+ChangeSubtitle <> 01 01 //change the subtitle
+        id I [] <> //-1: increse current stream id
+//other: change to the specify id
+        I [] 
+RemoveExtSub <> 01 01 //remove external subtitle
+        index I [] <> //-1:remove all
+//other: remove by the index
+        I [] 
+ShowSubtitle <> 03 01 //show the subtitle
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+HideSubtitle <> 00 01 //hide the subtitle
+        I [] 
+QuitSubtitle <> 00 01 //stop the subtitle
+        I [] 
+<event>
+
+
+
+
+<<Control>> SubtitleStream [BasicSubtitle] 00000001 <> 
+<prop>
+<method>
+SetAppInfo <> 03 01 //set app info
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+SetExtSubtitle <> 03 01 //set external subtitle
+        address I [] <> 
+        url S [] <> 
+        flag I [] <> //show or not
+//0:show
+//1:no
+        I [] 
+ChangeSubtitle <> 01 01 //change the subtitle
+        id I [] <> //-1: increse current stream id
+//other: change to the specify id
+        I [] 
+RemoveExtSub <> 01 01 //remove external subtitle
+        index I [] <> //-1:remove all
+//other: remove by the index
+        I [] 
+ShowSubtitle <> 03 01 //show the subtitle
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+HideSubtitle <> 00 01 //hide the subtitle
+        I [] 
+QuitSubtitle <> 00 01 //stop the subtitle
+        I [] 
+<event>
+
+
+
+
+<<Control>> SubtitleVOBSub [BasicSubtitle] 00000001 <> 
+<prop>
+<method>
+SetAppInfo <> 03 01 //set app info
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+SetExtSubtitle <> 03 01 //set external subtitle
+        address I [] <> 
+        url S [] <> 
+        flag I [] <> //show or not
+//0:show
+//1:no
+        I [] 
+ChangeSubtitle <> 01 01 //change the subtitle
+        id I [] <> //-1: increse current stream id
+//other: change to the specify id
+        I [] 
+RemoveExtSub <> 01 01 //remove external subtitle
+        index I [] <> //-1:remove all
+//other: remove by the index
+        I [] 
+ShowSubtitle <> 03 01 //show the subtitle
+        data0 I [] <> 
+        data1 I [] <> 
+        data2 I [] <> 
+        I [] 
+HideSubtitle <> 00 01 //hide the subtitle
+        I [] 
+QuitSubtitle <> 00 01 //stop the subtitle
+        I [] 
+<event>
+
+
+
+
+<<Control>> SWFPlayer [BasicPlayer,AttributeSource] 00000029 <s> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+FontPath <> S [] //default :   "mnt/UDISK/usba01/font.df2"
+AmlogicPath <> S [] //default : "/mnt/UDISK/usba01/amlogic"
+TempPath <> S [] //default : "/mnt/UDISK/usba01/amlogic/temp"
+ifLooping <> I [] //Set Looping for swf playback, 0 not loop, 1 loop
+ifInitAudio <> I [] //if init audio device in swf parser
+//for the swf which has no audio you have known
+ifDrm <> I [] //If encrypted, please set to 1, else set to 0
+//if 1, please set the key
+drm_key <> S [] //this is the key for encrpytion
+FrameLimitTime <> I [] //0:  default(2000ms).    >=3600000: no limit .    other:  ms
+ifNotScale <> I [] 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+StepPLay <> 00 01 //CM_SWF_STEP_PLAY
+        I [] 
+SlideShow <> 00 01 //CM_SWF_SLIDE_SHOW
+        I [] 
+ChangeQuality <> 00 01 
+        I [] 
+DebugInfo <> 00 01 
+        I [] 
+ZoomInOut <> 00 01 
+        I [] 
+PressUP <> 00 01 
+        I [] 
+PressDown <> 00 01 
+        I [] 
+PressLeft <> 00 01 
+        I [] 
+PressRight <> 00 01 
+        I [] 
+FocusEnter <> 00 01 
+        I [] 
+FocusSwitch <> 00 01 
+        I [] 
+PressKeyBoard <> 02 01 
+        afkey_val I [:AfKey] <> 
+        afkey_str S [] <> 
+        I [] 
+SetShowArea <> 04 01 //return -1, means invalid parameter
+//return 0, means call success
+        left I [] <> 
+        top I [] <> 
+        width I [] <> 
+        height I [] <> 
+        I [] 
+<event>
+AFMSG_SWF_INFOMATION <>
+ 
+
+
+
+<<Control>> SysProbe [AframeShellCmd] 00000003 <> 
+<prop>
+argn <H> I [] 
+CmdsDescription <HD> AS [;] 
+CmdNames <HD> AS [;] 
+args <HD> AS [;] 
+<method>
+CmdFun <> 03 01 
+        cmd_name S [] <> 
+        print_fun I [] <> 
+        flag I [] <> 
+        I [] 
+CleanRandomKey <> 00 01 
+        I [] 
+AddRandomKey <> 01 01 
+        key I [:AfKey] <> 
+        I [] 
+SetRandomKey <> 01 01 
+        period_ms I [] <> //the milliseconds to send random key, disable random key if period_ms is 0
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> TSPlayer [BasicPlayer] 00000001 <> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> TxtPlayer [BasicPlayer,AttributeSource] 00000030 <> //this control is for text playing. below method will be used for your special requirement
+//FastForward: for next line or next page
+// level=1: next line, otherwise next page
+//FastBackward: for previous line or previous page
+// level=1: previous line, otherwise previous page
+//Pan: for auto scroll 
+// direction: for auto scroll speed (0, 5000ms), distance: for auto scroll step(0, 8)
+//TimeSearch: pause_flag: 0, the time is to set line   1,the time is to set page  2, the time is to set file pos
+//Note:
+//1, use the CurPos to get the resume postion
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+DisplayArea <g> GR [] //define the text display area. x, y, width, height
+DisplayAngle <> I [] 
+FontSize <g> I [] 
+FGColor <g> I [] 
+BGColor <g> I [] 
+ScrollSpeed <g> I [] //bit0~bit15: animation speed. we add the animation effect for next line
+//bit16~bit23: animation step. 
+CurPage <R> I [] 
+CurLine <g> I [] 
+CurPos <g> I [] //current postion 
+TotalPage <R> I [] 
+PageNumberArea <g> GR [] 
+<method>
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+TurnPage <> 02 01 
+        direction I [] <> 
+        dlytime I [] <> 
+        I [] 
+StopScroll <> 00 01 //stop the autoscroll or auto turn page 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+DrawPage <> 02 01 
+        mode I [] <> 
+        value I [] <> 
+        I [] 
+SetUserMode <> 01 01 
+        mode I [] <> //mode=0,default,original draw process,mode=1,not use text animateion process
+        I [] 
+<event>
+ 
+
+
+
+<<Control>> Upgrade [] 00000013 <> 
+<prop>
+SystemHandle <> H [Bsp] 
+FileName <R> S [] 
+UpgradeHandle <> H [UpgradeHandle] 
+Info <D> AS [;] 
+Customer <RD> AI [;] 
+Version <RD> AI [;] 
+CreateDate <RD> AI [;] 
+Platform <D> AI [;] 
+Slot <RD> AI [;] 
+<method>
+GetInfo <> 01 01 
+        num I [] <> 
+        S [] 
+GetPlatform <> 01 01 
+        num I [] <> 
+        I [] 
+GetVersion <> 01 01 
+        num I [] <> 
+        I [] 
+GetCreateDate <> 01 01 
+        num I [] <> 
+        I [] 
+GetCustomer <> 01 01 
+        num I [] <> 
+        I [] 
+Check <> 00 01 //Check whether it is a legal file
+        I [] 
+Start <> 00 01 //Start Upgrade process
+        I [] 
+SetFileName <> 01 01 //Set Upgrade File Name
+        filename S [] <> //upgrade filename , full path
+        I [] //Success or Fail
+<event>
+AFMSG_UPG_UPGRADE_CHECK_OK <> 
+AFMSG_UPG_UPGRADE_CHECK_ERROR <> 
+AFMSG_UPG_UPGRADE_FAIL <> 
+AFMSG_UPG_UPGRADE_OPEN_ERROR <> 
+AFMSG_UPG_UPGRADE_FINISHED <> 
+AFMSG_UPG_UPGRADE_IN_PROGESS <>
+ 
+
+
+
+<<Control>> Variables [] 00000001 
+<prop>
+int0 <> I [] 
+int1 <> I [] 
+int2 <> I [] 
+int3 <> I [] 
+int4 <> I [] 
+int5 <> I [] 
+int6 <> I [] 
+int7 <> I [] 
+string0 <> S [] 
+string1 <> S [] 
+string2 <> S [] 
+string3 <> S [] 
+string4 <> S [] 
+string5 <> S [] 
+string6 <> S [] 
+string7 <> S [] 
+<method>
+<event>
+
+
+
+
+<<Control>> VOBPlayer [BasicPlayer,AttributeSource] 00000012 <s> 
+<prop>
+FastPlayTime <H> I [] //unit: 0.1s; 0: fast forward/backward without playing sound
+SendMsgFun <H> I [] //Readonly,   Container send msg function. This is internal interface set by container and casted to type of function pointer. Player call it to send it's message 
+SendMsgArg <H> I [] //Readonly,  Container send msg arg.
+//This is internal interface set by container and casted to type of "void*",  BasicPlayer assign it message pointer before calling SendMsgFun.
+AppType <C> S [] //The  supported files's extention name, has the format like:
+//"mp3,mov,mp4"  
+ThumbnailCfg <> I [] //thumbnail config, input: 1 thumbnail prefered, 
+DisplayMode <> I [0~5] //0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+InterSubtitle <> H [ShowSubtitle] //show internal subtitle
+VidDecodeFilter <> I [] //used for configure which video format should be filtered out,if  a  certain media type is filtered, Unsupport  message will be sent out
+//bit0 :   FILTER_DIVX
+//bit1:    FILTER_MPEG1
+//bit2:   FILTER_MPEG2
+//bit3:   FILTER_MPEG4
+//bit4:   FILTER_MJPEG
+//bit5:     FILTER_H263             
+//bit6:     FILTER_H264   
+PreviewMode <> I [] //0: full screen
+//1: keep ratio
+<method>
+GetAttribute <H> 02 01 
+        url S [] <> //url of item
+        attr_name S [] <> //The name of attribute
+        S [] //attr value
+Start <H> 00 01 //Create app task      
+        I [] 
+Quit <H> 00 01 //Delete app task        
+        I [] 
+Play <H> 05 01 //Play the file (url is not NULL and state is "STOP")
+//Or change state from "PAUSE", "FF", "FB" to normal playing ( url is NULL)
+        url S [] <> //if url is not NULL and player is in "STOP" state, play a new item (player must be in "STOP" state)
+//if url is NULL and player is in "PAUSE", "FF", "FB", change state to normal playing (player  can not be in "STOP" state)
+        window_x I [] <> // 
+        window_y I [] <> 
+        window_width I [] <> 
+        window_height I [] <> // 
+        I [:StreamType] //fail, return -1
+//not support, return -2
+//success:
+//return StreamType: 
+//STREAMTYPE_AUDIOONLY,
+//STREAMTYPE_PICTURE,
+//STREAMTYPE_VIDEO
+Stop <H> 00 01 //Stop playing
+        I [] 
+Pause <H> 00 01 //Pause     
+        I [] 
+FastForward <H> 01 01 //Fast forward
+        level I [] <> 
+        I [] //return -1 if not support
+FastBackward <H> 01 01 //Fast backward
+        level I [] <> 
+        I [] //return -1 if not support
+TimeSearch <H> 02 01 // 
+        time I [] <> //start play time; 
+        pause_flag I [] <> //flag: 0 normal play after time search, 1 pause after time search
+        I [] //return -1 if not support
+Zoom <H> 01 01 //Zoom, input: zoom level: 0, return normal display
+        level I [] <> 
+        I [] 
+Pan <H> 02 01 //  
+        direction I [] <> 
+        distance I [] <> 
+        I [] 
+SetParam <H> 02 01 //set parameters for below method, it will be reset after any of below method are called:
+//1. method of Play:
+//"time", the start playing time
+        param_name S [] <> 
+        value I [] <> 
+        I [] 
+AdjDisplayMode <> 01 01 //adjust video display mode
+        mode I [] <> //video adjust mode.  
+//0xff: DISPLAY_ADJUST_TOGGLE    ajust from 0 to 4 in turn
+//0:     DISPLAY_ADJUST_KEEP_RATIO
+//1:     DISPLAY_ADJUST_STRETCH
+//2:     DISPLAY_4_3_TO_16_9_SUBTITLE
+//3:     DISPLAY_4_3_TO_16_9_NO_SUBTITLE
+//4:     DISPLAY_16_9_TO_4_3_TV
+//5:     DISPLAY_KEEP_ORIGINAL
+//0xfe: DISPLAY_ADJUST_DISABLE
+        I [] 
+<event>
+AFMSG_BPLAY_SHOW_SUBTITLE <> 
+AFMSG_BPLAY_ZOOM_LEVEL <>
+ 
+
+
+
+<<Control>> uShowTime [] 00000021 <> 
+<prop>
+IconBK <g> RI [] 
+TimeCtrl <Cg> H [Rect] 
+FontColor <g> I [] 
+FontSize <g> I [] 
+LastTime <Rg> I [] 
+TotalItem <g> I [] 
+FontOffset <g> AI [;] 
+VolumePro <g> ARI [;] 
+VolumeValue <g> AI [;] 
+<method>
+ShowPercByTime <> 02 01 //According to playing time and total time, get percent of current time
+        playing_time I [] <> 
+        total_time I [] <> 
+        I [] 
+ShowByTime <> 01 01 //input:playing time int
+//output:playing time string
+        playing_time I [] <> 
+        I [] 
+ShowVolume <> 01 01 //0:no volume
+//if >totalitem ,clean icon
+//need look at layer
+        VolumeValue I [] <> 
+        I [] 
+<event>
+AFMSG_BPLAY_PLAY_TIME <I>
+ 
+
+
+
+<<Control>> uSSaver [] 00000013 <> 
+<prop>
+ICON_X <g> I [] 
+ICON_Y <g> I [] 
+ICON_W <g> I [] 
+ICON_H <g> I [] 
+SSstart <> I [] 
+transparentpata <> I [] 
+scr_direction <> I [] 
+lastpagehandle <> H [] 
+SSicon <g> RI [] 
+<method>
+osdsettpval_scr <> 01 01 
+        level I [] <> 
+        I [] 
+SSposition <> 00 01 
+        I [] 
+scr_timer_func <> 00 01 
+        I [] 
+SSstop <> 01 01 
+        type I [] <> 
+        I [] 
+SSstatus <> 00 01 
+        I [] 
+SSstart <> 00 01 
+        I [] 
+GetCurShowPage <> 00 01 //return the current show page handle
+        H [] 
+<event>
+
+
+
+
+<<Control>> uSysPara [uPara] 00000006 <> 
+<prop>
+int_array <> AI [;;:uIntParaEnum] 
+str_array <> AS [;;:uStrParaEnum] 
+<method>
+SetStrPara <> 02 01 
+        id I [:uStrParaEnum] <> 
+        str_value S [] <> 
+        I [] 
+GetStrPara <> 01 01 
+        id I [:uStrParaEnum] <> 
+        S [] 
+SetIntPara <> 02 01 
+        id I [:uIntParaEnum] <> 
+        int_value I [] <> 
+        I [] 
+GetIntPara <> 01 01 
+        id I [:uIntParaEnum] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uTempStr [] 00000001 <> 
+<prop>
+string <> S [] 
+<method>
+<event>
+
+
+
+
+<<Control>> uTempVar [] 00000001 <> 
+<prop>
+int_value <> I [] 
+<method>
+<event>
+
+
+
+
+<<Control>> uTimeSearch [] 00000007 <> 
+<prop>
+sys_para <> H [uParaMeter] 
+<method>
+ChecFileExist <> 01 01 //1 is exist,0 is not exist
+        full_name S [] <N> 
+        I [] 
+GetSaveTimeID <> 01 01 //return save time value id
+        full_name S [] <N> 
+        I [:uIntParaEnum] 
+GetTimeValue <> 01 01 //return time value
+        id I [0~] <N> 
+        I [] 
+SetFileName <> 01 01 //return save time id
+        full_name S [] <N> 
+        I [:uIntParaEnum] 
+SetTimeValue <> 02 01 
+        time_value I [0~] <N> 
+        id I [] <N> 
+        I [] 
+ClearFileName <> 01 01 
+        full_name S [] <> 
+        I [] 
+<event>
+
+
+
+
+<<Control>> uUpgrade [UpgradeHandle] 00000001 <> 
+<prop>
+<method>
+Check <> 02 01 
+        Platform I [] 
+        Customer I [] 
+        I [] 
+<event>
+AFMSG_UPG_UPGRADE_CHECK_OK <I> 
+AFMSG_UPG_UPGRADE_CHECK_ERROR <I> 
+AFMSG_UPG_UPGRADE_FAIL <I> 
+AFMSG_UPG_UPGRADE_FINISHED <I> 
+AFMSG_UPG_UPGRADE_IN_PROGESS <I> 
+AFMSG_UPG_UPGRADE_OPEN_ERROR <I>
+ 
+
+
+
+<<Control>> uVariable [] 00000005 <> 
+<prop>
+handle1 <g> H [] 
+handle2 <g> H [] 
+handle3 <g> H [] 
+handle4 <g> H [] 
+handle5 <g> H [] 
+handle6 <g> H [] 
+afkey_value <> I [:AfKey] 
+<method>
+<event>
+
+
+
+
+<<Control>> uVideoFmt [] 00000017 <> 
+<prop>
+curVideoFmt <g> I [] 
+outputmode <R> I [] //readonly
+//0: Analog
+//1:Panel
+//2:HDMI
+<method>
+SetVideoType <> 02 01 //Set Video output format
+        fmt I [] <> //0 - 1080P
+//1 - 1080I
+//2 - 720P
+        outputmode I [] <> 
+        I [] 
+DisplayMode <> 01 01 
+        type I [] <> //0(4:3) ; 1(16:9)
+        I [] 
+ResetForTVOut <> 01 01 //panel switch to tv out
+        type I [] <> //reserved type for further parameter using
+        I [] 
+FLVPlayReScale <> 00 01 
+        I [] 
+DiableVideo <> 00 01 
+        I [] 
+EnableVideo <> 00 01 
+        I [] 
+ResizeArea <> 09 01 
+        layer I [] <> 
+        x I [] <> 
+        y I [] <> 
+        width I [] <> 
+        height I [] <> 
+        x_show I [] <> 
+        y_show I [] <> 
+        width_show I [] <> 
+        height_show I [] <> 
+        I [] 
+RestoreArea <> 00 01 
+        I [] 
+VideoKeepScreen <> 01 01 //set the screen keep for video playing
+        keep_flag I [] <> //0------clear screen
+//1------keep screen
+        I [] 
+SetOSDWindow <> 04 01 //set a clip window for OSD to display
+        x I [] <> 
+        y I [] <> 
+        w I [] <> 
+        h I [] <> 
+        I [] 
+<event>
+
+
+
+<<MsgType>>
+AFMSG_BPLAY_STATE_CHANGE        15287200
+AFMSG_BPLAY_PLAY_TIME        15287201
+AFMSG_BPLAY_ITEM_CHANGING        15287202
+AFMSG_BPLAY_ITEM_CHANGED        15287203
+AFMSG_BPLAY_ITEM_NOT_SUPPORT        15287204
+AFMSG_BPLAY_PLAY_FAIL        15287205
+AFMSG_BPLAY_ALL_ITEM_PLAYED        15287206
+AFMSG_BPLAY_PLAYLIST_EMPTY        15287207
+AFMSG_BPLAY_PIC_DISPLAY        15287208
+AFMSG_BPLAY_EVENT        15287209
+AFMSG_BPLAY_SHOW_SUBTITLE        1528720a
+AFMSG_BPLAY_AUDIO_STREAM        1528720b
+AFMSG_BPLAY_SUBTITLE_STREAM        1528720c
+AFMSG_BPLAY_CMD_FAIL        1528720d
+AFMSG_BPLAY_ZOOM_LEVEL        1528720e
+AFMSG_BPLAY_UNSUPPORTED_AUDIO        1528720f
+AFMSG_BT_OPP_CONNECT        00004a00
+AFMSG_BT_OPP_DISCONNECT        00004a01
+AFMSG_BT_BIP_CONNECT        00004a02
+AFMSG_BT_BIP_DISCONNECT        00004a03
+AFMSG_BT_FTP_CONNECT        00004a04
+AFMSG_BT_FTP_DISCONNECT        00004a05
+AFMSG_BT_DEV_ABORT        00004a06
+AFMSG_BT_DEV_DOWN        00004a07
+AFMSG_BT_PIN_CODE_REQ        00004a08
+AFMSG_BT_HID_CONNECT        00004a09
+AFMSG_BT_HID_DISCONNECT        00004a0a
+AFMSG_BT_HID_DATA        00004a0b
+AFMSG_BT_HF_STATE_CHANGE        00004a0c
+AFMSG_BT_HF_STATE_CALL        00004a0d
+AFMSG_BT_HF_STATE_CALLSETUP        00004a0e
+AFMSG_BT_BT_DEV_INSERT        00004a0f
+AFMSG_BT_BT_DEV_REMOVE        00004a10
+AFMSG_DEVST_PRE_UNMOUNT        2230ee00
+AFMSG_DEVST_UNLOCK_DEV_INSERT        2230ee01
+AFMSG_DEVST_POST_UNMOUNT        2230ee02
+AFMSG_DEVST_POST_MOUNT        2230ee03
+AFMSG_DEVST_MOUNT_FAIL        2230ee04
+AFMSG_DEVST_PC_CONNECT        2230ee05
+AFMSG_DEVST_PC_DISCONNECT        2230ee06
+AFMSG_DEVST_PRINTER_CONNECT        2230ee07
+AFMSG_DEVST_PRINTER_DISCONNECT        2230ee08
+AFMSG_DEVST_DEV_REFRESH        2230ee09
+AFMSG_DEVST_CARD_PLUG_IN        2230ee0a
+AFMSG_DEVST_CARD_PLUG_OUT        2230ee0b
+AFMSG_DEVST_DEVICE_NOT_RECONGNISED        2230ee0c
+AFMSG_DEVST_MAX_HUB_TIERS        2230ee0d
+AFMSG_DEVST_UNLOCK_DEV_REMOVE        2230ee0e
+AFMSG_DVD_CHAPTER_CHANGED        000dba00
+AFMSG_DVD_AUDIO_CHANGED        000dba01
+AFMSG_DVD_SPU_CHANGED        000dba02
+AFMSG_DVD_ANGLE_CHANGED        000dba03
+AFMSG_DVD_ZOOM_CHANGED        000dba04
+AFMSG_DVD_STATUS_CHANGED        000dba05
+AFMSG_DVD_TIME_INFO        000dba06
+AFMSG_DVD_FORBIDDEN        000dba07
+AFMSG_DVD_PLAY_FAIL        000dba08
+AFMSG_DVD_DOMAIN_CHANGED        000dba09
+AFMSG_DVD_TITLE_CHANGED        000dba0a
+AFMSG_FIBRW_STATE_CHANGE        33635000
+AFMSG_FIBRW_ITEM_COUNT_UPDATE        33635001
+AFMSG_FIOP_REQ_COMPLETE        01e89800
+AFMSG_FIOP_REQ_CANCELED        01e89801
+AFMSG_FIOP_START        01e89802
+AFMSG_FIOP_PROGRESS        01e89803
+AFMSG_FIOP_SUCCESS        01e89804
+AFMSG_FIOP_FAIL        01e89805
+AFMSG_FIOP_POPUP_DIALOGBOX        01e89806
+AFMSG_FITRE_REQUEST_READY        33968000
+AFMSG_FITRE_REQ_GET_ITEM_NUM_READY        33968001
+AFMSG_FITRE_REFRESH        33968002
+AFMSG_FITRE_ADD_ENTRY_RESULT        33968003
+AFMSG_FITRE_CACHING_PROGRESS        33968004
+AFMSG_FITRE_CACHING_DONE        33968005
+AFMSG_GENMG_INDICATION        3a6d4a00
+AFMSG_GPLAY_UPDATE_SPECTRUM        3db42700
+AFMSG_GPLAY_UPDATE_LYRIC        3db42701
+AFMSG_GUI_ITEM_FOCUS_CHANGE        00162f00
+AFMSG_GUI_ITEM_FOCUS_SELECTED        00162f01
+AFMSG_GUI_ITEM_DRAW_FINISHED        00162f02
+AFMSG_GUI_ITEM_SLIDE_FINISHED        00162f03
+AFMSG_IME_IME_FINISH        001b0500
+AFMSG_IME_IME_QUERY_EXIT        001b0501
+AFMSG_INPUT_REMOTE_INPUT        4d5fbe00
+AFMSG_INPUT_MOUSE_INPUT        4d5fbe01
+AFMSG_NET_YAHOO_RESULT_REFRESH        00287900
+AFMSG_NET_POPMAIL_CLIENT_EVENT        00287901
+AFMSG_NET_POPMAIL_NEW_MAIL        00287902
+AFMSG_NET_SNTP_SYNC        00287903
+AFMSG_NET_DATASRC_READY        00287904
+AFMSG_NET_PIC_DOWNLOAD_READY        00287905
+AFMSG_NET_DOWNLOAD_TASK_INFO        00287906
+AFMSG_NETST_DEV_OFF        7342a600
+AFMSG_NETST_DEV_ON        7342a601
+AFMSG_NETST_DEV_PLUG        7342a602
+AFMSG_NETST_DEV_UNPLUG        7342a603
+AFMSG_NETST_NETIF_OFF        7342a604
+AFMSG_NETST_NETIF_ON        7342a605
+AFMSG_NETST_NETIF_READY        7342a606
+AFMSG_NETST_METIF_MAC_CHANGED        7342a607
+AFMSG_NETST_WIFI_SCAN_READY        7342a608
+AFMSG_NETST_WIFI_SCAN_REFRESH        7342a609
+AFMSG_NETST_WIFI_CONNECT_TIMEOUT        7342a60a
+AFMSG_NETST_WIFI_CONNECT_CANCEL        7342a60b
+AFMSG_NETST_WIFI_WPS_RESULT        7342a60c
+AFMSG_NETST_WIFI_WPS_CONNECT_RESULT        7342a60d
+AFMSG_NSTS_NET_STATUS_READY        046cb400
+AFMSG_PHOWB_LOGIN_SUCCESS        84534e00
+AFMSG_PHOWB_LOGIN_FAIL        84534e01
+AFMSG_PIC_PROCESS_FINISH        002e8600
+AFMSG_PRINT_PM_FINISHED        87423500
+AFMSG_PRINT_PM_CONNECT        87423501
+AFMSG_PRINT_PM_DISCONNECT        87423502
+AFMSG_PRINT_PM_WAITING        87423503
+AFMSG_PRINT_PM_PROGRESS        87423504
+AFMSG_PRINT_PM_PRITING        87423505
+AFMSG_PRINT_PM_WARNING        87423506
+AFMSG_PRINT_PM_ERROR        87423507
+AFMSG_PRINT_PM_FILEERROR        87423508
+AFMSG_STRTB_REFRESH        a049ff00
+AFMSG_SWF_INFOMATION        00388e00
+AFMSG_SYS_REGISTER        0038d100
+AFMSG_SYS_DRAW        0038d101
+AFMSG_SYS_HIDE        0038d102
+AFMSG_SYS_INIT        0038d103
+AFMSG_SYS_PAGE_DESTROYED        0038d104
+AFMSG_SYS_TIMER        0038d105
+AFMSG_SYS_LOST_FOCUS        0038d106
+AFMSG_SYS_GOT_FOCUS        0038d107
+AFMSG_SYS_DRIVER_REGISTER        0038d108
+AFMSG_THUMB_ONE_THUM_READY        a4d31a00
+AFMSG_THUMB_ALL_THUM_READY        a4d31a01
+AFMSG_THUMB_THUM_IDLE        a4d31a02
+AFMSG_THUMB_ONE_THUM_FAIL        a4d31a03
+AFMSG_THUMB_THUM_START        a4d31a04
+AFMSG_UPG_SKYWORTH_IMG_READY        003d8400
+AFMSG_UPG_UPGRADE_FINISHED        003d8401
+AFMSG_UPG_SKYWORTH_XML_READY        003d8402
+AFMSG_UPG_UPGRADE_CHECK_OK        003d8403
+AFMSG_UPG_UPGRADE_CHECK_ERROR        003d8404
+AFMSG_UPG_UPGRADE_OPEN_ERROR        003d8405
+AFMSG_UPG_UPGRADE_FAIL        003d8406
+AFMSG_UPG_UPGRADE_IN_PROGESS        003d8407
+AFMSG_UPNP_AVTRANSPORT_PLAY        067db900
+AFMSG_UPNP_AVTRANSPORT_STOP        067db901
+AFMSG_UPNP_AVTRANSPORT_PAUSE        067db902
+AFMSG_XFER_GOT_CALLBACK        0746f700
+AFMSG_UBAT_CHARGING_OVER        06548000
+AFMSG_UBAT_POWER_LOW        06548001
+AFMSG_UBAT_ADAPTER_CONNECT        06548002
+AFMSG_UBAT_ADAPTER_DISCONNECT        06548003
+AFMSG_UCN_CHANGE_RANGE        003c2c00
+AFMSG_UDEV_DEVST_POST_UNMOUNT        065aa000
+AFMSG_UDEV_SWF_MUSIC        065aa001
+AFMSG_UDEV_SWF_CMD        065aa002
+AFMSG_UNET_NET_GOT_CALLBACK        06771800
+AFMSG_UNET_NET_GOT_SEARCH_CALLBACK        06771801
+AFMSG_UNET_NET_GOT_PIC_CALLBACK        06771802
+AFMSG_UNET_DATASRC_READY        06771803
+AFMSG_UNET_PIC_DOWNLOAD_READY        06771804
+AFMSG_UNET_PIC_REQUEST        06771805
+AFMSG_UNET_PIC_REQUEST_CANCEL        06771806
+AFMSG_UNET_PIC_PLAY_ITEM        06771807
+AFMSG_UPWR_POWER_ON        067eae00
+AFMSG_UPWR_POWER_OFF        067eae01
+AFMSG_UPWR_SLEEP        067eae02
+AFMSG_UPWR_POWER_SAVING_START        067eae03
+AFMSG_UPWR_POWER_SAVING_END        067eae04
+AFMSG_URAD_AUTO_SEARCH_FINISHED        06820000
+AFMSG_URAD_CHANEL_FOUND        06820001
+AFMSG_URECO_RECORD_FINISH        afc15800
+AFMSG_USKB_KEYDOWN        0685e500
+AFMSG_UUSER_CALENDAR_DRAW_FLAG        b0d01800
+AFMSG_UUSER_QUIT_PLAYER        b0d01801
+AFMSG_UUSER_TEST        b0d01802
+AFMSG_UUSER_CARTOON_END        b0d01803
+AFMSG_UUSER_FOCUS_CHANGE        b0d01804
+AFMSG_UUSER_TAPMSG        b0d01805
+AFMSG_UUSER_DEV_LIST_EMPTY        b0d01806
+AFMSG_UUSER_DEV_LIST_UNMOUNT_FINISH        b0d01807
+AFMSG_UUSER_DEV_LIST_MOUNT_FINISH        b0d01808
+AFMSG_UUSER_DEV_ISO_MOUNT_FINISH        b0d01809
+AFMSG_UUSER_DEV_ISO_MOUNT_FAILED        b0d0180a
+AFMSG_UUSER_KEY_INPUT_CHECK_FINISH        b0d0180b
+AFMSG_UUSER_DEV_ISO_UNMOUNT_FINISH        b0d0180c

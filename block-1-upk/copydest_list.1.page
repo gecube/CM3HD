@@ -1,0 +1,223 @@
+<page> 41 "copydest_list" "NULL" 0 0 0 2d0 240 8 1 0
+<rule>
+38d103 a b a 1 481001 10482008 3 1 "dev_type_str" 1 "mount_point" 1 "UDISK" 1 481001 10482009 3 1 "dev_type_str" 1 "mount_point" 1 "SD" 6 0 2 0 1 3 10482009 1 "" 1 1 3 10482009 1 "__NULL__" 1 1 481001 10482009 3 1 "dev_type_str" 1 "mount_point" 1 "MS" 1 0 2 1 482c02 10482008 2 3 10482008 1 "," 1 482c02 10482008 2 3 10482008 3 10482009 1 1048040b 0 1 3 10482008 a 1048040e 0 3 1 "/mnt/" 0 0 0 0 2 1048080f 1 "/mnt/" 2 10481a09 0 2 2026c 2 10481a09 1 2 2026c 
+4d5fbe00 4 20 4 6 0 1 0 1 5 0 0 10 4 1 480811 10482007 1 6 47fffff 6 0 1 0 2 3 10482007 0 0 a 1 448140e 10482008 2 3 4481407 1 "TypeStr" 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348080d 0 3 3 4481406 1 "Mark.Select" 1 "1" 1 1 6 0 1 0 1 3 4482c0b 1 "tree" 1 6 0 1 0 1 3 10482008 1 "Dir" 3 1 10482401 0 1 6 38807ff a 1048240e 0 3 3 4481408 0 0 0 0 1 1048240d 0 3 0 3ffffe 1 "Mark.Select" 1 "1" 1 1 1 388040d 0 3 3 4481406 1 "Mark.Select" 1 "1" 2 1 0 2 2 1 482801 0 4 1 "source_url" 3 4482c08 6 10ffffff 0 1 1 482801 0 4 1 "dest_url" 3 10480808 6 10ffffff 0 1 1 482801 0 4 1 "source_type" 3 10482008 6 10ffffff 0 1 1 482801 0 4 1 "action_type" 1 "copy" 6 10ffffff 0 1 1 482801 0 4 1 "CopySrcPath" 3 4481409 6 10ffffff 0 1 2 10481c04 0 100 1 48080d 0 1 6 107fffff 1 48082c 0 2 6 10ffffff 0 1 1 0 2 5 9 1 0 2 6 0 1 0 1 5 0 0 11 3 1 48081b 0 1 6 107fffff 1 480800 0 1 6 103fffff 5 1 0 2 6 0 1 0 1 5 0 0 e 2 5 3 4d5fbe00 10480bff 2 0 11 1 "" 1 0 2 6 0 1 0 1 5 0 0 f 2 5 3 4d5fbe00 10480bff 2 0 10 1 "" 1 0 2 
+38d107 5 5 5 2 10481a09 0 2 2026d 2 10481a09 1 2 2026d 2 10481a06 1 0 ffffffff 1 481c00 0 2 3 10481c03 0 1 1 10481404 0 4 3 481c00 3 10481c02 0 1 0 1 
+38d106 5 5 5 2 10481a09 0 2 2026c 2 10481a09 1 2 2026c 2 10481a06 1 0 ffa6a6a6 1 481c00 0 2 3 10481c03 0 1 1 10481404 0 4 3 481c00 3 10481c02 0 1 0 1 
+33635001 1 2 1 6 0 1 0 1 7 0 6 10480bff 1 2 10482000 5 0 1 0 2 
+38d105 1 11 1 6 0 1 0 1 5 0 1 "copylist_focus_change" 2 1 480811 10482001 1 6 107fffff 6 0 1 0 1 3 10482001 0 1 3 1 481c01 10482007 2 3 10482000 0 1 6 0 1 0 3 3 10482000 0 5 2 1 481c01 0 2 3 10480806 3 10480807 6 0 1 0 3 3 481c00 0 0 1 1 480401 0 3 0 0 6 10482bff 2 2026e 1 1 1 480401 0 3 0 0 6 10482bff 2 2026f 2 1 1 1 480401 0 3 0 0 6 10482bff 2 2026f 2 6 0 1 0 3 3 10482000 0 5 3 1 481c01 0 2 0 4 3 10480807 1 481c00 0 2 3 10480806 3 481c00 6 0 1 0 4 3 481c00 3 10482007 1 1 480401 0 3 0 0 6 10482fff 2 20270 1 1 1 480401 0 3 0 0 6 10482fff 2 20271 2 1 1 1 480401 0 3 0 0 6 10482fff 2 20271 2 1 0 2 1 0 2 
+162f00 1 3 1 6 0 1 0 1 7 0 6 10480bff 2 1 480804 0 1 1 "copylist_focus_change" 1 480803 0 7 6 107fffff 1 "copylist_focus_change" 0 1 1 "" 0 0 0 0 0 0 1 0 2 
+38d101 2 2 2 1 480401 0 3 0 0 6 10480fff 2 20272 2 10481c04 0 4 
+<window> 1 "Wnd1" 0 0 0 2d0 240 0 b
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 12
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0
+0
+<ctrl> 2 "FileBrowser" "FileBrowser" 0 0 18
+<rule>
+<prop>
+a 
+a 
+14 
+14 
+104807ff 
+104817ff 
+0 
+0 
+"" 
+"" 
+0 
+0 
+0 
+5 
+1 
+"" 
+1 
+"" 
+5
+104813ff 
+104813ff 
+104813ff 
+104813ff 
+104813ff 
+<ctrl> 3 "Rect_cls" "Rect" 0 0 4
+<rule>
+<prop>
+10 
+fa 
+d6 
+78 
+<ctrl> 4 "uFileItem0_1" "uFileItem0" 0 0 e
+<rule>
+<prop>
+10 
+fa 
+bc 
+18 
+ffffffff 
+"" 
+0 
+0 
+0 
+ffffffff 
+ffffffff 
+ffffffff 
+0
+0
+<ctrl> 5 "FileListSlide" "FileListSlide" 0 0 8
+<rule>
+<prop>
+0 
+244 
+0 
+10481fff 
+10480fff 
+10481bff 
+0
+0
+<ctrl> 6 "uFListItemDraw" "uFListItemDraw" 0 0 27
+<rule>
+<prop>
+0 
+0 
+"" 
+0 
+0 
+2
+a 
+a 
+2
+ffa6a6a6 
+ffa6a6a6 
+2
+e 
+4 
+b
+2026c 
+2026c 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+b
+2026d 
+2026d 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+ffffffff 
+0
+<ctrl> 7 "SlotSlideAttr" "SlotSlideAttr" 0 0 1c
+<rule>
+<prop>
+7 
+1 
+0 
+0 
+4 
+1 
+0 
+0 
+0 
+bc 
+18 
+20273 
+7
+e2 
+fa 
+112 
+12a 
+142 
+15a 
+172 
+7
+10 
+10 
+10 
+10 
+10 
+10 
+10 
+<ctrl> 8 "Local_Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 9 "MarkTree" "GeneralFileTree" 0 0 12
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0
+0
+<ctrl> a "up" "Rect" 0 0 4
+<rule>
+<prop>
+d0 
+fa 
+e 
+a 
+<ctrl> b "down" "Rect" 0 0 4
+<rule>
+<prop>
+d0 
+168 
+e 
+a 
+<pal> 0 

@@ -1,0 +1,59 @@
+<page> 76 "myMovieDataSrc" "NULL" 0 0 0 2d0 240 0 1 0
+<rule>
+<window> 1 "Wnd1" 0 0 0 2d0 240 0 2
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 1d
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+10 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+5
+"video" 
+"music" 
+"picture" 
+"text" 
+"iso" 
+6
+"Mark.Select" 
+"Mark.Play" 
+"Mark.MusicPlay" 
+"FileName" 
+"PathName" 
+"TypeStr" 
+<ctrl> 2 "FileBrowser" "FileBrowser" 0 0 13
+<rule>
+<prop>
+0 
+0 
+14 
+14 
+1d8807ff 
+0 
+0 
+0 
+"" 
+"" 
+0 
+0 
+0 
+f 
+5 
+"" 
+120 
+"" 
+0
+<pal> 0 

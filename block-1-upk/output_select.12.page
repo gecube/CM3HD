@@ -1,0 +1,5 @@
+<page> 3 "output_select" "NULL" 0 0 0 2d0 1e0 0 1 0
+<rule>
+<window> 1 "wnd" 0 0 0 2d0 1e0 0 0
+<rule>
+<pal> 0 

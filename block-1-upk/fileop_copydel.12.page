@@ -1,0 +1,200 @@
+<page> 43 "fileop_copydel" "NULL" 0 0 0 2d0 240 b 1 0
+<rule>
+38d103 b b b 1 482803 10c80408 1 1 "source_url" 1 482803 10c80409 1 1 "dest_url" 1 482803 10c8040a 1 1 "source_type" 1 482803 10c8040b 1 1 "action_type" 2 10c8040c 1 "" 2 10c8040d 1 "anykey disable" 1 10c80818 0 1 1 "Mark.Select==1" 1 10c80c00 0 2 3 10c80408 0 a 2 10c80400 0 0 1 482803 10c8040e 1 1 "CopySrcPath" 2 10c81003 3 10c8040e 
+33968003 3 f 3 a 4500c02 0 1 0 0 a 4500402 0 1 0 0 6 0 1 0 1 3 10c8040b 1 "copy" 1 1 10c81001 0 2 3 10c80409 0 0 1 1 6 0 1 0 1 3 10c8040b 1 "delete" 1 6 0 1 0 1 3 10c8040a 1 "Dir" 8 1 10c81002 0 1 3 4481408 1 480805 0 1 6 103fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10ffffff 1 480800 0 1 6 47fffff 1 481c00 0 2 3 4481407 0 1 1 4482004 0 4 3 481c00 3 4481406 0 1 0 1 1 1 1 10c81000 0 1 0 0 2 1 0 2 2 
+1e89803 1 5 1 6 0 1 0 1 3 10c8040b 1 "copy" 4 1 482c04 0 1 5 3 1 482c02 0 2 3 482c01 1 "%" 1 10c82802 0 1 5 3 9 1 0 2 
+1e89800 2 15 2 2 10c8040d 1 "key enable" 6 0 1 0 1 3 10c8040b 1 "copy" 3 1 580403 0 1 1 "Mark.Select" 1 480401 0 3 0 0 6 10c81bff 2 20272 6 0 1 0 2 3 10c8040c 1 "" 1 1 480404 0 5 0 0 3 10c8040c 6 10c823ff 0 ffffffff 3 6481402 1 6 1 482c04 0 1 3 10c80400 1 48540c 10c8040f 1 0 98 1 48540c 10c8040e 1 0 99 1 482c02 0 2 3 10c8040f 3 482c01 1 482c02 0 2 3 482c01 3 10c8040e 1 480404 0 5 0 0 3 482c01 6 10c823ff 0 ffffffff 3 6481402 2 1 1 6 0 1 0 1 3 10c8040b 1 "delete" 3 1 580403 0 1 1 "Mark.Select" 1 480401 0 3 0 0 6 10c81bff 2 20272 6 0 1 0 2 3 10c8040c 1 "" 1 1 480404 0 5 0 0 3 10c8040c 6 10c823ff 0 ffffffff 3 6481402 1 2 6 0 1 0 2 3 10c80400 0 0 1 1 480406 0 6 0 0 0 9a 6 10c823ff 0 ffffffff 0 0 3 6481402 1 1 1 480406 0 6 0 0 0 9b 6 10c823ff 0 ffffffff 0 0 3 6481402 2 1 480803 0 7 6 47fffff 1 "deleted_to_refresh_preview" 0 1 1 "" 0 0 0 0 0 0 2 1 0 2 2 
+4d5fbe00 3 22 3 6 0 1 0 1 3 10c8040d 1 "anykey disable" 3 6 0 1 0 1 5 0 0 10 2 1 10c81005 0 0 6 0 1 0 1 3 10c8040b 1 "copy" 4 1 580403 0 1 1 "Mark.Select" 1 48080d 0 1 6 10ffffff 1 48082c 0 2 6 107fffff 0 1 1 480805 0 1 6 10ffffff 1 1 6 0 1 0 1 3 10c8040b 1 "delete" 3 1 48080d 0 1 6 10ffffff 1 48082c 0 2 6 10bfffff 0 1 1 480805 0 1 6 10ffffff 1 0 2 2 1 0 2 5 9 1 0 2 6 0 1 0 1 5 0 0 11 1 6 0 1 0 1 3 10c8040b 1 "copy" 3 1 48080d 0 1 6 10ffffff 1 480805 0 1 6 10ffffff 1 48082c 0 2 6 107fffff 0 1 1 1 6 0 1 0 1 3 10c8040b 1 "delete" 4 1 48080d 0 1 6 10ffffff 1 48082c 0 2 6 10bfffff 0 0 1 480805 0 1 6 10ffffff 1 480800 0 1 6 10bfffff 1 0 2 2 1 0 2 6 0 1 0 1 5 0 0 19 2 1 480811 10c80407 1 6 47fffff 6 0 1 0 1 3 10c80407 0 1 7 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 480800 0 1 6 47fffff 1 481c00 0 2 3 4481407 0 1 1 4482004 0 4 3 481c00 3 4481406 0 1 0 1 1 0 2 1 0 2 
+1e89802 2 e 2 6 0 1 0 1 3 10c8040b 1 "copy" 9 1 480401 0 3 0 0 6 10c81bff 2 20272 1 48540f 0 7 0 0 5 0 6 10c81fff 0 ffffffff 3 6481402 0 1 0 1 1 48540c 10c8040f 1 0 9c 1 482c02 0 2 3 10c8040f 3 10c80409 1 485413 0 6 0 0 3 482c01 6 10c823ff 0 ffffffff 3 6481402 0 1 1 480401 0 3 0 0 6 10c827ff 2 20278 1 10c82802 0 1 0 ffffffff 1 10c83000 0 1 0 0 9 1 0 2 6 0 1 0 1 3 10c8040b 1 "delete" 3 1 480401 0 3 0 0 6 10c81bff 2 20272 1 48540f 0 7 0 0 5 0 6 10c81fff 0 ffffffff 3 6481402 0 1 0 0 1 10c83000 0 1 0 0 1 0 2 
+38d102 2 9 2 6 0 1 0 1 3 10c8040b 1 "copy" 3 1 480804 0 1 1 "Item_Focus_Change" 1 480803 0 7 6 47fffff 1 "Item_Focus_Change" 0 5 1 "" 0 0 0 0 0 1 9 1 0 2 6 0 1 0 1 3 10c8040b 1 "delete" 1 6 0 1 0 1 3 10c8040a 1 "Dir" 3 1 480804 0 1 1 "Item_Focus_Change" 1 480803 0 7 6 47fffff 1 "Item_Focus_Change" 0 5 1 "" 0 0 0 0 0 1 9 1 0 2 1 0 2 
+1e89805 3 e 3 6 0 1 0 1 5 2 0 6 4 1 48540c 10c8040c 1 0 9d 1 10c81005 0 0 3 1e89800 10ffffff 0 9 1 0 2 6 0 1 0 1 5 2 0 3 4 1 48540c 10c8040c 1 0 9e 1 10c81005 0 0 3 1e89800 10ffffff 0 9 1 0 2 6 0 1 0 1 0 1 0 1 3 1 48540c 10c8040c 1 0 9f 1 10c81005 0 0 3 1e89800 10ffffff 0 1 0 2 
+2230ee00 3 4 3 1 482c00 10c80407 2 5 2 3 10c80408 1 482c00 10c80406 2 5 2 3 10c80409 6 0 2 0 1 3 10c80406 0 1 1 1 3 10c80407 0 1 1 2 10c8040c 1 "copy fail." 1 0 2 
+1e89804 1 2 1 6 0 2 0 1 3 10c8040b 1 "copy" 1 1 3 10c8040b 1 "delete" 1 1 481c00 10c80400 2 3 10c80400 0 1 1 0 2 
+38d105 1 1 1 9 
+<window> 1 "Wnd1" 0 0 0 2d0 240 0 c
+<rule>
+<ctrl> 1 "Local_Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 2 "GeneralFileTree" "GeneralFileTree" 0 0 1a
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+7
+"video" 
+"music" 
+"picture" 
+"text" 
+"record" 
+"flash" 
+"iso" 
+1
+"Mark.Select" 
+<ctrl> 3 "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+10c80bff 
+0 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> 4 "GeneralFileOp" "GeneralFileOp" 0 0 6
+<rule>
+<prop>
+10c80fff 
+0 
+1 
+"" 
+0 
+0 
+<ctrl> 5 "Rect_cls" "Rect" 0 0 4
+<rule>
+<prop>
+10 
+fa 
+d6 
+78 
+<ctrl> 6 "Rect_bg" "Rect" 0 0 4
+<rule>
+<prop>
+10 
+fa 
+d6 
+78 
+<ctrl> 7 "Rect_1" "Rect" 0 0 4
+<rule>
+<prop>
+1a 
+104 
+b4 
+10 
+<ctrl> 8 "Rect_2" "Rect" 0 0 4
+<rule>
+<prop>
+1a 
+11c 
+b4 
+10 
+<ctrl> 9 "Rect_area" "Rect" 0 0 4
+<rule>
+<prop>
+10 
+136 
+c8 
+8 
+<ctrl> a "uShowProcess" "uShowProcess" 0 0 11
+<rule>
+<prop>
+0 
+0 
+ffffffff 
+0 
+10c827ff 
+ffffffff 
+0 
+1 
+0 
+64 
+0 
+0 
+0
+1
+20279 
+0
+0
+<ctrl> b "Rect_cancel" "Rect" 0 0 4
+<rule>
+<prop>
+46 
+14a 
+4e 
+16 
+<ctrl> c "Button_Cancel" "uIconButton" 0 0 30
+<rule>
+<prop>
+46 
+14a 
+4e 
+16 
+0 
+2027a 
+ffffffff 
+0 
+0 
+ffffffff 
+ffffffff 
+0 
+0 
+0 
+2027a 
+ffffffff 
+0 
+0 
+a0 
+ffffffff 
+c0000 
+1e 
+6 
+ffffffff 
+ffffffff 
+0 
+0 
+ffffffff 
+ffffffff 
+0 
+0 
+0 
+ffffffff 
+ffffffff 
+0 
+0 
+ffffffff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+"" 
+0
+<pal> 0 

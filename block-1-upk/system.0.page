@@ -1,0 +1,851 @@
+<page> 1 "system" "NULL" 0 0 0 500 2d0 a 5 0
+<rule>
+38d103 20 3b 20 1 490800 0 3 0 3 0 d 0 0 1 490802 0 3 0 3 0 d 0 0 1 48082f 0 1 0 11 1 483406 0 0 6 0 1 0 2 3 483a00 45 0 1 4 1 483405 0 0 1 483406 0 0 2 483a00 16 0 1 1 483401 0 2 0 16 3 483a00 16 1 0 2 6 0 2 0 4 3 483a00 14 0 0 1 3 3 483a00 14 0 8 2 2 483a00 14 0 0 1 483401 0 2 0 14 3 483a00 14 1 0 2 1 485411 0 1 3 483a00 43 2 485c03 3 485c00 1 486800 0 0 1 481400 0 0 1 48dc00 0 0 1 480828 0 1 0 28 1 482801 0 4 1 "device_focus_item" 1 "__NULL__" 6 5bfffff 0 1 1 482801 0 4 1 "focus_item" 1 "video" 6 5bfffff 0 1 1 482801 0 4 1 "device_focus_item" 1 "Memory" 6 5bfffff 0 1 1 483404 0 1 0 0 1 485800 0 1 0 1 2 482406 0 0 1 486401 0 1 3 483a00 16 6 0 1 0 1 3 483a00 3c 0 0 1 1 486400 0 2 3 483a00 14 0 0 1 1 6 0 1 0 1 3 483a00 3c 0 1 1 1 486400 0 2 3 483a00 14 3 483a00 3d 1 1 1 486400 0 2 3 483a00 14 0 0 2 2 1 48082c 0 2 6 affffff 0 1 1 48082c 0 2 6 67fffff 0 1 1 484404 0 0 6 0 1 0 1 3 483a00 12 0 0 1 1 480822 0 1 0 0 1 0 2 6 0 1 0 1 3 483a00 12 0 1 1 1 480822 0 1 0 1 1 0 2 6 0 1 0 1 3 483a00 12 0 2 1 1 480822 0 1 0 2 1 0 2 6 0 1 0 1 3 483a00 12 0 3 1 1 480822 0 1 0 3 1 0 2 6 0 1 0 1 3 483a00 12 0 4 1 1 480822 0 1 0 4 1 0 2 6 0 1 0 1 3 483a00 12 0 5 1 1 480822 0 1 0 5 1 0 2 6 0 1 0 1 3 483a00 12 0 6 1 1 480822 0 1 0 6 1 0 2 6 0 1 0 2 3 483a01 0 1 "on" 4 1 481000 482408 3 0 1 0 1 1 "UDISK" 1 482c00 482400 2 1 "UDISK" 3 482408 6 0 1 0 1 3 482400 0 1 1 1 482801 0 4 1 "device_focus_item" 1 "USB" 6 5bfffff 0 1 1 3 1 481000 482408 3 0 1 0 1 1 "SD" 1 481000 482409 3 0 1 0 1 1 "MS" 6 0 2 0 1 3 482408 1 "SD" 1 1 3 482409 1 "MS" 1 1 482801 0 4 1 "device_focus_item" 1 "Card" 6 5bfffff 0 1 1 0 2 2 1 48082c 0 2 6 5bfffff 0 1 1 1 1 48082c 0 2 6 13fffff 0 1 2 2 490000 2 20001 
+38d101 1 1 1 1 480813 0 2 2 20002 0 1 
+38d105 0 0 0 
+287906 0 0 0 
+67eae03 0 0 0 
+67eae04 0 0 0 
+3d8402 0 0 0 
+3d8400 0 0 0 
+2230ee02 0 0 0 
+7342a603 0 0 0 
+<window> 1 "global" 0 0 0 500 2d0 0 47
+<rule>
+<ctrl> 1 "DrawTools" "DrawTools" 0 0 4
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+<ctrl> 2 "DefGlobal" "Global" 0 0 2
+<rule>
+<prop>
+0 
+"" 
+<ctrl> 3 "uDisplayDevice" "uDisplayDevice" 0 0 0
+<rule>
+<prop>
+<ctrl> 4 "MountInfo" "StringTable" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<ctrl> 5 "BlockDevMonitor" "BlockDevMonitor" 0 0 7
+<rule>
+<prop>
+1 
+0 
+4813ff 
+0 
+0 
+0 
+0
+<ctrl> 6 "NecRemoteInput" "NecRemoteInput" 0 0 85
+<rule>
+<prop>
+ff80 
+0 
+0 
+0 
+0 
+0 
+0 
+1 
+0 
+0 
+0 
+0 
+35
+42 
+1d 
+4a 
+1e 
+47 
+c 
+8 
+9 
+44 
+18 
+14 
+1 
+d 
+11 
+3 
+7 
+6 
+2 
+0 
+5d 
+e 
+41 
+13 
+1f 
+40 
+ff 
+f 
+b 
+5c 
+10 
+49 
+55 
+48 
+54 
+12 
+45 
+43 
+a 
+50 
+17 
+16 
+15 
+58 
+19 
+59 
+1a 
+4d 
+1b 
+4 
+5 
+1c 
+2a 
+23 
+35
+e 
+f 
+c 
+d 
+10 
+19 
+11 
+18 
+27 
+29 
+28 
+1e 
+cb 
+cc 
+1d 
+21 
+20 
+22 
+23 
+2b 
+2a 
+26 
+3d 
+40 
+14 
+15 
+1a 
+3f 
+16 
+17 
+ce 
+cf 
+d0 
+1b 
+d4 
+cd 
+41 
+60 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+a 
+b 
+2 
+21 
+20 
+11 
+1c 
+c0 
+b
+1 
+1 
+1 
+1 
+0 
+0 
+0 
+0 
+0 
+1 
+1 
+0
+<ctrl> 7 "Calculator" "Calculator" 0 0 1
+<rule>
+<prop>
+0 
+<ctrl> 8 "NULL"
+<ctrl> 9 "LocalVariable" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> a "InOutParam" "InOutParam" 0 0 2
+<rule>
+<prop>
+0 
+"" 
+<ctrl> b "StrManipulator" "StrManipulator" 0 0 2
+<rule>
+<prop>
+0 
+"" 
+<ctrl> c "uCardDevice" "uCardDevice" 0 0 0
+<rule>
+<prop>
+<ctrl> d "uProfile" "uProfile" 0 0 f
+<rule>
+<prop>
+"/dev/nandsys" 
+483bff 
+"" 
+"" 
+"" 
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+<ctrl> e "uSysPara" "uSysPara" 0 0 6e
+<rule>
+<prop>
+46
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+28 
+1 
+17 
+18 
+19 
+1a 
+1b 
+1c 
+1d 
+1e 
+1f 
+20 
+fffffc00 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+26
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"/mnt/usba01/net_movie/" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> f "AttrsMultiSrc" "AttrsMultiSrc" 0 0 5
+<rule>
+<prop>
+4
+5007ff 
+500fff 
+5017ff 
+5013ff 
+<ctrl> 10 "uI2C" "uI2C" 0 0 5
+<rule>
+<prop>
+ff 
+1 
+10000 
+2 
+64 
+<ctrl> 11 "uHDMI" "uHDMI" 0 0 7
+<rule>
+<prop>
+0 
+9 
+1 
+c120004c 
+4000000 
+c1200048 
+4000000 
+<ctrl> 12 "uBsp" "uBsp" 0 0 1
+<rule>
+<prop>
+0 
+<ctrl> 13 "uFileInfo" "uFileInfo" 0 0 4
+<rule>
+<prop>
+"" 
+"" 
+0 
+0 
+<ctrl> 14 "uPageHandles" "uVariable" 0 0 7
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+ffffffff 
+<ctrl> 15 "uMis" "uMis" 0 1 2
+<rule>
+2230ee03 1 2 1 6 0 1 0 1 5 1 1 "NAND" 1 8 1 0 2 
+<prop>
+0 
+"" 
+<ctrl> 16 "uCP2Uni" "uCP2Uni" 0 0 1
+<rule>
+<prop>
+ffffffff 
+<ctrl> 17 "uPlatformInfo" "uPlatformInfo" 0 0 7
+<rule>
+<prop>
+"" 
+"" 
+"" 
+"" 
+"" 
+0 
+484bff 
+<ctrl> 18 "historyPage" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 19 "uVideoFmt" "uVideoFmt" 0 0 2
+<rule>
+<prop>
+0 
+0 
+<ctrl> 1a "uUsbDevice" "uUsbDevice" 0 0 0
+<rule>
+<prop>
+<ctrl> 1b "VarPlatInfo" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"V1.04.01" 
+"Amlogic pmp" 
+"2009-11-26" 
+"PMP_V0.27" 
+"0M/980M" 
+"" 
+"" 
+"" 
+<ctrl> 1c "uOSDTool" "uOSDTool" 0 0 0
+<rule>
+<prop>
+<ctrl> 1d "uTimeSearch" "uTimeSearch" 0 0 1
+<rule>
+<prop>
+4837ff 
+<ctrl> 1e "var_palette" "Variables" 0 0 10
+<rule>
+<prop>
+7f190500 
+992d190c 
+ff2090d0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 1f "NULL"
+<ctrl> 20 "NULL"
+<ctrl> 21 "BttvDataSrc_suggest" "BttvDataSrc" 0 0 3
+<rule>
+<prop>
+0 
+c 
+0 
+<ctrl> 22 "NULL"
+<ctrl> 23 "NULL"
+<ctrl> 24 "BttvDataSrc_MyMovie" "uMyMvDataSrc" 0 0 2
+<rule>
+<prop>
+0 
+ffffffff 
+<ctrl> 25 "NULL"
+<ctrl> 26 "NULL"
+<ctrl> 27 "NULL"
+<ctrl> 28 "NULL"
+<ctrl> 29 "NULL"
+<ctrl> 2a "NULL"
+<ctrl> 2b "StrTable_Bt" "StringTable" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<ctrl> 2c "NULL"
+<ctrl> 2d "NULL"
+<ctrl> 2e "NULL"
+<ctrl> 2f "NULL"
+<ctrl> 30 "NULL"
+<ctrl> 31 "NULL"
+<ctrl> 32 "HWWatchDog" "HWWatchDog" 0 0 4
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+<ctrl> 33 "uBookMark" "uBookMark" 0 0 1
+<rule>
+<prop>
+4837ff 
+<ctrl> 34 "NULL"
+<ctrl> 35 "uRadio_FM_1" "uRadio_FM" 0 0 6
+<rule>
+<prop>
+0 
+0 
+"" 
+0 
+0 
+0
+<ctrl> 36 "OnboardKeyInput" "OnboardKeyInput" 0 0 14
+<rule>
+<prop>
+5 
+0 
+0 
+120901 
+6
+1 
+2 
+3 
+4 
+5 
+6 
+6
+e 
+f 
+10 
+c 
+d 
+11 
+0
+0
+<ctrl> 37 "uExt_Interface" "uExt_Interface" 0 0 0
+<rule>
+<prop>
+<ctrl> 38 "NULL"
+<ctrl> 39 "NULL"
+<ctrl> 3a "NULL"
+<ctrl> 3b "uDrawScrollStr" "uDrawScrollStr" 0 0 0
+<rule>
+<prop>
+<ctrl> 3c "NULL"
+<ctrl> 3d "upnp_var" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 3e "uISOFS_1" "uISOFS" 0 0 1
+<rule>
+<prop>
+"" 
+<ctrl> 3f "NULL"
+<ctrl> 40 "uResPathSet" "uResPathSet" 0 0 1
+<rule>
+<prop>
+ffffffff 
+<ctrl> 41 "NULL"
+<ctrl> 42 "IOControl" "IOControl" 0 0 0
+<rule>
+<prop>
+<ctrl> 43 "NULL"
+<ctrl> 44 "NULL"
+<ctrl> 45 "NULL"
+<ctrl> 46 "uPlayListMark" "uPlayListMark" 0 0 0
+<rule>
+<prop>
+<ctrl> 47 "NULL"
+<window> 2 "player" 0 0 0 500 2d0 0 8
+<rule>
+<ctrl> 1 "GPlayer" "GPlayer" 0 0 a
+<rule>
+<prop>
+0 
+0 
+0 
+"mp3,mp4,mov,wma,wav,m4a,aac,ape,ogg,flac,ac3,alac,mkv,flv,3gp" 
+0 
+0 
+0 
+0 
+20 
+0 
+<ctrl> 2 "PicPlayer" "PicPlayer" 0 0 1e
+<rule>
+<prop>
+1 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"jpg,jpeg,bmp,gif,tif,tiff,png,mp3,wma" 
+0 
+0 
+0 
+0 
+20003 
+0
+0
+<ctrl> 3 "AVIPlayer" "AVIPlayer" 0 0 a
+<rule>
+<prop>
+0 
+0 
+0 
+"avi,divx,xvid" 
+0 
+0 
+0 
+0 
+0 
+0 
+<ctrl> 4 "RealPlayer" "realplayer" 0 0 8
+<rule>
+<prop>
+0 
+0 
+0 
+"rm,rmvb" 
+0 
+0 
+0 
+0 
+<ctrl> 5 "VOBPlayer" "VOBPlayer" 0 0 9
+<rule>
+<prop>
+0 
+0 
+0 
+"mpg,vob,mpeg,dat,ts,m2ts,mts,mod,tp" 
+0 
+0 
+0 
+0 
+0 
+<ctrl> 6 "TSPlayer" "TSPlayer" 0 0 5
+<rule>
+<prop>
+0 
+0 
+0 
+"" 
+0 
+<ctrl> 7 "DvdPlayer" "DvdPlayer" 0 0 a
+<rule>
+<prop>
+0 
+0 
+0 
+"ifo" 
+0 
+"" 
+0 
+0 
+0 
+ffffffff 
+<ctrl> 8 "SWFPlayer" "SWFPlayer" 0 0 e
+<rule>
+<prop>
+0 
+0 
+0 
+"swf" 
+0 
+"" 
+"" 
+"" 
+1 
+0 
+0 
+"" 
+36ee80 
+0 
+<window> 3 "filesys" 0 0 0 500 2d0 0 3
+<rule>
+<ctrl> 1 "FileTreeManager" "FileTreeManager" 0 0 25
+<rule>
+<prop>
+0 
+0 
+"FileName,CreatedTime,ModifiedTime,FileSize" 
+b
+"Music.Cover" 
+"Desc.Author" 
+"Desc.Album" 
+"Desc.Year" 
+"Music.FileSize" 
+"Video.Format" 
+"Audio.Format" 
+"Video.TotalTime" 
+"FileSize" 
+"Image.Width" 
+"Image.Height" 
+9
+483fff 
+483fff 
+483fff 
+483fff 
+483fff 
+483fff 
+483fff 
+483fff 
+483fff 
+3
+"Select:2" 
+"Play:2" 
+"MusicPlay:2" 
+6
+"video:avi,mpg,divx,rm,rmvb,mp4,mov,vob,mpeg,dat,mkv,ts,m2ts,mts,tp,mod,xvid,flv,3gp,trp" 
+"picture:jpg,jpeg,bmp,gif,tif,tiff,png,mp3" 
+"music:mp3,wma,m4a,aac,ape,ogg,flac,alac,wav,m3u,wpl,pls,ogm" 
+"text:txt" 
+"flash:swf" 
+"iso:iso" 
+0
+<ctrl> 2 "GeneralFileTree" "GeneralFileTree" 0 0 15
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+3
+"music" 
+"video" 
+"text" 
+0
+<ctrl> 3 "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+580bff 
+0 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<window> 4 "debug" 0 0 0 500 2d0 0 3
+<rule>
+<ctrl> 1 "AShellUsbSerial" "AShellUsbSerial" 0 0 3
+<rule>
+<prop>
+2
+600fff 
+600bff 
+<ctrl> 2 "AframeDebug" "AframeDebug" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<ctrl> 3 "SysProbe" "SysProbe" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<window> 5 "NetworkMgr" 0 0 0 500 2d0 0 8
+<rule>
+<ctrl> 1 "NULL"
+<ctrl> 2 "NULL"
+<ctrl> 3 "NULL"
+<ctrl> 4 "NULL"
+<ctrl> 5 "NULL"
+<ctrl> 6 "NULL"
+<ctrl> 7 "NULL"
+<ctrl> 8 "NULL"
+<pal> 0 

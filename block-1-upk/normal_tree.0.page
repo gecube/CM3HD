@@ -1,0 +1,46 @@
+<page> e "normal_tree" "NULL" 0 0 0 500 2d0 0 1 0
+<rule>
+<window> 1 "wnd" 0 0 0 500 2d0 0 2
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 1d
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+10 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+5
+"video" 
+"music" 
+"picture" 
+"text" 
+"iso" 
+6
+"Mark.Select" 
+"Mark.Play" 
+"Mark.MusicPlay" 
+"FileName" 
+"PathName" 
+"TypeStr" 
+<ctrl> 2 "NameTimeSorter" "NameTimeSorter" 0 0 6
+<rule>
+<prop>
+0 
+0 
+0 
+0
+0
+0
+<pal> 0 

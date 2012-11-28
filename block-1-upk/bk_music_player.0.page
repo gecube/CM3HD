@@ -1,0 +1,139 @@
+<page> 7 "bk_music_player" "NULL" 0 0 0 500 2d0 9 1 0
+<rule>
+15287207 1 7 1 6 0 1 0 1 7 0 6 1c80fff 4 6 0 1 0 1 3 1c8100f 1 "Need_Cancel" 2 2 1c8100f 1 "" 9 1 0 2 a 1c80c02 0 1 0 0 1 480805 0 1 6 33fffff 1 480805 0 1 6 1ffffff 1 0 2 
+38d103 1 33 1 6 0 4 0 1 3 486008 1 "thumbnail_view" 1 1 3 486008 1 "list_view" 1 1 3 486008 1 "picture_ui" 1 1 3 ac8040d 1 "back_music" e 1 482803 1c81008 1 1 "entry" 1 482803 1c81009 1 1 "play_url" 1 482803 1c8100a 1 1 "media_type" 1 482803 1c8100b 1 1 "datasrc_type" 1 482803 1c8100c 1 1 "sort_type" 1 482802 1c81000 1 1 "autohide" 1 1c80418 0 1 1 "Mark.MusicPlay==1" 1 1c8040a 0 5 3 1c8100a 0 0 0 0 0 0 1 "" 1 483402 1c81006 1 0 9 6 0 2 0 1 3 1c81006 0 0 1 1 3 1c81006 0 1 1 2 1c80803 0 1 1 1 6 0 1 0 1 3 1c81006 0 2 1 2 1c80803 0 1 1 1 6 0 1 0 1 3 1c81006 0 3 1 2 1c80803 0 0 1 0 2 2 2 6 0 1 0 1 3 1c8100b 1 "tree" 3 1 1c82001 0 1 6 38807ff a 1c8200e 0 3 3 3880409 0 0 0 0 6 0 1 0 1 3 1c8100c 1 "name_ascent" 3 2 1c81400 0 1 2 1c8040a 0 80 1 1c80407 0 1 6 1c817ff 1 1 6 0 1 0 1 3 1c8100c 1 "date_ascent" 3 2 1c81400 0 3 2 1c8040a 0 80 1 1c80407 0 1 6 1c817ff 1 2 2 1c81400 0 0 2 1c8040a 0 0 2 2 1 1 6 0 1 0 1 3 1c8100c 1 "name_ascent" 3 2 1c81400 0 1 2 1c80802 0 80 1 1c80809 0 1 6 1c817ff 1 1 6 0 1 0 1 3 1c8100c 1 "date_ascent" 3 2 1c81400 0 3 2 1c80802 0 80 1 1c80809 0 1 6 1c817ff 1 2 2 1c81400 0 0 2 1c80802 0 0 2 2 2 a 1c80800 0 2 3 1c81008 0 10 1 482807 1c8100f 1 1 "s_result" 6 0 1 0 1 3 1c8100f 1 "FAIL" 1 1 480805 0 1 6 1ffffff 1 4 2 1c80805 3 1c81009 a 1c80c01 0 1 0 0 6 0 1 0 2 3 1c81000 0 2 3 1 482800 0 4 1 "autohide" 3 1c81000 6 33fffff 0 1 1 482800 0 4 1 "focus" 0 0 6 33fffff 0 1 6 0 1 0 1 3 1c8100a 1 "music" 1 1 48082c 0 2 6 33fffff 0 0 1 0 2 1 0 2 2 486008 1 "bk_music_player" 2 1 0 2 
+38d102 0 0 0 
+15287205 1 1 1 2 1c8100d 1 "played fail" 
+15287203 2 3 2 6 0 1 0 1 3 483a00 9 0 2 1 2 1c80803 0 2 1 0 2 2 1c8100d 1 "" 
+15287206 2 19 2 6 0 1 0 2 7 0 6 1c80fff 1 9 1 0 2 6 0 1 0 1 3 483a00 9 0 3 2 1 480811 1c81007 1 6 33fffff 6 0 1 0 1 3 1c81007 0 1 b 1 480811 3080c07 1 6 47fffff 6 0 1 0 1 3 3080c07 0 1 1 1 480800 0 1 6 47fffff 1 0 2 1 480811 3080c07 1 6 43fffff 6 0 1 0 1 3 3080c07 0 1 1 1 480800 0 1 6 43fffff 1 0 2 1 1c80c02 0 1 0 0 6 0 1 0 1 3 3080c0e 1 "play" 3 1 3083403 0 3 2 20007 2 20008 2 20007 1 3083400 0 1 0 2 2 3080c0e 1 "pause" 1 0 2 1 3082001 0 1 0 0 1 480401 0 3 0 0 6 30813ff 2 20009 1 480805 0 1 6 33fffff 1 480805 0 1 6 1ffffff 9 1 2 1 1c80c02 0 1 0 0 1 480805 0 1 6 1ffffff 2 1 2 1 1c80c02 0 1 0 0 1 480805 0 1 6 1ffffff 2 
+15287201 1 1 1 2 1c81002 5 1 
+38d105 0 0 0 
+1528720b 1 3 1 6 0 1 0 1 3 482405 0 1 2 1 484402 0 1 0 1 2 482405 0 0 1 0 2 
+<window> 1 "wnd" 0 0 0 500 2d0 0 8
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 19
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+0 
+0 
+0 
+0 
+0 
+0 
+1
+"music" 
+6
+"Mark.MusicPlay" 
+"Music.Cover" 
+"Desc.Author" 
+"Desc.Album" 
+"Desc.Year" 
+"Music.FileSize" 
+<ctrl> 2 "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+1c807ff 
+0 
+ffffffff 
+1 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> 3 "BatchPlayer" "BatchPlayer" 0 0 18
+<rule>
+<prop>
+1c80bff 
+2 
+2 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+ffffffff 
+0 
+0 
+"" 
+0 
+0
+1
+5007ff 
+<ctrl> 4 "LocalVariables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 5 "NameTimeSorter" "NameTimeSorter" 0 0 6
+<rule>
+<prop>
+0 
+0 
+0 
+0
+0
+0
+<ctrl> 6 "NULL"
+<ctrl> 7 "MusicVolumn" "uTempVar" 0 0 1
+<rule>
+<prop>
+0 
+<ctrl> 8 "RemarkTree" "GeneralFileTree" 0 0 14
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+10 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+1
+"music" 
+1
+"Mark.MusicPlay" 
+<pal> 0 

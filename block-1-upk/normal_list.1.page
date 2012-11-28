@@ -1,0 +1,79 @@
+<page> d "normal_list" "NULL" 0 0 0 2d0 1e0 0 1 0
+<rule>
+<window> 1 "wnd" 0 0 0 2d0 1e0 0 4
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 1d
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+10 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+5
+"video" 
+"music" 
+"picture" 
+"text" 
+"iso" 
+6
+"Mark.Select" 
+"Mark.Play" 
+"Mark.MusicPlay" 
+"FileName" 
+"PathName" 
+"TypeStr" 
+<ctrl> 2 "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+34807ff 
+10 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> 3 "LocalVariables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 4 "NameTimeSorter" "NameTimeSorter" 0 0 6
+<rule>
+<prop>
+0 
+0 
+0 
+0
+0
+0
+<pal> 0 

@@ -1,0 +1,698 @@
+<page> 11 "list_view" "NULL" 0 0 0 780 438 11 2 0
+<rule>
+38d103 b f b 1 482803 4482c08 1 1 "entry" 1 482803 4482c09 1 1 "media_type" 1 482803 4482c0a 1 1 "sort_type" 1 482803 4482c0b 1 1 "datasrc_type" 2 4482402 3 4482c09 2 500803 0 3 1 482803 4501408 1 1 "dev_type_str" 6 0 1 0 1 3 4501408 1 "UPNP" 2 2 4482404 0 0 2 48f408 1 "UNICODE_OFF" 1 2 2 4482404 0 1 2 48f408 1 "UNICODE_ON" 2 1 482803 4501409 1 1 "return_menu" 2 4500c0f 0 810000 2 450040f 0 410000 
+162f01 8 4e 8 1 482803 4482c08 1 1 "entry" 1 482803 4482c09 1 1 "media_type" 1 482803 4482c0a 1 1 "sort_type" 1 482803 4482c0b 1 1 "datasrc_type" 1 4481410 4482c09 1 3 4481407 1 482c00 4482c07 2 1 "video" 3 4482c09 6 0 1 0 2 3 4482c07 0 0 1 2 4482c09 1 "video" 1 2 1 482c00 4482c07 2 1 "music" 3 4482c09 6 0 1 0 2 3 4482c07 0 0 1 2 4482c09 1 "music" 1 2 1 482c00 4482c07 2 1 "picture" 3 4482c09 6 0 1 0 2 3 4482c07 0 0 1 2 4482c09 1 "picture" 1 2 1 482c00 4482c07 2 1 "text" 3 4482c09 6 0 1 0 2 3 4482c07 0 0 1 2 4482c09 1 "text" 1 2 1 482c00 4482c07 2 1 "record" 3 4482c09 6 0 1 0 2 3 4482c07 0 0 1 2 4482c09 1 "record" 1 0 2 2 2 2 2 6 0 1 0 1 7 0 6 44817ff 7 1 480804 0 1 1 "Item_Focus_Change" a 4500c02 0 1 0 0 6 0 2 0 1 3 4482c09 1 "video" 1 1 3 4482c09 1 "video_ts" 2 1 480805 0 1 6 33fffff 1 480805 0 1 6 1ffffff 1 0 2 1 4481410 4482c0f 1 3 4481406 1 482c00 4482c07 2 1 "music" 3 4482c0f 1 482c09 450080d 1 3 4481408 6 0 c 0 2 3 4482c07 0 0 1 1 3 450080d 1 "MP3" 1 1 3 450080d 1 "WMA" 1 1 3 450080d 1 "M4A" 1 1 3 450080d 1 "AAC" 1 1 3 450080d 1 "APE" 1 1 3 450080d 1 "OGG" 1 1 3 450080d 1 "WAV" 1 1 3 450080d 1 "FLAC" 1 1 3 450080d 1 "M3U" 1 1 3 450080d 1 "WPL" 1 1 3 450080d 1 "PLS" 2 1 480804 0 1 1 "music_start_play" 6 0 1 0 1 3 450080d 1 "M3U" 1 1 480803 0 7 6 47fffff 1 "music_start_play" 0 a 3 4481408 0 1 0 0 0 0 1 1 6 0 1 0 1 3 450080d 1 "WPL" 1 1 480803 0 7 6 47fffff 1 "music_start_play" 0 a 3 4481408 0 2 0 0 0 0 1 1 6 0 1 0 1 3 450080d 1 "PLS" 1 1 480803 0 7 6 47fffff 1 "music_start_play" 0 a 3 4481408 0 3 0 0 0 0 1 1 1 480803 0 7 6 47fffff 1 "music_start_play" 0 a 1 "music_start_play" 0 0 0 0 0 0 2 2 2 1 e 1 580403 0 1 1 "Play" 6 0 1 0 1 3 4482c09 1 "picture" 1 6 0 1 0 1 3 4482c0b 1 "tree" 1 6 0 1 0 1 3 483a00 4 0 0 1 1 388040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 1 6 0 2 0 1 3 483a00 4 0 1 1 1 3 483a00 4 0 2 1 1 388040d 0 3 0 3fffff 1 "Mark.Play" 1 "1" 1 0 2 2 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348080d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 2 1 0 2 6 0 1 0 1 3 4482c09 1 "video" 1 6 0 1 0 1 3 4482c0b 1 "tree" 1 6 0 1 0 1 3 483a00 e 0 0 1 1 388040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 1 1 388040d 0 3 0 3fffff 1 "Mark.Play" 1 "1" 2 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348080d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 2 1 0 2 6 0 1 0 1 3 4482c09 1 "text" 1 6 0 1 0 1 3 4482c0b 1 "tree" 1 6 0 1 0 1 3 483a00 4 0 0 1 1 388040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 1 6 0 2 0 1 3 483a00 4 0 1 1 1 3 483a00 4 0 2 1 1 388040d 0 3 0 3fffff 1 "Mark.Play" 1 "1" 1 0 2 2 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348080d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 2 1 0 2 6 0 1 0 1 3 4482c0b 1 "tree" 1 1 388040d 0 3 0 3fffff 1 "Mark.Play" 1 "1" 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348080d 0 3 0 3fffff 1 "Mark.Play" 1 "1" 1 0 2 2 1 482801 0 4 1 "entry" 3 4482c08 6 1bfffff 0 1 1 482801 0 4 1 "play_url" 3 4481408 6 1bfffff 0 1 1 482801 0 4 1 "media_type" 3 4482c09 6 1bfffff 0 1 1 482801 0 4 1 "sort_type" 3 4482c0a 6 1bfffff 0 1 1 482801 0 4 1 "datasrc_type" 3 4482c0b 6 1bfffff 0 1 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "media_player" 6 3ffffff 0 0 1 48082c 0 2 6 3ffffff 0 0 6 0 1 0 1 3 4482c0b 1 "tree" 1 1 1880401 0 1 6 38807ff 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 1 1880401 0 1 6 34807ff 1 0 2 2 2 1 0 2 
+33635000 1 12 1 6 0 1 0 1 7 0 6 44817ff 2 6 0 2 0 1 5 0 0 2 1 1 5 0 0 1 7 6 0 1 0 1 5 0 0 1 1 1 482801 0 4 1 "device_focus_item" 1 "Memory" 6 5bfffff 0 1 1 0 2 2 4500800 0 ffffffff 2 4482c00 0 ffffffff 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 6 0 1 0 1 3 4501409 1 "UPNP" 1 6 0 1 0 1 5 0 0 1 1 1 482801 0 4 1 "arg0" 1 "media_menu" 6 3ffffff 0 1 1 1 1 482801 0 4 1 "arg0" 1 "netapp_manual" 6 3ffffff 0 1 2 1 1 6 0 1 0 1 3 4501409 1 "THUNDER" 1 1 482801 0 4 1 "arg0" 1 "thunder_main" 6 3ffffff 0 1 1 1 1 482801 0 4 1 "arg0" 1 "media_menu" 6 3ffffff 0 1 2 2 a 4500c02 0 1 0 0 1 48082c 0 2 6 3ffffff 0 0 1 0 2 6 0 2 0 2 5 0 0 5 0 2 5 0 0 4 1 1 4482400 0 0 1 0 2 1 0 2 
+38d102 6 7 6 1 480813 0 2 2 20002 0 3 1 480409 0 4 0 0 6 4480fff 0 0 0 1 2 500803 0 0 1 480804 0 1 1 "Item_Focus_Change" 1 482800 0 4 1 "focus" 0 0 6 33fffff 0 1 6 0 1 0 1 3 6484006 0 1 1 1 6484001 0 1 0 0 1 0 2 
+38d101 c 35 c 2 486008 1 "list_view" 1 480813 0 2 2 20002 0 3 1 482803 4501408 1 1 "dev_type_str" 6 0 2 0 1 3 482801 1 "SD" 1 1 3 482801 1 "MS" 1 1 480401 0 3 0 0 6 44877ff 2 202f9 1 0 2 6 0 1 0 1 3 482801 1 "NAND" 1 1 480401 0 3 0 0 6 4487fff 2 202f8 1 0 2 6 0 1 0 1 3 482801 1 "UDISK" 1 1 480401 0 3 0 0 6 4487bff 2 202f7 1 0 2 6 0 1 0 1 3 4482c09 1 "video" 6 1 480805 0 1 6 1ffffff 1 480805 0 1 6 33fffff 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 a 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 20304 1 0 2 6 0 1 0 1 3 4482c09 1 "music" 6 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 9 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 20305 1 480811 4500806 1 6 1ffffff 6 0 1 0 2 3 4500806 0 0 1 6 0 1 0 1 3 1c8100d 1 "played fail" 1 1 480805 0 1 6 1ffffff 1 2 2 1c8100f 1 "Need_Blocking" 1 48082c 0 2 6 33fffff 0 0 2 1 0 2 1 0 2 6 0 1 0 1 3 4482c09 1 "picture" 5 2 500801 0 1 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 8 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 20306 1 0 2 6 0 1 0 1 3 4482c09 1 "flash" 4 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 16 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 20307 1 0 2 6 0 1 0 1 3 4482c09 1 "text" 4 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 b 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 202fd 1 0 2 6 0 2 0 1 3 4482c09 1 "video,picture,music,text,flash,iso" 1 1 3 4482c09 1 "video,picture,music,text,iso" 7 2 4501009 3 4482c09 1 480409 0 4 0 0 6 4481bff 0 0 0 1 1 480405 0 6 0 0 0 c 6 4481bff 0 ffa6a6a6 0 0 3 6481400 1 480409 0 4 0 0 6 4481fff 0 0 0 1 1 480401 0 3 0 0 6 4481fff 2 202fe 1 480811 4500806 1 6 1ffffff 6 0 1 0 2 3 4500806 0 0 1 6 0 1 0 1 3 1c8100d 1 "played fail" 1 1 480805 0 1 6 1ffffff 1 0 2 1 0 2 1 0 2 
+4d5fbe00 d 87 d 6 0 1 0 1 5 0 0 cc 5 1 482801 0 4 1 "cmd" 1 "set_view" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "next" 6 3ffffff 0 1 a 4500c02 0 1 0 0 1 48082c 0 2 6 3ffffff 0 0 1 482801 0 4 1 "focus_url" 3 4481408 6 23fffff 0 1 1 0 2 6 0 1 0 1 5 0 0 cb 6 6 0 7 0 1 3 4482c09 1 "video,picture,music,text,flash,iso" 1 1 3 4482c09 1 "video,picture,music,text,iso" 1 1 3 4482c09 1 "flash" 1 1 3 4482c09 1 "text" 1 1 3 4481408 1 "" 1 1 3 4501009 1 "video,picture,music,text,flash,iso" 1 1 3 4501009 1 "video,picture,music,text,iso" 1 9 1 0 2 1 482801 0 4 1 "cmd" 1 "set_view" 6 3ffffff 0 1 1 482801 0 4 1 "arg1" 1 "next" 6 3ffffff 0 1 a 4500c02 0 1 0 0 1 48082c 0 2 6 3ffffff 0 0 1 482801 0 4 1 "focus_url" 3 4481408 6 23fffff 0 1 1 0 2 6 0 1 0 1 5 0 0 d4 5 1 482801 0 4 1 "cmd" 1 "set_view" 6 3ffffff 0 1 1 482801 0 4 1 "arg2" 1 "next" 6 3ffffff 0 1 a 4500c02 0 1 0 0 1 48082c 0 2 6 3ffffff 0 0 1 482801 0 4 1 "focus_url" 3 4481408 6 23fffff 0 1 1 0 2 6 0 1 0 1 5 0 0 19 6 6 0 2 0 2 3 450140a 1 "list is null" 0 2 3 450080b 1 "item info getting" 9 1 480804 0 1 1 "Item_Focus_Change" 1 480409 0 4 0 0 6 6480bff 0 0 0 1 1 480804 0 1 1 "volume_hide" 1 480811 4500806 1 6 1ffffff 6 0 1 0 1 3 4500806 0 1 2 1 480805 0 1 6 33fffff 1 480805 0 1 6 1ffffff 1 0 2 a 4500c02 0 1 0 0 1 48081b 0 1 6 47fffff 1 48082c 0 2 6 103fffff 0 1 1 48082c 0 2 6 107fffff 0 0 1 0 2 9 1 482801 0 4 1 "cmd" 1 "set_view" 6 3ffffff 0 1 1 482801 0 4 1 "arg2" 1 "next" 6 3ffffff 0 1 1 48082c 0 2 6 3ffffff 0 0 1 482801 0 4 1 "focus_url" 3 4481408 6 23fffff 0 1 1 0 2 6 0 1 0 1 5 0 0 18 4 1 480811 4500806 1 6 1ffffff 6 0 1 0 2 3 4500806 0 0 8 6 0 1 0 1 3 4482c09 1 "music" 1 1 482800 0 4 1 "autohide" 0 0 6 33fffff 0 1 1 1 1 482800 0 4 1 "autohide" 0 1 6 33fffff 0 1 2 1 482800 0 4 1 "focus" 0 1 6 33fffff 0 1 1 48081b 0 1 6 47fffff 1 480802 0 1 6 33fffff 1 3082805 0 1 1 "uIconButton_Prev" 1 308280f 0 2 1 "uIconButton_Prev" 0 1 1 48082c 0 2 6 33fffff 0 1 6 0 1 0 1 3 4482c09 1 "music" 1 1 48082c 0 2 6 33fffff 0 1 1 0 2 1 0 2 5 9 1 0 2 1 480811 4482c07 1 6 33fffff 6 0 1 0 1 3 4482c07 0 1 2 6 0 5 0 1 5 0 0 1e 1 1 5 0 0 20 1 1 5 0 0 21 1 1 5 0 0 22 1 1 5 0 0 23 7 1 480800 0 1 6 33fffff 1 48081b 0 1 6 47fffff 6 0 1 0 1 5 0 0 21 3 1 3082805 0 1 1 "uIconButton_Prev" 3 4d5fbe00 33fffff 2 0 10 1 "" 9 1 0 2 6 0 1 0 1 5 0 0 20 3 1 3082805 0 1 1 "uIconButton_Next" 3 4d5fbe00 33fffff 2 0 10 1 "" 9 1 0 2 6 0 1 0 1 5 0 0 1e 3 1 3082805 0 1 1 "uIconButton_Stop" 3 4d5fbe00 33fffff 2 0 10 1 "" 9 1 0 2 6 0 1 0 1 5 0 0 22 3 1 3082805 0 1 1 "uIconButton_FF" 3 4d5fbe00 33fffff 2 0 10 1 "" 9 1 0 2 6 0 1 0 1 5 0 0 23 3 1 3082805 0 1 1 "uIconButton_FB" 3 4d5fbe00 33fffff 2 0 10 1 "" 9 1 0 2 1 0 2 6 0 1 0 1 5 0 0 1d 3 1 480811 4500800 1 6 33fffff 6 0 1 0 1 3 4500800 0 1 3 1 480800 0 1 6 33fffff 1 48081b 0 1 6 47fffff 1 3082805 0 1 1 "uIconButton_Play" 1 2 1 3082805 0 1 1 "uIconButton_Play" 3 4d5fbe00 47fffff 2 0 10 1 "" 2 9 1 0 2 1 1 6 0 1 0 1 5 0 0 20 1 3 4d5fbe00 44817ff 2 0 13 1 "" 1 1 6 0 1 0 1 5 0 0 21 1 3 4d5fbe00 44817ff 2 0 12 1 "" 1 0 2 2 2 6 0 1 0 1 5 0 0 1d 2 6 0 1 0 1 3 4482c09 1 "music" 1 3 4d5fbe00 47fffff 2 0 10 1 "" 1 0 2 6 0 2 0 1 3 4482c09 1 "video" 1 1 3 4482c09 1 "picture" 2 1 448140e 4482c0f 2 3 4481407 1 "TypeStr" 6 0 1 0 2 3 4482c0f 1 "Dir" 1 3 4d5fbe00 47fffff 2 0 10 1 "" 1 0 2 1 0 2 1 0 2 6 0 2 0 1 5 0 0 10 0 1 3 448140a 0 0 1 5 1 0 2 6 0 2 0 1 5 0 0 11 1 1 5 0 0 e 1 6 0 1 0 1 3 4482c0b 1 "tree" 3 1 4481405 0 0 1 448140b 0 2 3 3880409 0 0 5 1 0 2 1 0 2 6 0 2 0 1 5 0 0 10 1 1 5 0 0 f 2 6 0 1 0 1 5 0 0 f 2 3 4d5fbe00 47fffff 2 0 10 1 "" 9 1 0 2 6 0 4 0 2 3 4482c09 1 "flash" 0 2 3 4482c09 1 "text" 0 2 3 4482c09 1 "music" 0 2 3 4482c09 1 "picture" 3 1 448140e 448a408 2 3 4481407 1 "TypeStr" 6 0 1 0 1 3 448a408 1 "Dir" 2 1 482c07 448a409 1 3 4481408 6 0 1 0 1 3 448a409 1 "VIDEO_TS" a 1 482801 0 4 1 "real_media_type" 1 "dvd" 6 2bfffff 0 1 1 482801 0 4 1 "media_type" 1 "VIDEO_TS" 6 1bfffff 0 1 1 482801 0 4 1 "media_type" 1 "VIDEO_TS" 6 47fffff 0 1 1 482801 0 4 1 "real_media_type" 1 "dvd" 6 1bfffff 0 1 1 482801 0 4 1 "dvd_path" 3 4481408 6 1bfffff 0 1 1 482801 0 4 1 "play_url" 3 4481408 6 1bfffff 0 1 a 4500c02 0 1 0 0 1 480805 0 1 6 47fffff 1 48082c 0 2 6 1bfffff 0 1 9 1 0 2 1 0 2 6 0 1 0 1 3 448a408 1 "iso" 3 1 48f800 0 1 3 4481408 1 48081b 0 1 6 47fffff 9 1 0 2 1 0 2 1 0 2 6 0 1 0 1 5 0 0 39 2 3 4d5fbe00 47fffff 2 0 c 1 "key_repeat" 5 1 0 2 6 0 1 0 1 5 0 0 38 2 3 4d5fbe00 47fffff 2 0 d 1 "key_repeat" 5 1 0 2 
+162f00 8 f 8 1 480811 4500807 1 6 103fffff 6 0 2 0 2 7 0 6 44817ff 1 2 3 4500807 0 0 1 9 1 0 2 1 448140e 4482c0f 2 3 4481407 1 "TypeStr" 6 0 1 0 2 3 4482c0f 1 "Dir" 2 1 4481410 4482c0e 1 3 4481407 6 0 1 0 1 3 4482c0e 1 "video" 2 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 20308 1 0 2 1 0 2 1 480804 0 1 1 "Item_Focus_Change" 1 4481410 4482c0e 1 3 4481407 6 0 1 0 1 3 4482c0e 1 "music" 1 1 480803 0 7 6 47fffff 1 "Item_Focus_Change" 0 a 1 "" 0 0 0 0 0 1 1 1 1 480803 0 7 6 47fffff 1 "Item_Focus_Change" 0 1e 1 "" 0 0 0 0 0 1 2 9 
+33635001 1 2c 1 6 0 1 0 1 7 0 6 44817ff 9 1 482803 4482c0f 1 1 "dev_type_str" 1 484805 4482c02 1 1 "usba0" 1 484805 4482c03 1 1 "usbb0" 6 0 1 0 1 3 4482c0f 1 "UDISK" 1 6 0 1 0 1 3 4482c03 0 1 1 1 481003 4482c0f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 1 1 6 0 1 0 1 3 4482c02 0 1 1 1 481003 4482c0f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 1 481001 4482c0f 3 1 "dev_type_str" 1 "mount_point" 3 4482c0f 2 2 1 1 6 0 1 0 1 3 4482c0f 1 "NAND" 1 6 0 1 0 1 3 4482c02 0 0 1 1 481003 4482c0f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 6 0 1 0 1 3 4482c03 0 0 1 1 481003 4482c0f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 1 1 1 481001 4482c0f 3 1 "dev_type_str" 1 "mount_point" 3 4482c0f 2 2 1 1 1 481001 4482c0f 3 1 "dev_type_str" 1 "mount_point" 3 4482c0f 2 2 1 485412 4482c07 2 3 4482c0f 3 4482c08 6 0 1 0 1 3 4482c07 0 0 2 1 482c00 0 2 3 4482c08 3 4482c0f 6 0 1 0 1 3 482c00 0 0 2 6 0 1 0 1 5 0 0 0 4 1 482801 0 4 1 "device_focus_item" 1 "Memory" 6 5bfffff 0 1 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "media_menu" 6 3ffffff 0 1 1 48082c 0 2 6 3ffffff 0 0 1 0 2 9 1 2 6 0 1 0 1 3 4482c0b 1 "tree" 4 9 1 482801 0 4 1 "entry" 3 4482c0f 6 23fffff 0 1 1 480805 0 1 6 47fffff 1 48082c 0 2 6 23fffff 0 1 1 0 2 9 2 1 0 2 1 4488803 0 1 5 0 1 4488808 0 3 3 4481407 0 0 3 4481406 6 0 1 0 1 5 0 0 0 4 2 450140a 1 "list is null" 6 0 1 0 1 3 4482c09 1 "picture" 1 1 4500c02 0 1 0 0 1 0 2 6 0 1 0 1 3 4482c09 1 "music" 1 1 4500402 0 1 0 0 1 0 2 1 480803 0 7 6 47fffff 1 "no_file_update" 0 1 1 "" 0 0 0 0 0 0 1 2 2 450140a 1 "list is not null" 2 448b401 0 0 2 1 0 2 
+38d105 4 129 4 6 0 1 0 1 5 0 1 "Item_Focus_Change" 16 1 480804 0 1 1 "Item_Focus_Change" 1 4488806 0 3 3 4481407 0 0 3 4481406 1 480811 4482c07 1 6 103fffff 6 0 1 0 1 3 4482c07 0 1 1 9 1 0 2 2 450080b 1 "item info getting" 1 448140e 4482c0e 2 3 4481407 1 "TypeStr" 2 4482c0d 3 4482c09 1 4481410 4482c09 1 3 4481407 1 480409 0 4 0 0 6 4483bff 0 0 0 1 6 0 1 0 1 3 4482c0e 1 "Dir" 3 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 20309 1 480409 0 4 0 0 6 4483bff 0 0 0 1 1 6 6 0 1 0 1 3 4482c09 1 "iso" 2 1 480409 0 4 0 0 6 4483bff 0 0 0 1 1 480401 0 3 0 0 6 44893ff 2 20308 1 0 2 6 0 1 0 1 3 4482c09 1 "video" 2 2 4482c00 3 4481406 6 0 2 0 1 3 4481406 3 4482c00 0 2 3 4501408 1 "UPNP" e a 4500c02 0 1 0 0 a 580401 0 2 3 4481408 1 "Video.TotalTime" 1 482807 4500808 1 1 "s_ret" a 580401 0 2 3 4481408 1 "FileSize" 1 482807 4500809 1 1 "s_ret" 2 4482c01 0 0 1 480409 0 4 0 0 6 44867ff 0 0 0 1 1 480409 0 4 0 0 6 4485fff 0 0 0 1 1 480409 0 4 0 0 6 44857ff 0 0 0 1 1 480409 0 4 0 0 6 4484fff 0 0 0 1 1 480409 0 4 0 0 6 44873ff 0 0 0 1 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 448140e 4482c0e 2 3 4481407 1 "TypeStr" 6 0 2 0 2 3 4482c0e 1 "Dir" 0 2 3 448140a 0 0 c 1 480805 0 1 6 1ffffff 1 480805 0 1 6 33fffff 1 4500c0c 0 2 3 4481408 0 0 1 480405 0 6 0 0 0 14 6 44843ff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 f 6 4484bff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 e 6 44853ff 0 ffffffff 0 0 3 6481402 1 482c03 4500801 1 3 4500808 1 485401 0 4 3 4500801 6 44847ff 0 ffffffff 3 6481402 1 482c03 4500801 1 3 4500809 1 485405 0 4 3 4500809 6 4484fff 0 ffffffff 3 6481402 1 482c09 450080a 1 3 4481408 1 480403 0 5 0 0 3 450080a 6 44857ff 0 ffffffff 3 6481402 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 4482c09 1 "music" 20 a 4500c02 0 1 0 0 1 448140e 450080d 2 3 4481407 1 "TypeStr" a 580401 0 2 3 4481408 1 "Music.Cover" 1 482807 4500808 1 1 "s_ret" a 580401 0 2 3 4481408 1 "Desc.Author" 1 482807 4500809 1 1 "s_ret" a 580401 0 2 3 4481408 1 "Desc.Album" 1 482807 450080a 1 1 "s_ret" a 580401 0 2 3 4481408 1 "FileSize" 1 482807 450080c 1 1 "s_ret" a 580401 0 2 3 4481408 1 "Video.TotalTime" 1 482807 450080f 1 1 "s_ret" 6 0 1 0 1 3 4500808 1 "1" 1 1 4500c0c 0 2 3 4481408 0 0 1 1 6 0 1 0 2 3 4482c0e 1 "Dir" 1 6 0 1 0 1 3 4500808 1 "0" 1 1 480401 0 3 0 0 6 44893ff 2 2030a 1 1 1 480401 0 3 0 0 6 44893ff 2 2030a 2 1 0 2 2 1 448140e 4482c0e 2 3 4481407 1 "TypeStr" 6 0 2 0 2 3 4482c0e 1 "Dir" 0 2 3 448140a 0 0 1 2 4500801 0 1 1 1 2 4500801 0 0 2 1 480405 0 6 0 0 0 12 6 44843ff 0 ffffffff 0 0 3 6481402 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 485402 4500809 3 3 4500809 3 4484402 3 6481402 1 480403 0 5 0 0 3 4500809 6 44847ff 0 ffffffff 3 6481402 1 480405 0 6 0 0 0 13 6 4484bff 0 ffffffff 0 0 3 6481402 1 480409 0 4 0 0 6 4484fff 0 0 0 1 1 485402 450080a 3 3 450080a 3 4484c02 3 6481402 1 480403 0 5 0 0 3 450080a 6 4484fff 0 ffffffff 3 6481402 1 482c03 4500806 1 3 450080c 1 480405 0 6 0 0 0 f 6 44853ff 0 ffffffff 0 0 3 6481402 1 480409 0 4 0 0 6 44857ff 0 0 0 1 1 480405 0 6 0 0 0 e 6 4485bff 0 ffffffff 0 0 3 6481402 1 480409 0 4 0 0 6 4485fff 0 0 0 1 1 482c03 4500807 1 3 450080f 1 480405 0 6 0 0 0 14 6 44863ff 0 ffffffff 0 0 3 6481402 1 480409 0 4 0 0 6 44867ff 0 0 0 1 6 0 1 0 1 3 4500801 0 1 7 6 0 1 0 2 3 4500809 1 "" 1 1 480403 0 5 0 0 3 4500809 6 44847ff 0 ffffffff 3 6481402 1 0 2 6 0 1 0 2 3 450080a 1 "" 1 1 480403 0 5 0 0 3 450080a 6 4484fff 0 ffffffff 3 6481402 1 0 2 1 485404 0 4 3 4500806 6 44857ff 0 ffffffff 3 6481402 1 448140e 450080d 2 3 4481407 1 "TypeStr" 6 0 1 0 1 3 450080d 1 "music" 1 1 482c09 450080d 1 3 4481408 1 0 2 1 480403 0 5 0 0 3 450080d 6 4485fff 0 ffffffff 3 6481402 1 485401 0 4 3 4500807 6 44867ff 0 ffffffff 3 6481402 1 0 2 1 0 2 6 0 1 0 1 3 4482c09 1 "picture" 5 1 480409 0 4 0 0 6 4483fff 0 0 0 1 2 4482c0f 1 "" 1 480404 0 5 0 0 3 4482c0f 6 4483fff 0 ffffffff 3 6481402 1 448140e 4482c0f 2 3 4481407 1 "TypeStr" 6 0 2 0 1 3 4482c0f 1 "picture" 0 2 3 4501408 1 "UPNP" 18 a 4500c02 0 1 0 0 1 4500c0c 0 2 3 4481408 0 0 1 480405 0 6 0 0 0 f 6 44843ff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 e 6 4484bff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 10 6 44853ff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 11 6 4485bff 0 ffffffff 0 0 3 6481402 1 484c00 0 1 3 4481408 1 480409 0 4 0 0 6 44893ff 0 0 0 1 1 480409 0 4 0 0 6 4485fff 0 0 0 1 1 480403 0 5 0 0 3 484c01 6 4485fff 0 ffffffff 3 6481402 1 482c04 4482c0e 1 3 484c03 1 482c04 4482c0f 1 3 484c02 1 482c02 0 2 3 4482c0e 1 "x" 1 482c02 0 2 3 482c01 3 4482c0f 1 480409 0 4 0 0 6 44857ff 0 0 0 1 1 480403 0 5 0 0 3 482c01 6 44857ff 0 ffffffff 3 6481402 a 580401 0 2 3 4481408 1 "FileSize" 1 482807 4482c0f 1 1 "s_ret" 1 482c03 0 1 3 4482c0f 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 485404 0 4 3 482c00 6 44847ff 0 ffffffff 3 6481402 1 482c09 450080a 1 3 4481408 1 480409 0 4 0 0 6 4484fff 0 0 0 1 1 480403 0 5 0 0 3 450080a 6 4484fff 0 ffffffff 3 6481402 1 8 1 480409 0 4 0 0 6 44893ff 0 0 0 1 1 480401 0 3 0 0 6 44893ff 2 2030b 1 480405 0 6 0 0 0 f 6 44843ff 0 ffffffff 0 0 3 6481402 a 580401 0 2 3 4481408 1 "FileSize" 1 482807 4482c0f 1 1 "s_ret" 1 482c03 0 1 3 4482c0f 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 485404 0 4 3 482c00 6 44847ff 0 ffffffff 3 6481402 2 1 0 2 6 0 1 0 1 3 4482c09 1 "text" 10 a 4500c02 0 1 0 0 1 480409 0 4 0 0 6 4483fff 0 0 0 1 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 480409 0 4 0 0 6 4484fff 0 0 0 1 1 480409 0 4 0 0 6 44857ff 0 0 0 1 1 480409 0 4 0 0 6 4485fff 0 0 0 1 1 480409 0 4 0 0 6 44867ff 0 0 0 1 1 480409 0 4 0 0 6 4486fff 0 0 0 1 1 480405 0 6 0 0 0 f 6 44843ff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 e 6 4484bff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 15 6 44853ff 0 ffffffff 0 0 3 6481402 2 4482c0f 1 "" 1 480404 0 5 0 0 3 4482c0f 6 4483fff 0 ffffffff 3 6481402 1 448140e 4482c0f 2 3 4481407 1 "TypeStr" 6 0 1 0 1 3 4482c0f 1 "Dir" 1 2 4482c0f 1 "" 1 0 2 6 0 1 0 1 3 4482c0f 1 "text" d 1 484c00 0 1 3 4481408 1 480403 0 5 0 0 3 484c01 6 44857ff 0 ffffffff 3 6481402 1 482c04 4482c0e 1 3 484c03 1 482c04 4482c0f 1 3 484c02 1 482c02 0 2 3 4482c0e 1 "x" 1 482c02 0 2 3 482c01 3 4482c0f a 580401 0 2 3 4481408 1 "FileSize" 1 482807 4482c0f 1 1 "s_ret" 1 482c03 0 1 3 4482c0f 1 485404 0 4 3 482c00 6 44847ff 0 ffffffff 3 6481402 1 482c09 450080a 1 3 4481408 1 480403 0 5 0 0 3 450080a 6 4484fff 0 ffffffff 3 6481402 1 480401 0 3 0 0 6 44893ff 2 2030c 1 0 2 1 0 2 6 0 1 0 1 3 4482c09 1 "flash" 7 2 4482c00 3 4481406 a 4500c02 0 1 0 0 a 580401 0 2 3 4481408 1 "Video.TotalTime" 1 482807 4500808 1 1 "s_ret" a 580401 0 2 3 4481408 1 "FileSize" 1 482807 4500809 1 1 "s_ret" 6 0 1 0 1 3 4481406 3 4482c00 9 2 4482c01 0 0 1 480409 0 4 0 0 6 44867ff 0 0 0 1 1 480409 0 4 0 0 6 4485fff 0 0 0 1 1 480409 0 4 0 0 6 44857ff 0 0 0 1 1 480409 0 4 0 0 6 4484fff 0 0 0 1 1 480409 0 4 0 0 6 44873ff 0 0 0 1 1 480409 0 4 0 0 6 44847ff 0 0 0 1 1 448140e 4482c0e 2 3 4481407 1 "TypeStr" 6 0 2 0 2 3 4482c0e 1 "Dir" 0 2 3 448140a 0 0 a 1 480405 0 6 0 0 0 14 6 44843ff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 f 6 4484bff 0 ffffffff 0 0 3 6481402 1 480405 0 6 0 0 0 e 6 44853ff 0 ffffffff 0 0 3 6481402 1 482c03 4500801 1 3 4500808 1 485401 0 4 3 4500801 6 44847ff 0 ffffffff 3 6481402 1 482c03 4500801 1 3 4500809 1 485404 0 4 3 4500801 6 4484fff 0 ffffffff 3 6481402 1 482c09 450080a 1 3 4481408 1 480403 0 5 0 0 3 450080a 6 44857ff 0 ffffffff 3 6481402 1 480401 0 3 0 0 6 44893ff 2 2030d 1 0 2 1 0 2 1 0 2 2 6 0 1 0 2 3 448140a 0 0 2 1 480409 0 4 0 0 6 44873ff 0 0 0 1 6 0 1 0 2 3 4501408 1 "UPNP" 1 1 48540e 0 7 0 0 3 4481408 6 44873ff 0 ffffffff 3 6481401 0 1 0 1 1 1 1 48540e 0 7 0 0 3 4481408 6 44873ff 0 ffffffff 3 6481401 0 1 0 0 2 1 2 1 480409 0 4 0 0 6 44873ff 0 0 0 1 1 480409 0 4 0 0 6 4483bff 0 0 0 1 2 2 4482c09 3 4482c0d 6 0 1 0 1 3 4482c09 1 "picture" 1 1 48540c 4482c0c 1 0 8 1 0 2 6 0 1 0 1 3 4482c09 1 "music" 1 1 48540c 4482c0c 1 0 9 1 0 2 6 0 1 0 1 3 4482c09 1 "video" 1 1 48540c 4482c0c 1 0 a 1 0 2 6 0 1 0 1 3 4482c09 1 "text" 1 1 48540c 4482c0c 1 0 b 1 0 2 6 0 1 0 1 3 4482c09 1 "flash" 1 1 48540c 4482c0c 1 0 16 1 0 2 6 0 2 0 1 3 4482c09 1 "video,picture,music,text,flash,iso" 1 1 3 4482c09 1 "video,picture,music,text,iso" 1 1 48540c 4482c0c 1 0 c 1 0 2 1 482c08 450080f 1 3 4481408 1 485403 450080e 5 3 450080f 6 44847ff 0 ffffffff 3 6481402 0 3 6 0 1 0 2 3 4501008 3 450080e 4 2 4501008 3 450080e 1 480409 0 4 0 0 6 448a3ff 0 0 0 1 1 480409 0 4 0 0 6 4481bff 0 0 0 1 6 0 1 0 1 3 450080e 1 "/" 1 1 480403 0 5 0 0 3 4482c0c 6 448a3ff 0 ffa6a6a6 3 6481400 1 1 6 0 1 0 2 3 4501408 1 "UPNP" 1 1 48540d 0 8 0 0 3 4481408 3 4482c0c 6 448a3ff 0 ffa6a6a6 3 6481400 0 0 0 1 1 1 1 48540d 0 8 0 0 3 4481408 3 4482c0c 6 448a3ff 0 ffa6a6a6 3 6481400 0 0 0 0 2 2 1 0 2 2 450080b 1 "item info got" 1 0 2 6 0 1 0 1 5 0 1 "no_file_update" 9 1 480811 4482c07 1 6 103fffff 6 0 1 0 1 3 4482c07 0 1 5 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 480800 0 1 6 47fffff 1 0 2 a 4500c02 0 1 0 0 1 480813 0 2 2 20002 0 3 1 480409 0 4 0 0 6 44893ff 0 0 0 1 1 480409 0 4 0 0 6 4483bff 0 0 0 1 1 480401 0 3 0 0 6 4489fff 2 202ff 1 480405 0 6 0 0 0 d 6 4489bff 0 7fffffff 0 0 3 6481404 5 1 0 2 6 0 1 0 1 5 0 1 "music_start_play" c 1 480805 0 1 6 1ffffff 1 480805 0 1 6 33fffff 1 580403 0 1 1 "MusicPlay" 6 0 3 0 1 5 3 0 1 1 1 5 3 0 2 1 1 5 3 0 3 3 6 0 1 0 1 5 3 0 1 1 1 491800 0 3 5 2 1 "Mark.MusicPlay" 1 "1" 1 0 2 6 0 1 0 1 5 3 0 2 1 1 491801 0 3 5 2 1 "Mark.MusicPlay" 1 "1" 1 0 2 6 0 1 0 1 5 3 0 3 1 1 491802 0 3 5 2 1 "Mark.MusicPlay" 1 "1" 1 0 2 1 1 6 0 1 0 1 3 4482c0b 1 "tree" 1 6 0 1 0 1 3 483a00 9 0 0 1 1 388040d 0 3 0 3ffffe 1 "Mark.MusicPlay" 1 "1" 1 1 1 388040d 0 3 0 3fffff 1 "Mark.MusicPlay" 1 "1" 2 1 1 6 0 1 0 1 3 4482c0b 1 "list" 1 6 0 1 0 1 3 483a00 9 0 0 1 1 348080d 0 3 0 3ffffe 1 "Mark.MusicPlay" 1 "1" 1 1 1 348080d 0 3 0 3fffff 1 "Mark.MusicPlay" 1 "1" 2 1 0 2 2 2 1 482801 0 4 1 "entry" 3 4482c08 6 1ffffff 0 1 1 482801 0 4 1 "play_url" 3 4481408 6 1ffffff 0 1 1 482801 0 4 1 "media_type" 3 4482c09 6 1ffffff 0 1 1 482801 0 4 1 "sort_type" 3 4482c0a 6 1ffffff 0 1 1 482801 0 4 1 "datasrc_type" 3 4482c0b 6 1ffffff 0 1 6 0 1 0 1 3 4482c09 1 "music" 1 1 482800 0 4 1 "autohide" 0 0 6 1ffffff 0 1 1 1 1 482800 0 4 1 "autohide" 0 1 6 1ffffff 0 1 2 2 486008 1 "list_view" 1 48082c 0 2 6 1ffffff 0 1 1 0 2 6 0 1 0 1 5 0 1 "deleted_to_refresh_preview" 3 1 480804 0 1 1 "deleted_to_refresh_preview" 1 448140e 4482c0e 2 3 4481407 1 "TypeStr" 6 0 1 0 1 3 4482c0e 1 "Dir" 2 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 20309 1 6 6 0 1 0 1 3 4482c09 1 "iso" 1 1 480401 0 3 0 0 6 44893ff 2 20308 1 0 2 6 0 1 0 1 3 4482c09 1 "video" 2 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 20308 1 0 2 6 0 1 0 1 3 4482c09 1 "music" 2 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 2030a 1 0 2 6 0 1 0 1 3 4482c09 1 "picture" 2 1 448140e 4482c0f 2 3 4481407 1 "TypeStr" 6 0 2 0 1 3 4482c0f 1 "picture" 0 2 3 4501408 1 "UPNP" 2 a 4500c02 0 1 0 0 1 4500c0c 0 2 3 4481408 0 0 1 2 1 480409 0 4 0 0 6 44893ff 0 0 0 1 1 480401 0 3 0 0 6 44893ff 2 2030b 2 1 0 2 6 0 1 0 1 3 4482c09 1 "text" 2 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 2030c 1 0 2 6 0 1 0 1 3 4482c09 1 "flash" 3 2 4482c00 3 4481406 a 4500c02 0 1 0 0 1 480401 0 3 0 0 6 44893ff 2 2030d 1 0 2 2 1 0 2 
+2e8600 1 4 1 6 0 1 0 1 3 4482c09 1 "picture" 1 6 0 1 0 1 3 4500c13 3 4481408 1 1 480409 0 4 0 0 6 44893ff 0 0 0 1 1 0 2 1 1 1 480409 0 4 0 0 6 44893ff 0 0 0 1 2 
+b0d01809 2 11 2 6 0 1 0 1 5 1 1 "LOOP" 3 1 482c02 448a40a 2 5 2 1 "/VIDEO_TS/" 1 485409 448a402 1 3 448a40a 6 0 1 0 1 3 448a402 0 1 8 1 482801 0 4 1 "iso_path" 3 4481408 6 2bfffff 0 1 1 482801 0 4 1 "real_media_type" 1 "iso" 6 2bfffff 0 1 1 482801 0 4 1 "iso_path" 3 4481408 6 1bfffff 0 1 1 482801 0 4 1 "media_type" 1 "VIDEO_TS" 6 1bfffff 0 1 1 482801 0 4 1 "real_media_type" 1 "iso" 6 1bfffff 0 1 1 482801 0 4 1 "dvd_path" 3 448a40a 6 1bfffff 0 1 1 480805 0 1 6 47fffff 1 48082c 0 2 6 1bfffff 0 1 1 2 1 480800 0 1 6 47fffff 1 48f801 0 1 3 4481408 2 1 2 1 480800 0 1 6 47fffff 1 48f801 0 1 3 4481408 2 9 
+7342a604 1 1 1 9 
+2230ee02 0 0 0 
+b0d0180a 2 2 2 1 480800 0 1 6 47fffff 1 48f801 0 1 3 4481408 
+38d107 0 0 0 
+38d106 0 0 0 
+33968000 1 2 1 6 0 1 0 1 3 6484006 0 1 1 1 6484001 0 1 0 0 1 0 2 
+<window> 1 "wnd" 0 0 0 780 438 0 31
+<rule>
+<ctrl> 1 "GeneralFileTree" "GeneralFileTree" 0 0 17
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+10 
+0 
+0 
+0 
+"" 
+80 
+0 
+0 
+0 
+0 
+0 
+1
+"video" 
+4
+"Stream.Duration" 
+"Video.Format" 
+"Audio.Format" 
+"Desc.Title" 
+<ctrl> 2 "entry_tbl" "StringTable" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<ctrl> 3 "Rect_cls" "Rect" 0 0 4
+<rule>
+<prop>
+2 
+0 
+748 
+402 
+<ctrl> 4 "uFileItem0_1" "uFileItem0" 0 0 e
+<rule>
+<prop>
+0 
+0 
+5 
+5 
+ffffffff 
+"" 
+0 
+0 
+0 
+ffffffff 
+ffffffff 
+ffffffff 
+0
+0
+<ctrl> 5 "FileBrowser" "FileBrowser" 0 1 1e
+<rule>
+4d5fbe00 1 2 1 6 0 2 0 1 5 0 0 e 1 1 5 0 0 f 1 8 1 0 2 
+<prop>
+0 
+0 
+14 
+15 
+44837ff 
+44823ff 
+0 
+0 
+"" 
+"" 
+0 
+0 
+0 
+b 
+0 
+"" 
+10120 
+"" 
+b
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+44813ff 
+<ctrl> 6 "Rect_name" "Rect" 0 0 4
+<rule>
+<prop>
+14a 
+3c 
+6e 
+30 
+<ctrl> 7 "Rect_video" "Rect" 0 0 4
+<rule>
+<prop>
+d2 
+30 
+3c 
+2d 
+<ctrl> 8 "FileListSlide_1" "FileListSlide" 0 0 a
+<rule>
+<prop>
+0 
+442 
+0 
+4482bff 
+44833ff 
+44827ff 
+1
+"Mark.Select" 
+1
+1 
+<ctrl> 9 "uFListItemDraw_1" "uFListItemDraw" 0 0 2a
+<rule>
+<prop>
+0 
+0 
+"" 
+6801c2 
+0 
+2
+21 
+24 
+2
+ffa6a6a6 
+ffffffff 
+4
+78 
+8 
+5 
+0 
+d
+2030e 
+2030e 
+2030f 
+20310 
+20311 
+20310 
+20312 
+ffffffff 
+ffffffff 
+ffffffff 
+20312 
+20313 
+20314 
+a
+20315 
+20316 
+20317 
+20316 
+20318 
+20316 
+20319 
+20316 
+2031a 
+20316 
+0
+<ctrl> a "SlotSlideAttr_1" "SlotSlideAttr" 0 0 28
+<rule>
+<prop>
+d 
+2 
+0 
+0 
+4 
+1 
+0 
+0 
+0 
+3d0 
+38 
+ffffffff 
+d
+68 
+a0 
+d8 
+110 
+148 
+180 
+1b8 
+1f0 
+228 
+260 
+298 
+2d0 
+308 
+d
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+2a2 
+<ctrl> b "LocalVariables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> c "Rect_list" "Rect" 0 0 4
+<rule>
+<prop>
+2a2 
+a0 
+3d0 
+2d5 
+<ctrl> d "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+44807ff 
+10 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> e "Rect_clinfo" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+208 
+1c2 
+138 
+<ctrl> f "Rect_info_2" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+208 
+1c2 
+32 
+<ctrl> 10 "Rect_info_3" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+250 
+e1 
+28 
+<ctrl> 11 "Rect_info_4" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+250 
+e1 
+28 
+<ctrl> 12 "Rect_info_5" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+278 
+e1 
+28 
+<ctrl> 13 "Rect_info_6" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+278 
+e1 
+28 
+<ctrl> 14 "Rect_info_7" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+2a0 
+e1 
+28 
+<ctrl> 15 "Rect_info_8" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+2a0 
+e1 
+28 
+<ctrl> 16 "Rect_info_9" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+2c8 
+e1 
+28 
+<ctrl> 17 "Rect_info_10" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+2c8 
+e1 
+28 
+<ctrl> 18 "Rect_info_11" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+2f0 
+e1 
+28 
+<ctrl> 19 "Rect_info_12" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+2f0 
+e1 
+28 
+<ctrl> 1a "Rect_info_13" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+318 
+e1 
+28 
+<ctrl> 1b "Rect_info_14" "Rect" 0 0 4
+<rule>
+<prop>
+16d 
+318 
+e1 
+28 
+<ctrl> 1c "Rect_info_Name" "Rect" 0 0 4
+<rule>
+<prop>
+8c 
+208 
+1c2 
+32 
+<ctrl> 1d "Rect_card_icon" "Rect" 0 0 4
+<rule>
+<prop>
+592 
+30 
+4b 
+32 
+<ctrl> 1e "Rect_usb_icon" "Rect" 0 0 4
+<rule>
+<prop>
+608 
+30 
+4b 
+32 
+<ctrl> 1f "Rect_nand_icon" "Rect" 0 0 4
+<rule>
+<prop>
+676 
+30 
+4b 
+32 
+<ctrl> 20 "Rect_listbar_bg" "Rect" 0 0 4
+<rule>
+<prop>
+6f3 
+87 
+1c 
+2f8 
+<ctrl> 21 "Rect_listbar" "Rect" 0 0 4
+<rule>
+<prop>
+6f4 
+90 
+1c 
+2e4 
+<ctrl> 22 "uScrollBar" "uScrollBar" 0 1 e
+<rule>
+4d5fbe00 1 1 1 9 
+<prop>
+44883ff 
+20300 
+0 
+0 
+1 
+44887ff 
+20301 
+8c 
+b 
+1 
+0 
+0 
+0
+0
+<ctrl> 23 "uVideoFmt_1" "uVideoFmt" 0 0 2
+<rule>
+<prop>
+0 
+0 
+<ctrl> 24 "Rect_previw_1" "Rect" 0 0 4
+<rule>
+<prop>
+98 
+7e 
+18e 
+160 
+<ctrl> 25 "Rect_previw_2" "Rect" 0 0 4
+<rule>
+<prop>
+c0 
+84 
+15e 
+154 
+<ctrl> 26 "Rect_warnning" "Rect" 0 0 4
+<rule>
+<prop>
+366 
+1c2 
+136 
+39 
+<ctrl> 27 "Rect_warnrect" "Rect" 0 0 4
+<rule>
+<prop>
+2a3 
+177 
+258 
+10e 
+<ctrl> 28 "Rect_path" "Rect" 0 0 4
+<rule>
+<prop>
+14a 
+3c 
+41a 
+30 
+<ctrl> 29 "Var_dvdinfo" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 2a "record_focus" "uTempStr" 0 0 1
+<rule>
+<prop>
+"" 
+<ctrl> 2b "NULL"
+<ctrl> 2c "NULL"
+<ctrl> 2d "PMP_Local_Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 2e "DeviceNum" "uTempVar" 0 0 1
+<rule>
+<prop>
+1 
+<ctrl> 2f "GeneralFileList_FixBug" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+448c7ff 
+0 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> 30 "Variables_FixBug" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 31 "GeneralFileTree_FixBug" "GeneralFileTree" 0 0 12
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0
+0
+<window> 2 "Wnd1" 0 0 0 780 438 0 6
+<rule>
+<ctrl> 1 "Audio_Cover_Player" "BatchPlayer" 0 0 18
+<rule>
+<prop>
+0 
+1 
+1 
+0 
+44897ff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+ffffffff 
+0 
+0 
+"" 
+0 
+0
+1
+500bff 
+<ctrl> 2 "Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 3 "pic_preview" "BatchPlayer" 0 0 1c
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+44893ff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+10000 
+ffffffff 
+0 
+0 
+"" 
+0 
+0
+5
+500bff 
+4501bff 
+500fff 
+5013ff 
+5017ff 
+<ctrl> 4 "Path" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 5 "cur_dev_type" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 6 "MovieIconGPlayer" "GPlayer" 0 0 a
+<rule>
+<prop>
+0 
+0 
+0 
+"mp4,mov,mkv,flv,3gp" 
+0 
+0 
+0 
+0 
+20 
+0 
+<pal> 0 

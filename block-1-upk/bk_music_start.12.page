@@ -1,0 +1,69 @@
+<page> 29 "bk_music_start" "NULL" 0 0 0 2d0 1e0 1 1 0
+<rule>
+38d101 6 e 6 1 481008 0 2 1 "fs_type!=NETFS_FS" 6 a480fff 1 a480c01 a481008 3 1 "fs_type" 1 "mount_point" 1 "__ALL__" a a480400 0 2 3 a481008 0 10 1 482807 0 1 1 "s_result" 6 0 1 0 1 3 482801 1 "SUCCESS" 8 1 a48040d 0 3 0 3fffff 1 "Mark.MusicPlay" 1 "1" 1 482801 0 4 1 "entry" 3 a481008 6 1ffffff 0 1 1 482801 0 4 1 "play_url" 1 "" 6 1ffffff 0 1 1 482801 0 4 1 "media_type" 1 "music" 6 1ffffff 0 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 1ffffff 0 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 1ffffff 0 1 1 482800 0 4 1 "autohide" 0 2 6 1ffffff 0 1 1 48082c 0 2 6 1ffffff 0 1 1 0 2 1 480805 0 1 6 a7fffff 
+<window> 1 "Wnd1" 0 0 0 2d0 1e0 0 4
+<rule>
+<ctrl> 1 "GeneralFileList" "GeneralFileList" 0 0 b
+<rule>
+<prop>
+a480bff 
+0 
+ffffffff 
+ffffffff 
+0 
+"" 
+0 
+0 
+0 
+0 
+"" 
+<ctrl> 2 "GeneralFileTree" "GeneralFileTree" 0 0 14
+<rule>
+<prop>
+5807ff 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+ffffffff 
+0 
+0 
+0 
+0 
+0 
+1
+"music" 
+1
+"Mark.MusicPlay" 
+<ctrl> 3 "EntryStringTable" "StringTable" 0 0 4
+<rule>
+<prop>
+0 
+0
+0
+0
+<ctrl> 4 "Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<pal> 0 

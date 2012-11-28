@@ -1,0 +1,5 @@
+<page> 4 "language_select" "NULL" 0 0 0 500 2d0 0 1 0
+<rule>
+<window> 1 "wnd" 0 0 0 500 2d0 0 0
+<rule>
+<pal> 0 

@@ -1,0 +1,125 @@
+<page> 2b "monitor" "NULL" 0 0 0 500 2d0 7 1 0
+<rule>
+38d105 8 249 8 6 0 1 0 1 5 0 1 "GPIO_DET" 5 1 480804 0 1 1 "USB_DET" 1 490800 0 3 0 3 0 e 0 1 1 490801 ac81c07 2 0 3 0 e 6 0 1 0 1 3 ac81c07 0 0 3 1 484805 ac81c05 1 1 "usba0" 1 484805 ac81c06 1 1 "usbb0" 6 0 2 0 1 3 ac81c05 0 0 1 1 3 ac81c06 0 0 1 1 490802 0 3 0 3 0 d 0 0 1 1 1 490802 0 3 0 3 0 d 0 1 2 1 0 2 1 480803 0 7 6 affffff 1 "USB_DET" 0 5 1 "" 0 0 0 0 0 1 1 0 2 6 0 1 0 1 5 0 1 "USB_DET" 3 2 ac81c00 0 0 1 490801 ac81c00 2 0 0 0 100 6 0 1 0 1 3 ac81c00 0 1 1 6 0 1 0 1 3 ac81c01 0 1 3 2 ac81c01 0 1 1 490802 0 3 0 3 0 d 0 1 2 ac81c02 0 1 1 f 2 ac81c01 0 1 2 ac81c02 0 1 1 490802 0 3 0 3 0 d 0 1 1 480811 6480c07 1 6 103fffff 6 0 1 0 1 3 6480c07 0 1 4 1 480811 6480c06 1 6 10ffffff 6 0 1 0 1 3 6480c06 0 1 1 1 10c81005 0 0 1 0 2 6 0 1 0 1 0 1 0 1 5 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 2 10481c04 0 100 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 0 2 2 6481c00 6 47fffff 1 2 1 480811 6480c07 1 6 33fffff 6 0 1 0 1 3 6480c07 0 1 3 1 480805 0 1 6 33fffff 1 480811 6480c06 1 6 43fffff 6 0 1 0 1 3 6480c06 0 1 1 2 6481c00 6 43fffff 1 2 1 480811 6480c06 1 6 47fffff 6 0 1 0 1 3 6480c06 0 1 1 2 6481c00 6 47fffff 1 0 2 2 1 1 1 480809 6481c00 0 2 2 6 0 1 0 2 3 6481c00 6 67fffff 1 1 480805 0 1 3 6481c00 1 0 2 1 480805 0 1 6 1bfffff 1 480805 0 1 6 1ffffff 1 480805 0 1 6 a7fffff 1 480805 0 1 6 37fffff 1 480805 0 1 6 3bfffff 1 480813 0 2 2 20002 0 1 1 480409 0 4 0 0 6 64823ff 0 0 0 1 1 480401 0 3 0 0 6 6481bff 2 200ec 1 490802 0 3 0 3 0 d 0 0 2 1 2 2 ac81c01 0 0 6 0 1 0 1 3 ac81c02 0 1 6 1 490801 ac81c07 2 0 3 0 e 6 0 1 0 1 3 ac81c07 0 0 1 1 490802 0 3 0 3 0 d 0 1 1 1 1 490802 0 3 0 3 0 d 0 0 2 2 ac81c02 0 0 1 480409 0 4 0 0 6 6481bff 0 0 0 1 2 6483801 0 0 6 0 1 0 2 3 ac8040e 1 "SLEEP" 1 1 48082c 0 2 6 5bfffff 0 1 1 1 2 6483802 0 1 2 1 1 2 ac81c02 0 0 2 2 1 0 2 6 0 1 0 1 5 0 1 "CHANGE_RESOLUTION" 6 1 483402 ac80c00 1 0 3d 1 486400 0 2 5 3 3 ac80c00 1 486401 0 1 3 483a00 16 1 480813 0 2 2 20002 0 1 1 48082c 0 2 6 67fffff 0 1 6 0 1 0 1 5 2 1 "media_menu" 1 1 48082c 0 2 6 5bfffff 0 1 1 1 1 48082c 0 2 6 53fffff 0 1 2 1 0 2 6 0 1 0 1 5 0 1 "transfer_key" 2 3 4d5fbe00 ffffffff 2 3 485006 5 2 2 485006 0 0 1 0 2 6 0 1 0 1 5 0 1 "hotkey" e 6 0 1 0 1 5 2 1 "h_display" 2 1 480811 ac80400 1 6 1bfffff 6 0 1 0 1 3 ac80400 0 1 1 6 0 2 0 1 3 188100a 1 "video" 1 1 3 188100a 1 "VIDEO_TS" e 1 480804 0 1 1 "16943_hide" 1 1880c14 0 1 0 ff 1 481c00 1889001 2 3 1889001 0 1 6 0 1 0 5 3 1889001 0 5 1 2 1889001 0 0 1 0 2 1 480811 6480c07 1 6 2bfffff 6 0 1 0 1 3 6480c07 0 1 2 1 480805 0 1 6 2bfffff 1 480800 0 1 6 1bfffff 1 0 2 6 0 1 0 2 3 1881805 0 1 2 2 1881805 0 1 1 480409 0 4 0 0 6 18897ff 0 0 0 1 1 0 2 1 480409 0 4 0 0 6 6483fff 0 0 0 1 6 0 1 0 1 3 1889001 0 1 1 1 480406 0 6 0 0 0 91 6 6483fff 0 ffffffff 0 0 3 6481405 1 0 2 6 0 1 0 1 3 1889001 0 2 1 1 480406 0 6 0 0 0 92 6 6483fff 0 ffffffff 0 0 3 6481405 1 0 2 6 0 1 0 1 3 1889001 0 3 1 1 480406 0 6 0 0 0 93 6 6483fff 0 ffffffff 0 0 3 6481405 1 0 2 6 0 1 0 1 3 1889001 0 4 1 1 480406 0 6 0 0 0 94 6 6483fff 0 ffffffff 0 0 3 6481405 1 0 2 6 0 1 0 1 3 1889001 0 0 1 1 480406 0 6 0 0 0 95 6 6483fff 0 ffffffff 0 0 3 6481405 1 0 2 1 480803 0 7 6 67fffff 1 "16943_hide" 0 a 1 "" 0 0 0 0 0 0 1 0 2 1 0 2 1 0 2 1 480811 ac80400 1 6 5bfffff 6 0 1 0 1 3 ac80400 0 1 8 1 482801 0 4 1 "focus_url" 1 "__NULL__" 6 23fffff 0 1 1 484805 ac80400 1 1 "usba0" 1 484805 ac80401 1 1 "usbb0" 6 0 1 0 1 3 5883c0c 1 "USB" 3 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 47fffff 0 1 6 0 1 0 1 3 ac80400 0 1 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 6 0 1 0 1 3 ac80401 0 1 2 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 6 0 1 0 2 3 ac8040f 1 "__NULL__" 2 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbc" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 4 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbd" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 4 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbe" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 2 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 0 2 1 0 2 1 0 2 1 0 2 1 1 2 ac8040f 1 "__NULL__" 2 2 1 0 2 6 0 1 0 1 3 5883c0c 1 "Card" 5 1 482801 0 4 1 "dev_type_str" 1 "SD" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "SD" 6 47fffff 0 1 2 ac8040f 1 "" 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "SD" 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 1 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "MS" 1 0 2 1 0 2 6 0 1 0 1 3 5883c0c 1 "Memory" 3 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 47fffff 0 1 6 0 1 0 1 3 ac80400 0 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 6 0 1 0 1 3 ac80401 0 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 1 2 6 0 1 0 2 5 2 1 "setup" 1 1 480405 0 6 0 0 0 38 6 5887bff 0 ffffffff 0 0 3 6481412 1 0 2 2 ac8040f 1 "__NULL__" 2 2 1 0 2 6 0 1 0 2 5 2 1 "setup" 1 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 1 9 1 0 2 1 0 2 1 482801 0 4 1 "entry" 3 ac8040f 6 23fffff 0 1 1 1 6 0 2 0 1 3 ac82008 1 "" 1 1 3 ac82008 1 "__NULL__" 5 1 482801 0 4 1 "focus_url" 1 "__NULL__" 6 23fffff 0 1 1 484805 ac80400 1 1 "usba0" 1 484805 ac80401 1 1 "usbb0" 6 0 2 0 2 3 ac80400 0 ffffffff 1 2 3 ac80401 0 ffffffff 1 6 0 1 0 1 3 ac80400 0 1 3 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 47fffff 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 6 0 1 0 1 3 ac80401 0 1 4 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "UDISK" 6 47fffff 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 6 0 1 0 2 3 ac8040f 1 "__NULL__" 2 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbc" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 4 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbd" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 4 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 481003 ac8040c 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbe" 0 9 6 0 1 0 2 3 ac8040c 1 "__NULL__" 2 1 482c02 0 2 3 ac8040f 1 "," 1 482c02 ac8040f 2 3 482c01 3 ac8040c 1 0 2 1 0 2 1 0 2 1 0 2 1 1 6 0 1 0 1 3 ac80400 0 0 3 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 47fffff 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usba" 0 9 1 1 6 0 1 0 1 3 ac80401 0 0 3 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "NAND" 6 47fffff 0 1 1 481003 ac8040f 4 1 "mount_point" 1 "mount_point" 1 "/mnt/usbb" 0 9 1 1 2 ac8040f 1 "__NULL__" 2 2 2 2 1 5 2 ac8040f 1 "" 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "SD" 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 1 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "MS" 1 0 2 1 482801 0 4 1 "dev_type_str" 1 "SD" 6 43fffff 0 1 1 482801 0 4 1 "dev_type_str" 1 "SD" 6 47fffff 0 1 2 1 482801 0 4 1 "entry" 3 ac8040f 6 23fffff 0 1 1 0 2 2 6 0 6 0 1 5 2 1 "picture" 1 1 5 2 1 "music" 1 1 5 2 1 "video" 1 1 5 2 1 "text" 1 1 5 2 1 "network" 1 1 5 2 1 "file" 20 1 480811 ac80401 1 6 43fffff 1 480811 ac80402 1 6 47fffff 1 480811 ac80403 1 6 9ffffff 6 0 2 0 1 3 ac80401 0 1 1 1 3 ac80402 0 1 4 6 0 2 0 1 3 ac80401 0 1 0 1 3 4083009 5 2 1 9 1 0 2 6 0 2 0 1 3 ac80402 0 1 0 1 3 4482c09 5 2 1 9 1 0 2 6 0 1 0 1 3 ac80402 0 1 2 1 480811 ac80407 1 6 10ffffff 6 0 1 0 1 3 ac80407 0 1 1 6 0 1 0 1 3 10c8040d 1 "anykey disable" 1 9 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 ac80402 0 1 1 a 4500c02 0 1 0 0 1 0 2 1 0 2 6 0 1 0 1 3 ac80403 0 1 1 9 1 0 2 1 480805 0 1 6 53fffff 1 480805 0 1 6 57fffff 1 480805 0 1 6 5ffffff 1 480805 0 1 6 63fffff 1 480805 0 1 6 6ffffff 1 480805 0 1 6 73fffff 1 480805 0 1 6 77fffff 1 480805 0 1 6 93fffff 1 480805 0 1 6 97fffff 1 480805 0 1 6 9bfffff 1 480805 0 1 6 43fffff 1 480805 0 1 6 47fffff 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 480805 0 1 6 37fffff 1 480805 0 1 6 3bfffff 1 480805 0 1 6 33fffff 1 480805 0 1 6 5bfffff 1 480805 0 1 6 27fffff 1 480805 0 1 6 1b3fffff 1 480805 0 1 6 abfffff 1 480805 0 1 6 2bfffff 1 480805 0 1 6 fffffff 1 480811 ac80400 1 6 1bfffff 6 0 1 0 1 3 ac80400 0 1 6 a 1880c02 0 1 0 0 6 0 1 0 1 3 188100a 1 "VIDEO_TS" 1 6 0 1 0 1 3 1887c08 1 "iso" 1 1 48f801 0 1 1 "_NULL_" 1 0 2 1 0 2 6 0 1 0 1 3 483a00 2e 0 1 1 6 0 1 0 1 3 188100a 1 "video" 1 6 0 1 0 3 3 1880c05 0 1 2 1 487403 1881003 1 3 1880c13 1 487404 0 2 3 1880c05 3 1881003 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 188100a 1 "flash" 1 1 486400 0 2 3 1881004 3 486401 1 0 2 6 0 1 0 1 3 188100a 1 "text" 2 6 0 1 0 1 3 483a00 32 0 1 3 1 48cc03 1881003 1 3 1880c13 1 48cc04 0 2 3 188500f 3 1881003 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480805 0 1 6 1bfffff 1 0 2 1 0 2 6 0 1 0 1 5 2 1 "picture" 2 6 0 1 0 1 0 1 0 1 6 1 482801 0 4 1 "focus_item" 1 "picture" 6 5bfffff 0 1 1 482801 0 4 1 "media_type" 1 "picture" 6 23fffff 0 1 6 0 1 0 1 3 483a00 7 0 0 2 1 482801 0 4 1 "view_type" 1 "thumbnail_view" 6 23fffff 0 1 1 482800 0 4 1 "DrawHLFrame" 0 1 6 43fffff 0 0 1 1 1 482801 0 4 1 "view_type" 1 "list_view" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 5 0 0 1 1 482801 0 4 1 "datasrc_type" 1 "tree" 6 23fffff 0 1 1 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 6 0 0 1 1 482801 0 4 1 "sort_type" 1 "name_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 1 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 2 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 23fffff 0 1 2 2 2 1 48082c 0 2 6 23fffff 0 1 1 0 2 9 1 0 2 6 0 1 0 1 5 2 1 "music" 2 6 0 1 0 1 0 1 0 1 8 1 482801 0 4 1 "focus_item" 1 "music" 6 5bfffff 0 1 1 482800 0 4 1 "focus" 0 0 6 33fffff 0 1 1 482801 0 4 1 "media_type" 1 "music" 6 23fffff 0 1 6 0 1 0 1 3 483a00 c 0 1 2 1 482801 0 4 1 "view_type" 1 "thumbnail_view" 6 23fffff 0 1 1 482800 0 4 1 "DrawHLFrame" 0 1 6 43fffff 0 0 1 1 1 482801 0 4 1 "view_type" 1 "list_view" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 a 0 0 1 1 482801 0 4 1 "datasrc_type" 1 "tree" 6 23fffff 0 1 1 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 b 0 0 1 1 482801 0 4 1 "sort_type" 1 "name_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 b 0 1 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 23fffff 0 1 2 2 1 48082c 0 2 6 23fffff 0 1 1 480805 0 1 6 5bfffff 1 0 2 9 1 0 2 6 0 1 0 1 5 2 1 "video" 2 6 0 1 0 1 0 1 0 1 7 1 482801 0 4 1 "focus_item" 1 "video" 6 5bfffff 0 1 1 482801 0 4 1 "media_type" 1 "video,iso" 6 23fffff 0 1 6 0 1 0 1 3 483a00 11 0 1 2 1 482801 0 4 1 "view_type" 1 "thumbnail_view" 6 23fffff 0 1 1 482800 0 4 1 "DrawHLFrame" 0 1 6 43fffff 0 0 1 1 1 482801 0 4 1 "view_type" 1 "list_view" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 f 0 0 1 1 482801 0 4 1 "datasrc_type" 1 "tree" 6 23fffff 0 1 1 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 10 0 0 1 1 482801 0 4 1 "sort_type" 1 "name_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 10 0 1 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 23fffff 0 1 2 2 1 48082c 0 2 6 23fffff 0 1 1 480805 0 1 6 5bfffff 1 0 2 9 1 0 2 6 0 1 0 1 5 2 1 "text" 2 6 0 1 0 1 0 1 0 1 7 1 482801 0 4 1 "focus_item" 1 "text" 6 5bfffff 0 1 6 0 1 0 1 0 1 0 0 2 1 482801 0 4 1 "view_type" 1 "thumbnail_view" 6 23fffff 0 1 1 482800 0 4 1 "DrawHLFrame" 0 1 6 43fffff 0 0 1 1 1 482801 0 4 1 "view_type" 1 "list_view" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 2f 0 0 1 1 482801 0 4 1 "datasrc_type" 1 "tree" 6 23fffff 0 1 1 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 30 0 0 1 1 482801 0 4 1 "sort_type" 1 "name_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 1 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 2 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 23fffff 0 1 2 2 2 1 482801 0 4 1 "media_type" 1 "text" 6 23fffff 0 1 1 48082c 0 2 6 23fffff 0 1 1 480805 0 1 6 5bfffff 1 0 2 9 1 0 2 6 0 1 0 1 5 2 1 "home" 1c 1 480811 ac80400 1 6 5bfffff 1 480811 ac80401 1 6 10ffffff 1 480811 ac80402 1 6 9ffffff 6 0 2 0 1 3 ac80400 0 1 1 1 3 ac80402 0 1 1 9 1 0 2 6 0 1 0 1 3 ac80401 0 1 1 6 0 1 0 1 3 10c8040d 1 "anykey disable" 1 9 1 0 2 1 0 2 1 480811 ac80400 1 6 47fffff 6 0 1 0 1 3 ac80400 0 1 1 a 4500c02 0 1 0 0 1 0 2 1 480805 0 1 6 53fffff 1 480805 0 1 6 57fffff 1 480805 0 1 6 5ffffff 1 480805 0 1 6 63fffff 1 480805 0 1 6 6ffffff 1 480805 0 1 6 73fffff 1 480805 0 1 6 77fffff 1 480805 0 1 6 93fffff 1 480805 0 1 6 97fffff 1 480805 0 1 6 9bfffff 1 480805 0 1 6 27fffff 1 480805 0 1 6 1b3fffff 1 480805 0 1 6 abfffff 1 480805 0 1 6 2bfffff 1 480805 0 1 6 fffffff 1 480811 ac80400 1 6 1bfffff 6 0 1 0 1 3 ac80400 0 1 6 a 1880c02 0 1 0 0 6 0 1 0 1 3 188100a 1 "VIDEO_TS" 1 6 0 1 0 1 3 1887c08 1 "iso" 1 1 48f801 0 1 1 "_NULL_" 1 0 2 1 0 2 6 0 1 0 1 3 483a00 2e 0 1 1 6 0 1 0 1 3 188100a 1 "video" 1 6 0 1 0 3 3 1880c05 0 1 2 1 487403 1881003 1 3 1880c13 1 487404 0 2 3 1880c05 3 1881003 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 188100a 1 "flash" 1 1 486400 0 2 3 1881004 3 486401 1 0 2 6 0 1 0 1 3 188100a 1 "text" 2 6 0 1 0 1 3 483a00 32 0 1 3 1 48cc03 1881003 1 3 1880c13 1 48cc04 0 2 3 188500f 3 1881003 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480805 0 1 6 1bfffff 1 0 2 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "media_menu" 6 3ffffff 0 1 1 48082c 0 2 6 3ffffff 0 0 9 1 0 2 6 0 1 0 1 5 2 1 "network" 13 1 480805 0 1 6 27fffff 1 480805 0 1 6 1b3fffff 1 480805 0 1 6 abfffff 1 480805 0 1 6 2bfffff 1 480805 0 1 6 33fffff 1 480805 0 1 6 fffffff 6 0 1 0 1 3 ac80400 0 1 1 a 1c80c02 0 1 0 0 1 0 2 1 480811 ac80400 1 6 1bfffff 6 0 1 0 1 3 ac80400 0 1 6 a 1880c02 0 1 0 0 6 0 1 0 1 3 188100a 1 "VIDEO_TS" 1 6 0 1 0 1 3 1887c08 1 "iso" 1 1 48f801 0 1 1 "_NULL_" 1 0 2 1 0 2 6 0 1 0 1 3 483a00 2e 0 1 1 6 0 1 0 1 3 188100a 1 "video" 1 6 0 1 0 3 3 1880c05 0 1 2 1 487403 1881003 1 3 1880c13 1 487404 0 2 3 1880c05 3 1881003 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 188100a 1 "flash" 1 1 486400 0 2 3 1881004 3 486401 1 0 2 6 0 1 0 1 3 188100a 1 "text" 2 6 0 1 0 1 3 483a00 32 0 1 3 1 48cc03 1881003 1 3 1880c13 1 48cc04 0 2 3 188500f 3 1881003 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480805 0 1 6 1bfffff 1 0 2 1 480805 0 1 6 43fffff 1 480805 0 1 6 47fffff 1 480805 0 1 6 37fffff 1 480805 0 1 6 3bfffff 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 480811 ac80400 1 6 5bfffff 9 1 0 2 6 0 1 0 1 5 2 1 "setup" 27 1 480811 ac80400 1 6 9ffffff 1 480811 ac80401 1 6 10ffffff 6 0 1 0 1 3 ac80400 0 1 1 9 1 0 2 6 0 1 0 1 3 ac80401 0 1 1 6 0 1 0 1 3 10c8040d 1 "anykey disable" 1 9 1 0 2 1 0 2 1 480811 ac80400 1 6 53fffff 1 480811 ac80401 1 6 57fffff 1 480811 ac80402 1 6 5ffffff 1 480811 ac80403 1 6 63fffff 1 480811 ac80404 1 6 6ffffff 1 480811 ac80405 1 6 73fffff 1 480811 ac80406 1 6 93fffff 1 480811 ac80407 1 6 97fffff 1 480811 ac81800 1 6 77fffff 6 0 9 0 1 3 ac80400 0 1 1 1 3 ac80401 0 1 1 1 3 ac80402 0 1 1 1 3 ac80403 0 1 1 1 3 ac80404 0 1 1 1 3 ac80405 0 1 1 1 3 ac80406 0 1 1 1 3 ac80407 0 1 1 1 3 ac81800 0 1 1 9 1 0 2 1 480811 ac80400 1 6 9bfffff 6 0 1 0 1 3 ac80400 0 1 1 9 1 0 2 1 480811 ac80400 1 6 47fffff 6 0 1 0 1 3 ac80400 0 1 1 a 4500c02 0 1 0 0 1 0 2 1 480805 0 1 6 27fffff 1 480805 0 1 6 1b3fffff 1 480805 0 1 6 abfffff 1 480805 0 1 6 2bfffff 1 480805 0 1 6 33fffff 1 480805 0 1 6 fffffff 1 480811 ac80400 1 6 1bfffff 6 0 1 0 1 3 ac80400 0 1 6 a 1880c02 0 1 0 0 6 0 1 0 1 3 188100a 1 "VIDEO_TS" 1 6 0 1 0 1 3 1887c08 1 "iso" 1 1 48f801 0 1 1 "_NULL_" 1 0 2 1 0 2 6 0 1 0 1 3 483a00 2e 0 1 1 6 0 1 0 1 3 188100a 1 "video" 1 6 0 1 0 3 3 1880c05 0 1 2 1 487403 1881003 1 3 1880c13 1 487404 0 2 3 1880c05 3 1881003 1 0 2 1 0 2 1 0 2 6 0 1 0 1 3 188100a 1 "flash" 1 1 486400 0 2 3 1881004 3 486401 1 0 2 6 0 1 0 1 3 188100a 1 "text" 2 6 0 1 0 1 3 483a00 32 0 1 3 1 48cc03 1881003 1 3 1880c13 1 48cc04 0 2 3 188500f 3 1881003 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480409 0 4 0 0 6 18833ff 0 0 0 1 1 0 2 1 480805 0 1 6 1bfffff 1 0 2 1 480805 0 1 6 43fffff 1 480805 0 1 6 47fffff 1 480805 0 1 6 37fffff 1 480805 0 1 6 3bfffff 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 1 480805 0 1 6 10ffffff 1 482800 0 4 1 "FocusIndex" 0 0 6 53fffff 0 1 1 482800 0 4 1 "FocusSlot" 0 0 6 53fffff 0 1 1 480811 ac80400 1 6 5bfffff 6 0 1 0 1 3 ac80400 0 1 2 1 48082a 0 5 6 53fffff 6 5bfffff 0 1 0 2 3 6481410 1 480805 0 1 6 5bfffff 1 1 1 48082c 0 2 6 53fffff 0 1 2 9 1 0 2 6 0 1 0 1 5 2 1 "h_slideshow" 4 1 480811 ac80400 1 6 43fffff 6 0 1 0 1 3 ac80400 0 1 1 6 0 1 0 1 3 4083009 1 "picture" d 1 48080d 0 1 6 43fffff 6 0 1 0 1 3 408300b 1 "tree" 1 1 388040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 6 0 1 0 1 3 408300b 1 "list" 1 1 348040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 1 482801 0 4 1 "play_url" 1 "" 6 1bfffff 0 1 1 482801 0 4 1 "entry" 3 4083008 6 1bfffff 0 1 1 482801 0 4 1 "media_type" 1 "picture" 6 1bfffff 0 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 1bfffff 0 1 1 482801 0 4 1 "sort_type" 3 408300a 6 1bfffff 0 1 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "media_player" 6 3ffffff 0 1 1 4080c02 0 0 1 48082c 0 2 6 3ffffff 0 1 9 1 0 2 1 0 2 1 480811 ac80400 1 6 47fffff 6 0 1 0 1 3 ac80400 0 1 3 1 480811 ac80401 1 6 10ffffff 6 0 1 0 1 3 ac80401 0 1 1 9 1 3 1 480805 0 1 6 103fffff 1 480805 0 1 6 107fffff 1 480805 0 1 6 10bfffff 2 6 0 1 0 1 3 4482c09 1 "picture" d 1 48080d 0 1 6 47fffff 6 0 1 0 1 3 4482c0b 1 "tree" 1 1 388040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 6 0 1 0 1 3 4482c0b 1 "list" 1 1 348040d 0 3 0 3ffffe 1 "Mark.Play" 1 "1" 1 0 2 1 482801 0 4 1 "play_url" 1 "" 6 1bfffff 0 1 1 482801 0 4 1 "entry" 3 4482c08 6 1bfffff 0 1 1 482801 0 4 1 "media_type" 1 "picture" 6 1bfffff 0 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 1bfffff 0 1 1 482801 0 4 1 "sort_type" 3 4482c0a 6 1bfffff 0 1 1 482801 0 4 1 "cmd" 1 "exit" 6 3ffffff 0 1 1 482801 0 4 1 "arg0" 1 "media_player" 6 3ffffff 0 1 1 4080c02 0 0 1 48082c 0 2 6 3ffffff 0 1 9 1 0 2 1 0 2 1 0 2 6 0 1 0 1 5 2 1 "h_backmusic" 6 1 480811 ac80401 1 6 1bfffff 6 0 1 0 1 3 ac80401 0 1 1 6 0 3 0 1 3 188100a 1 "VIDEO_TS" 1 1 3 188100a 1 "flash" 1 1 3 188100a 1 "video" 1 9 1 0 2 1 0 2 2 ac8040d 1 "back_music" 1 480811 ac80403 1 6 1ffffff 6 0 1 0 2 3 ac80403 0 1 1 1 48082c 0 2 6 a7fffff 0 0 1 1 6 0 1 0 2 3 1c80c10 0 1 1 1 1c80c01 0 1 0 0 1 1 1 1c80c02 0 1 0 0 2 2 9 1 0 2 6 0 1 0 1 5 2 1 "file" 2 6 0 1 0 1 0 1 0 1 7 1 482801 0 4 1 "focus_item" 1 "file" 6 5bfffff 0 1 6 0 1 0 1 0 1 0 0 2 1 482801 0 4 1 "view_type" 1 "thumbnail_view" 6 23fffff 0 1 1 482800 0 4 1 "DrawHLFrame" 0 1 6 43fffff 0 0 1 1 1 482801 0 4 1 "view_type" 1 "list_view" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 2f 0 0 1 1 482801 0 4 1 "datasrc_type" 1 "tree" 6 23fffff 0 1 1 1 1 482801 0 4 1 "datasrc_type" 1 "list" 6 23fffff 0 1 2 6 0 1 0 1 3 483a00 30 0 0 1 1 482801 0 4 1 "sort_type" 1 "name_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 1 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 6 0 1 0 1 3 483a00 6 0 2 1 1 482801 0 4 1 "sort_type" 1 "date_ascent" 6 23fffff 0 1 1 1 1 482801 0 4 1 "sort_type" 1 "nosort" 6 23fffff 0 1 2 2 2 1 482801 0 4 1 "media_type" 1 "video,picture,music,text,flash,iso" 6 23fffff 0 1 1 48082c 0 2 6 23fffff 0 1 1 480805 0 1 6 5bfffff 1 0 2 9 1 0 2 1 0 2 6 0 1 0 1 5 0 1 "device_not_recongnised" 1 1 480409 0 4 0 0 6 ac80bff 0 0 0 1 1 0 2 6 0 1 0 1 5 0 1 "devst_max_hub_tiers" 1 1 480409 0 4 0 0 6 ac80bff 0 0 0 1 1 0 2 6 0 1 0 1 5 0 1 "POWER_DETECT" 2 1 490801 482407 2 0 3 0 e 6 0 1 0 1 3 482407 0 0 1 6 0 1 0 1 3 482406 0 1 1 1 490802 0 3 0 3 0 d 0 0 1 0 2 1 1 2 482406 0 1 2 1 0 2 
+4d5fbe00 14 5e 14 6 0 1 0 2 3 485006 0 0 5 1 480804 0 1 1 "transfer_key" 2 485006 5 0 1 480803 0 7 6 affffff 1 "transfer_key" 0 5 5 1 0 0 0 0 0 0 5 9 1 0 2 6 0 1 0 1 3 6483801 0 1 1 9 1 0 2 1 480811 ac80407 1 6 47fffff 6 0 2 0 1 3 ac80407 0 1 0 1 3 4501408 1 "UPNP" 1 9 1 0 2 1 480804 0 1 1 "hotkey" 6 0 6 0 1 5 0 0 ce 1 1 5 0 0 cf 1 1 5 0 0 d0 1 1 5 0 0 d1 1 1 5 0 0 d2 1 1 5 0 0 1b 1 6 0 1 0 1 3 ac82000 0 1 2 5 9 1 0 2 1 0 2 6 0 1 0 1 5 0 0 ce 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "picture" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 cf 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "music" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 d0 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "video" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 d1 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "text" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 16 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "home" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 17 4 1 480811 ac80400 1 6 53fffff 6 0 1 0 1 3 ac80400 0 1 1 9 1 0 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "setup" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 26 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "h_slideshow" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 15 1 6 0 1 0 1 3 ac8040e 1 "" 5 1 486404 0 0 1 484405 0 0 2 ac8040e 1 "SLEEP" 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "home" 0 0 0 0 0 0 1 490802 0 3 0 4 0 b 0 0 1 6 1 490802 0 3 0 4 0 b 0 1 1 5880405 0 1 1 "video" 1 486405 0 0 1 484406 0 0 2 ac8040e 1 "" 6 0 1 0 1 3 6483802 0 1 2 1 48082c 0 2 6 5bfffff 0 1 2 6483802 0 0 1 0 2 2 1 0 2 6 0 1 0 1 5 0 0 1a 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "h_display" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 93 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "h_backmusic" 0 0 0 0 0 0 9 1 0 2 6 0 1 0 1 5 0 0 c0 1 6 0 1 0 1 3 ac8040e 1 "SLEEP" 8 1 490802 0 3 0 4 0 b 0 1 2 ac8040e 1 "" 1 480804 0 1 1 "transfer_key" 2 485006 0 14 1 480803 0 7 6 affffff 1 "transfer_key" 0 5 5 1 0 0 0 0 0 0 6 0 1 0 1 3 6483802 0 1 2 1 48082c 0 2 6 5bfffff 0 1 2 6483802 0 0 1 0 2 5 9 1 0 2 1 0 2 6 0 1 0 1 5 0 0 1c 1 6 0 1 0 1 3 ac8040e 1 "" 7 2 ac8040e 1 "SLEEP" 1 490802 0 3 0 4 0 b 0 0 1 480804 0 1 1 "transfer_key" 2 485006 0 14 1 480803 0 7 6 affffff 1 "transfer_key" 0 5 5 1 0 0 0 0 0 0 5 9 1 0 2 1 0 2 6 0 1 0 1 5 0 0 14 1 6 0 1 0 1 3 ac8040e 1 "" 2 2 ac8040e 1 "SLEEP" 1 490802 0 3 0 4 0 b 0 0 1 3 1 490802 0 3 0 4 0 b 0 1 2 ac8040e 1 "" 6 0 1 0 1 3 6483802 0 1 2 1 48082c 0 2 6 5bfffff 0 1 2 6483802 0 0 1 0 2 2 1 0 2 6 0 1 0 1 5 0 0 1b 2 1 480803 0 7 6 affffff 1 "hotkey" 0 2 1 "file" 0 0 0 0 0 0 9 1 0 2 
+2230ee0c 0 0 0 
+2230ee0d 3 3 3 1 480409 0 4 0 0 6 ac80bff 0 0 0 1 1 480403 0 5 0 0 1 "many hubs." 6 ac80bff 0 ffffffff 3 6481402 1 480803 0 7 6 affffff 1 "devst_max_hub_tiers" 0 14 1 "devst_max_hub_tiers" 0 0 0 0 0 0 
+38d103 3 3 3 2 485006 0 1 2 ac81c01 0 0 2 ac81c02 0 0 
+2230ee02 2 b 2 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "UDISK" 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 2 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "SD" 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 2 1 481001 ac8040f 3 1 "dev_type_str" 1 "mount_point" 1 "MS" 6 0 2 0 1 3 ac8040f 1 "" 1 1 3 ac8040f 1 "__NULL__" 2 2 ac82008 1 "" 2 ac82000 0 1 1 1 2 ac82000 0 0 2 1 1 2 ac82000 0 0 2 1 1 2 ac82000 0 0 2 
+2230ee03 1 1 1 2 ac82000 0 0 
+<window> 1 "wnd" 0 0 0 500 2d0 0 8
+<rule>
+<ctrl> 1 "LocalVariables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 2 "Rect_1" "Rect" 0 0 4
+<rule>
+<prop>
+80 
+4e 
+b9 
+18 
+<ctrl> 3 "uOutputMode" "uTempVar" 0 0 1
+<rule>
+<prop>
+0 
+<ctrl> 4 "Rect_16943" "Rect" 0 0 4
+<rule>
+<prop>
+46a 
+33 
+78 
+3c 
+<ctrl> 5 "Variables" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 6 "Variables_1" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 7 "Variables_2L" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<ctrl> 8 "Variables_2" "Variables" 0 0 10
+<rule>
+<prop>
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+"" 
+<pal> 0 
